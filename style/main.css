@@ -1,0 +1,68 @@
+/*
+color scheme:
+ background: #FCF2E1
+ text: #5C5750
+ accent/hover: #5B8AB2
+*/
+
+@font-face {
+  font-family: "Josefin-Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("Josefin-Sans/JosefinSans-Regular.ttf") format("opentype");
+}
+
+body {
+ background: #FCF2E1;
+ color: #5C5750;
+ font-size: 15px;
+ font-family: Josefin-Sans, Arial;
+ line-height: 1.2em;
+}
+
+nav {
+ margin: 2em 0;
+}
+
+article {
+ margin: 2em;
+}
+
+a, a:visited, a:active {
+ text-decoration: none;
+ color: #5C5750;
+}
+
+a:hover {
+ color: #5B8AB2;
+}
+
+nav ul {
+ padding: 0;
+}
+
+nav ul li {
+ display: inline-block;
+ width: 25%;
+ text-align: center;
+ font-size: 22px;
+}
+
+#etalage rect {
+ stroke: #FCF2E1;
+ stroke-width: .05;
+}
+#etalage text {
+ font-size: .1px;
+ fill: #FCF2E1;
+}
+#etalage a text {
+ opacity: 0;
+ -webkit-transition: opacity .5s ease-in-out;
+ -o-transition: opacity .5s ease-in-out;
+ transition: opacity .5s ease-in-out;
+}
+#etalage a:hover text {
+ opacity: 1;
+ //display: block;
+}
