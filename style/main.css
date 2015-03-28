@@ -13,7 +13,7 @@ color scheme:
 }
 
 body {
- background: #FCF2E1;
+ background: #FFFFE9;
  color: #5C5750;
  font-size: 15px;
  font-family: Josefin-Sans, Arial;
@@ -49,12 +49,12 @@ nav ul li {
 }
 
 #etalage rect {
- stroke: #FCF2E1;
+ stroke: #FFFFE9;
  stroke-width: .05;
 }
 #etalage text {
  font-size: .1px;
- fill: #FCF2E1;
+ fill: #FFFFE9;
 }
 #etalage a text {
  opacity: 0;
@@ -66,3 +66,38 @@ nav ul li {
  opacity: 1;
  //display: block;
 }
+
+h1 {
+ text-align: center;
+}
+
+.thumbnails {
+ position: absolute;
+ top: calc(100% - 2em);
+ height: 4em;
+ left: 0;
+ width: 100%;
+ text-align: center;
+ margin: -3em auto 0;
+}
+.thumbnails img {
+ height: 4em;
+ width: auto;
+}
+
+.caroussel {
+ position: absolute;
+ top: 7em;
+ bottom: 6em;
+ left: 0;
+ width: 100%;
+ background-size: contain;
+ background-position: center;
+ background-repeat: no-repeat;
+ transition: opacity ease 2s;
+ opacity: 0;
+}
+.caroussel.selected {
+ opacity: 1;
+}
+ 
