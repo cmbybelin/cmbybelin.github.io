@@ -1,27 +1,9 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Capture the Moment by Belin Photography</title>
-  <meta name="description" content="Belinda Terrisse Photography">
-  <meta name="viewport" content="width=device-width">
-
-  <!-- Deal with HTML 5 element in older IE browsers -->
-  <link rel="stylesheet" href="style/main.css">
-</head>
-<body>
- <nav>
-  <ul>
-    <li><a href="#">Home</a></li><!--
-    --><li><a href="#portfolio">Portfolio</a></li><!--
-    --><li><a href="#projecten">Projecten</a></li><!--
-    --><li><a href="#overmij">Over&nbsp;mij</a></li>
-  </ul>
- </nav>
+---
+title: Capture the Moment by Belin
+---
+{% include head.html %}
 
  <article>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed ullamcorper quam, eget congue turpis. Suspendisse eget tellus malesuada, efficitur orci in, pharera enim. Donec ut nulla turpis. Integer sed nisl vitae nisi condimentum fringilla sed vitae turpis. Sed vulputate nibh vitae felis vestibulum finibus. Nullam nibh nisl, molestie dapibus placerat non, fermentum sit amet nibh. Suspendisse sit amet varius turpis. Nullam ut ipsum dui. Etiam efficitur ullamcorper nibh ac finibus. Ut id ligula vel tellus dignissim lobortis eu sit amet mi. Nam tempor aliquam ipsum, sed iaculis est dapibus in.</p>
 
 <!-- 4 columns, 2 rows raster. -->
 <svg id="etalage" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -33,21 +15,21 @@
   <pattern id="img-portret" patternUnits="objectBoundingBox" width="1" height="1" >
    <image xlink:href="frontpage/portret.jpg" width="1" height="1"></image>
   </pattern>
-  <pattern id="img-projecten" patternUnits="objectBoundingBox" width="1" height="1" >
+  <pattern id="img-reizen" patternUnits="objectBoundingBox" width="1" height="1" >
    <image xlink:href="frontpage/projecten.jpg" width="1" height="1"></image>
   </pattern>
   <pattern id="img-flora" patternUnits="objectBoundingBox" width="2" height="1" >
    <image xlink:href="frontpage/flora.jpg" width="2" height="1"></image>
   </pattern>
  </defs>
- <a xlink:href="#detail"><rect x="0%" y="0" width="50%" height="100%" fill="url(#img-detail)" />
-  <text x=".05" y="1.95">Detail</text></a>
+ <a xlink:href="#detail"><rect x="0%" y="0" width="50%" height="100%" fill="url(#img-flora)" />
+  <text x=".05" y="1.95">Flora &amp; fauna</text></a>
  <a xlink:href="#portret"><rect x="50%" y="0" width="25%" height="50%" fill="url(#img-portret)" />
   <text x="2.05" y=".95">Portret</text></a>
- <a xlink:href="#projecten"><rect x="75%" y="0" width="25%" height="50%" fill="url(#img-projecten)" />
-  <text x="3.05" y=".95">Projecten</text></a>
- <a xlink:href="#flora"><rect x="50%" y="50%" width="50%" height="50%" fill="url(#img-flora)" />
-  <text x="2.05" y="1.95">Flora</text></a>
+ <a xlink:href="#projecten"><rect x="75%" y="0" width="25%" height="50%" fill="url(#img-reizen)" />
+  <text x="3.05" y=".95">Reizen</text></a>
+ <a xlink:href="florafauna.html"><rect x="50%" y="50%" width="50%" height="50%" fill="url(#img-detail)" />
+  <text x="2.05" y="1.95">Detail</text></a>
 </svg>
 
 </article>
