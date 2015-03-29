@@ -1,47 +1,8 @@
 ---
-title: Flora & fauna
+title: Flora &amp; fauna
+layout: portfolio
+portfolio: [
+	"portfolio/florafauna/Belinda 08.jpg",
+	"portfolio/florafauna/Obie.jpg",
+	"portfolio/florafauna/paard kl.jpg" ]
 ---
-
-{% include head.html %}
-
- <article class="portfolio">
-  <h1>Flora &amp; fauna</h1>
-  <div>
-    <div id="img1" class="caroussel selected"></div>
-    <div id="img2" class="caroussel"></div>
-    <div id="img3" class="caroussel"></div>
-  </div>
-  <div class="thumbnails">
-   <img rel="img1" src="portfolio/florafauna/Belinda 08.jpg" alt="..."/>
-   <img rel="img2" src="portfolio/florafauna/Obie.jpg" alt=""/>
-   <img rel="img3" src="portfolio/florafauna/paard kl.jpg" alt=""/>
-  </div>
- </article>
- <style>
- .caroussel#img1 {
-  background-image: url('portfolio/florafauna/Belinda 08.jpg');
- }
- .caroussel#img2 {
-  background-image: url('portfolio/florafauna/Obie.jpg');
- }
- .caroussel#img3 {
-  background-image: url('portfolio/florafauna/paard kl.jpg');
- }
- </style>
- <script>
-    var $caroussel = document.querySelectorAll('.caroussel');
-    var $thumbnails = document.querySelectorAll('.thumbnails img');
-    for (var i = 0; i < $thumbnails.length; i++) {
-      $thumbnails[i].addEventListener('click', function() {
-        var selected = document.querySelector('.caroussel.selected');
-        var id = this.getAttribute('rel');
-        if (selected) {
-          selected.classList.remove('selected');
-        }
-        document.getElementById(id).classList.add('selected');
-      });
-    }
- </script>
-
-{% include tail.html %}
-

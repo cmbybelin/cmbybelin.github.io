@@ -1,0 +1,44 @@
+---
+---
+
+{% include head.html %}
+
+ <article class="portfolio">
+  <h1>{{ page.title }}</h1>
+  <div >
+  {% for photo in page.portfolio %}
+   <div id="img{{ forloop.index }}" class="caroussel{% if forloop.first %} selected{% endif %}"></div>
+  {% endfor %}
+  </div>
+  <div class="thumbnails">
+  {% for photo in page.portfolio %}
+   <img rel="img{{ forloop.index }}" src="{{ photo }}" alt="" />
+  {% endfor %}
+  </div>
+ </article>
+
+ <style>
+ {% for photo in page.portfolio %}
+ #img{{ forloop.index }} {
+  background-image: url('{{ photo }}');
+ }
+ {% endfor %}
+ </style>
+
+ <script>
+    var $caroussel = document.querySelectorAll('.caroussel');
+    var $thumbnails = document.querySelectorAll('.thumbnails img');
+    for (var i = 0; i < $thumbnails.length; i++) {
+      $thumbnails[i].addEventListener('click', function() {
+        var selected = document.querySelector('.caroussel.selected');
+        var id = this.getAttribute('rel');
+        if (selected) {
+          selected.classList.remove('selected');
+        }
+        document.getElementById(id).classList.add('selected');
+      });
+    }
+ </script>
+
+{% include tail.html %}
+
