@@ -43,7 +43,7 @@ nav ul {
 
 nav ul li {
  display: inline-block;
- width: 25%;
+ width: 33.333%;
  text-align: center;
  font-size: 22px;
 }
@@ -70,6 +70,8 @@ nav ul li {
 h1 {
  text-align: center;
 }
+
+/* PORTFOLIO */
 
 .thumbnails {
  position: absolute;
@@ -101,3 +103,14 @@ h1 {
  opacity: 1;
 }
  
+/* BLOG */
+article.blog {
+ max-width: 600px;
+ margin-left: auto;
+ margin-right: auto;
+}
+.blog img {
+ max-width: 600px;
+ max-height: 600px;
+}
+
