@@ -50,10 +50,10 @@ nav ul li {
 
 #etalage rect {
  stroke: #FFFFE9;
- stroke-width: .05;
+ stroke-width: 5;
 }
 #etalage text {
- font-size: .1px;
+ font-size: 10px;
  fill: #FFFFE9;
 }
 #etalage a text {
@@ -64,7 +64,6 @@ nav ul li {
 }
 #etalage a:hover text {
  opacity: 1;
- //display: block;
 }
 
 h1 {
