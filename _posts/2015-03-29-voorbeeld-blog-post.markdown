@@ -1,8 +1,9 @@
 ---
 title: Dit is een voorbeeld blog post
+layout: blog
 ---
 
-Er gebeurd van alles op deze site. We zijn druk bezig
+Er gebeurd van alles op deze site. We zijn druk bezig.
 
 <!--more-->
 
@@ -10,3 +11,4 @@ De home page wordt aangepakt, er wordt een portfolio opgebouwd en we kunnen zelf
 
 Spannende tijden! :)
 
+![Lightpainting](/portfolio/projecten/Lightpainting.jpg)
