@@ -11,6 +11,18 @@ color scheme:
   font-weight: normal;
   src: url("Josefin-Sans/JosefinSans-Regular.ttf") format("opentype");
 }
+@font-face {
+  font-family: "Jellyka-Western-Princess";
+  font-style: normal;
+  font-weight: normal;
+  src: url("jellyka_western_princess/Jellyka Western Princess.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Scriptina";
+  font-style: normal;
+  font-weight: normal;
+  src: url("scriptina/scriptina.ttf") format("opentype");
+}
 
 body {
  background: #FFFFE9;
