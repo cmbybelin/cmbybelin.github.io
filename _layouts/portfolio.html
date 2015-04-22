@@ -4,7 +4,6 @@
 {% include head.html %}
 
  <article class="portfolio">
-  <h1>{{ page.title }}</h1>
   <div >
   {% for photo in page.portfolio %}
    <div id="img{{ forloop.index }}" class="caroussel{% if forloop.first %} selected{% endif %}"></div>
