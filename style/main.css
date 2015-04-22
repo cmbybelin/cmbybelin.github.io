@@ -25,19 +25,127 @@ color scheme:
 }
 
 body {
- background: #FFFFE9;
+ background: #eeeeee;
  color: #5C5750;
  font-size: 15px;
  font-family: Josefin-Sans, Arial;
  line-height: 1.2em;
+ padding: 12px;
+ padding-bottom: 36px;
+}
+
+header, .signature {
+ font-family: Jellyka-Western-Princess, Verdana, Arial;
+ font-size: 45px;
+ line-height: 61px;
+ color: rgb(161, 156, 148);
+}
+
+header {
+ border-bottom: 1px solid black;
+}
+.signature {
+ text-align: right;
 }
 
 nav {
- margin: 2em 0;
+ border-top: 1px solid black;
+ margin-top: 4px;
 }
 
-article {
- margin: 2em;
+nav ul {
+ padding: 0;
+}
+
+nav ul li {
+ display: inline-block;
+ text-align: center;
+ font-size: 22px;
+ margin-right: 5em;
+}
+
+/* index */
+.teaser .img {
+ width: 100%;
+}
+
+@media (min-width: 900px) {
+ .signature {
+  margin-right: 200px;
+ }
+ .teaser {
+  display: table-row;
+ }
+
+ .teaser .img {
+  display: table-cell;
+  width: calc(100% - 12px);
+ }
+
+ .teaser .sidebar {
+  display: table-cell;
+  width: 180px;
+ }
+ .teaser span, .teaser a {
+  display: block;
+  margin-bottom: 1.2em;
+ }
+}
+
+.teaser .sidebar {
+ background-color: rgb(73, 73, 68);
+ line-height: 200%;
+ vertical-align: top;
+ padding: 12px 4px;
+}
+
+.teaser .other {
+ font-family: Times New Roman;
+ font-weight: bold;
+ font-variant: small-caps;
+ font-size: 36px;
+ color: #eee;
+}
+.teaser .newborn {
+ font-family: Courier New, Courier, monotype;
+ font-size: 27px;
+ color: #bbb;
+}
+.teaser .portrait {
+ font-family: Scriptina;
+ font-size: 35px;
+ text-align: right;
+ color: #eee;
+}
+.teaser .travel {
+ font-family: American-Typewriter;
+ font-size: 55px;
+ margin-bottom: .4em;
+ color: #eee;
+}
+.teaser .landscape {
+ font-family: Papyrus;
+ font-size: 24px;
+ text-align: right;
+ color: #eee;
+}
+.teaser .details {
+ font-family: Courier New, Courier, monotype;
+ font-size: 28px;
+ color: #bbb;
+}
+.teaser .family {
+ font-family: Scriptina;
+ font-size: 51px;
+ color: #bbb;
+ margin-bottom: .4em;
+}
+
+.teaser .portrait:hover,
+.teaser .travel:hover,
+.teaser .landscape:hover,
+.teaser .details:hover {
+ color: #fff;
 }
 
 a, a:visited, a:active {
@@ -47,35 +155,6 @@ a, a:visited, a:active {
 
 a:hover {
  color: #5B8AB2;
-}
-
-nav ul {
- padding: 0;
-}
-
-nav ul li {
- display: inline-block;
- width: 33.333%;
- text-align: center;
- font-size: 22px;
-}
-
-#etalage rect {
- stroke: #FFFFE9;
- stroke-width: 5;
-}
-#etalage text {
- font-size: 10px;
- fill: #FFFFE9;
-}
-#etalage a text {
- opacity: 0;
- -webkit-transition: opacity .5s ease-in-out;
- -o-transition: opacity .5s ease-in-out;
- transition: opacity .5s ease-in-out;
-}
-#etalage a:hover text {
- opacity: 1;
 }
 
 h1 {
@@ -100,7 +179,7 @@ h1 {
 
 .caroussel {
  position: absolute;
- top: 7em;
+ top: 132px;
  bottom: 6em;
  left: 0;
  width: 100%;
