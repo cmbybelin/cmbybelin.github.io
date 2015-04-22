@@ -61,12 +61,24 @@ nav ul li {
  display: inline-block;
  text-align: center;
  font-size: 22px;
- margin-right: 5em;
+ margin-left: 5em;
+}
+nav ul li:first-child {
+ margin-left: 0;
 }
 
 /* index */
 .teaser .img {
  width: 100%;
+}
+
+@media (max-width: 420px) {
+ header, .signature {
+  font-size: 35px;
+ }
+ nav ul li {
+  margin-left: 2em;
+ }
 }
 
 @media (min-width: 900px) {
