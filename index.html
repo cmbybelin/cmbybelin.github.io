@@ -5,41 +5,21 @@ title: Capture the Moment by Belin
 
  <article>
 
-<!-- 4 columns, 2 rows raster. -->
-<svg id="etalage" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    width="100%" height="100%" xml:space="preserve" viewBox="0 0 400 200" style="margin: auto">
- <defs>
-  <pattern id="img-detail" patternUnits="objectBoundingBox" width="100%" height="100%" >
-   <image xlink:href="frontpage/detail.jpg" width="100" height="100"></image>
-  </pattern>
-  <pattern id="img-portret" patternUnits="objectBoundingBox" width="100%" height="100%" >
-   <image xlink:href="frontpage/portret.jpg" width="100" height="100"></image>
-  </pattern>
-  <pattern id="img-reizen" patternUnits="objectBoundingBox" width="200%" height="100%" >
-   <image xlink:href="frontpage/reizen.jpg" width="200" height="101"></image>
-  </pattern>
-  <pattern id="img-flora" patternUnits="objectBoundingBox" width="200%" height="200%" >
-   <image xlink:href="frontpage/flora.jpg" width="200" height="200"></image>
-  </pattern>
- </defs>
- <a xlink:href="florafauna.html">
-  <rect x="0" y="0" width="50%" height="100%" fill="url(#img-flora)" />
-  <text x="7" y="193">Flora &amp; fauna</text>
- </a>
- <a xlink:href="detail.html">
-  <rect x="50%" y="0" width="25%" height="50%" fill="url(#img-detail)" />
-  <text x="207" y="93">Detail</text>
- </a>
- <a xlink:href="portret.html">
-  <rect x="75%" y="0" width="25%" height="50%" fill="url(#img-portret)" />
-  <text x="307" y="93">Portret</text>
- </a>
- <a xlink:href="reis-ijsland.html">
-  <rect x="50%" y="50%" width="50%" height="50%" fill="url(#img-reizen)" />
-  <text x="207" y="193">Reizen</text>
- </a>
-</svg>
-
+ <div class="teaser">
+  <img class="img" src="portfolio/fotoreizen/Ijsland 6.jpg" alt=""/>
+  <div class="sidebar">
+   <span class="other">and other fun stuff:</span>
+   <!--<span class="newborn">New Born</span>-->
+   <a href="portret.html" class="portrait">Portrait</a>
+   <a href="reis-ijsland.html" class="travel">Travel</a>
+   <a href="florafauna.html" class="landscape">Landscape</a>
+   <a href="detail.html" class="details">Details</a>
+   <!--<span class="family">Family</span>-->
+  </div>
+ </div>
+ <div class="signature">
+ by Belin
+ </div>
 </article>
 
 {% include tail.html %}
