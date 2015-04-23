@@ -34,7 +34,12 @@ body {
  padding-bottom: 36px;
 }
 
-header, .signature {
+header, nav, article {
+ max-width: 1280px;
+ margin: 0 auto;
+}
+
+header a, header a:hover, header a:visited, header a:active, .signature {
  font-family: Jellyka-Western-Princess, Verdana, Arial;
  font-size: 45px;
  line-height: 61px;
@@ -157,7 +162,9 @@ nav ul li:first-child {
 .teaser .travel:hover,
 .teaser .landscape:hover,
 .teaser .details:hover {
- color: #fff;
+ text-decoration: none;
+ text-shadow: 0 0 5px #aaa;
+ /*color: #fff;*/
 }
 
 a, a:visited, a:active {
@@ -166,7 +173,7 @@ a, a:visited, a:active {
 }
 
 a:hover {
- color: #5B8AB2;
+ color: #000;
 }
 
 h1 {
