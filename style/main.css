@@ -86,6 +86,10 @@ nav ul li:first-child {
  }
 }
 
+.teaser span, .teaser a {
+ margin: 0 .4em;
+}
+
 @media (min-width: 900px) {
  .signature {
   margin-right: 200px;
@@ -105,7 +109,7 @@ nav ul li:first-child {
  }
  .teaser span, .teaser a {
   display: block;
-  margin-bottom: 1.2em;
+  margin: 0 0 1.2em 0;
  }
 }
 
@@ -214,9 +218,7 @@ h1 {
  
 /* BLOG */
 article.blog {
- max-width: 600px;
- margin-left: auto;
- margin-right: auto;
+ max-width: 640px;
 }
 .blog img {
  max-width: 600px;
