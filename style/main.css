@@ -47,14 +47,14 @@ header a, header a:hover, header a:visited, header a:active, .signature {
 }
 
 header {
- border-bottom: 1px solid black;
+ border-bottom: 1px solid rgb(73, 73, 68);
 }
 .signature {
  text-align: right;
 }
 
 nav {
- border-top: 1px solid black;
+ border-top: 1px solid rgb(73, 73, 68);
  margin-top: 4px;
 }
 
