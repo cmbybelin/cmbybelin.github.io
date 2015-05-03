@@ -56,10 +56,12 @@ header {
 nav {
  border-top: 1px solid rgb(73, 73, 68);
  margin-top: 4px;
+ margin-bottom: 24px;
 }
 
 nav ul {
  padding: 0;
+ margin: 12px 0 0;
 }
 
 nav ul li {
@@ -188,22 +190,25 @@ h1 {
 
 .thumbnails {
  position: absolute;
- top: calc(100% - 2em);
- height: 4em;
+ bottom: 8px;
+ height: 64px;
  left: 0;
  width: 100%;
  text-align: center;
- margin: -3em auto 0;
 }
 .thumbnails img {
- height: 4em;
+ height: 64px;
  width: auto;
+ border: 1px solid transparent;
+}
+.thumbnails img.selected {
+ border: 1px solid white;
 }
 
 .caroussel {
  position: absolute;
  top: 132px;
- bottom: 6em;
+ bottom: 80px;
  left: 0;
  width: 100%;
  background-size: contain;
@@ -218,7 +223,7 @@ h1 {
  
 /* BLOG */
 article.blog {
- max-width: 640px;
+ max-width: 800px;
 }
 .blog img {
  max-width: 600px;
@@ -227,4 +232,7 @@ article.blog {
 label {
  display: block;
  margin-top: 6px;
+}
+textarea {
+ font-family: Josefin-Sans, Arial;
 }
