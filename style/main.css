@@ -29,7 +29,7 @@ body {
  color: #5C5750;
  font-size: 15px;
  font-family: Josefin-Sans, Arial;
- line-height: 1.2em;
+ line-height: 1.3em;
  padding: 12px;
  padding-bottom: 36px;
 }
@@ -74,22 +74,35 @@ nav ul li:first-child {
  margin-left: 0;
 }
 
+a, a:visited, a:active {
+ text-decoration: none;
+ color: #5C5750;
+}
+
+a:hover {
+ color: #000;
+}
+
 /* index */
 .teaser .img {
  width: 100%;
 }
 
 @media (max-width: 420px) {
- header, .signature {
+ body {
+  padding: 0px;
+ }
+ header a, .signature {
   font-size: 35px;
  }
  nav ul li {
-  margin-left: 2em;
+  margin-left: 1em;
  }
 }
 
 .teaser span, .teaser a {
  margin: 0 .4em;
+ text-decoration: none;
 }
 
 @media (min-width: 900px) {
@@ -126,7 +139,7 @@ nav ul li:first-child {
  font-family: Times New Roman;
  font-weight: bold;
  font-variant: small-caps;
- font-size: 36px;
+ font-size: 32px;
  color: #eee;
 }
 .teaser .newborn {
@@ -173,13 +186,8 @@ nav ul li:first-child {
  /*color: #fff;*/
 }
 
-a, a:visited, a:active {
- text-decoration: none;
- color: #5C5750;
-}
-
-a:hover {
- color: #000;
+article a {
+ text-decoration: underline;
 }
 
 h1 {
@@ -192,9 +200,11 @@ h1 {
  position: absolute;
  bottom: 8px;
  height: 64px;
- left: 0;
- width: 100%;
+ left: 8px;
+ width: calc(100% - 16px);
  text-align: center;
+ white-space: nowrap;
+ overflow-x: scroll;
 }
 .thumbnails img {
  height: 64px;
@@ -229,7 +239,9 @@ article.blog {
  max-width: 600px;
  max-height: 600px;
 }
-label {
+
+/* CONTACT */
+label, button {
  display: block;
  margin-top: 6px;
 }
