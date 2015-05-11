@@ -39,7 +39,7 @@ header, nav, article {
  margin: 0 auto;
 }
 
-header a {
+header a, .signature {
  font-size: 45px;
 }
 header a, header a:hover, header a:visited, header a:active, .signature {
