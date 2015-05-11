@@ -16,10 +16,39 @@
  </header>
  <nav>
   <ul>
-    <li><a href="/">Home</a></li><!--
-    --><li><a href="/portfolio.html">Portfolio</a></li><!--
-    --><li><a href="/blog.html">Blog</a></li><!--
-    --><li><a href="/contact.html">Contact</a></li>
+    <li><a href="/">Home</a></li>
+    {% if include.portfolio_section %}
+    <li class="dropdown" aria-haspopup="true"><span class="dropdown-title">{{ include.portfolio_section }}<span class="caret">&#9660;</span></span>
+    <ul class="subnav">
+     <li><a href="florafauna.html">Flora &amp; fauna</a></li>
+     <li><a href="portret.html">Portret</a></li>
+     <li><a href="detail.html">Detail</a></li>
+     <li><a href="reis-ijsland.html">Fotoreis IJsland, maart 2015</a></li>
+     <li><a href="reis-istanbul.html">Fotoreis Istanbul, november 2014</a></li>
+    </ul></li>
+    {% else %}
+    <li><a href="/portfolio.html">Portfolio</a></li>
+    {% endif %}
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/contact.html">Contact</a></li>
   </ul>
  </nav>
 
+ <script>
+  (function (document) {
+    var $dropdowns = document.querySelectorAll('.dropdown');
+    for (var i = 0; i < $dropdowns.length; i++) {
+      $dropdowns[i].addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.toggle('hover');
+      });
+    };
+
+    document.addEventListener('click', function () {
+      var $dropdowns = document.querySelectorAll('.dropdown');
+      for (var i = 0; i < $dropdowns.length; i++) {
+        $dropdowns[i].classList.remove('hover');
+      }
+    });
+  })(document);
+ </script>
