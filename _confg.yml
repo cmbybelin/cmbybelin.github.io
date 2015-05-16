@@ -1,8 +1,7 @@
 defaults:
-  - excerpt_separator: <!--more-->
   -
     scope:
       path: ""
-      type: "posts"
     values:
-      layout: "blog.html"
+      layout: "page"
+  - excerpt_separator: <!--more-->
