@@ -239,6 +239,7 @@ h1 {
  background-color: rgba(92, 87, 80, .8) /* #5C5750 */;
  padding: 0 12px 24px;
  margin: 0;
+ border-top-right-radius: 2px;
  border-bottom-left-radius: 12px;
  border-bottom-right-radius: 12px;
  position: absolute;
@@ -264,6 +265,8 @@ h1 {
 
 .dropdown.hover .subnav {
  display: block;
+ border-top-left-radius: 2px;
+ border-top-right-radius: 2px;
 }
 
 .thumbnails {
