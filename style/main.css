@@ -57,6 +57,14 @@ header h2 {
  vertical-align: bottom;
 }
 
+.external-sites {
+ float: right;
+ margin-top: 4px;
+}
+.external-sites a {
+ font-size: 24px;
+}
+
 .signature {
  text-align: right;
 }
@@ -199,7 +207,6 @@ a:hover {
 .teaser-sidebar .details:hover {
  text-decoration: none;
  text-shadow: 0 0 5px #aaa;
- /*color: #fff;*/
 }
 
 article a {
