@@ -304,13 +304,38 @@ h1 {
  background-size: contain;
  background-position: center;
  background-repeat: no-repeat;
- transition: opacity ease 2s;
+ transition: visibility 0s ease 2s, opacity ease 2s;
+ visibility: hidden;
  opacity: 0;
+ text-align: center;
+}
+.caroussel p {
 }
 .caroussel.selected {
+ visibility: visible;
+ opacity: 1;
+ transition-delay: 0s;
+}
+.caption {
+ position: absolute;
+ bottom: 0;
+ text-align: center;
+ width: 100%;
+ margin: 0;
+ min-height: 30px;
+ transition: opacity ease 1s;
+ opacity: 0;
+}
+.caroussel.selected:hover .caption {
  opacity: 1;
 }
- 
+.caroussel.selected span {
+ background: rgba(0,0,0,0.6);
+ color: #f8f8f8;
+ padding: 4px 12px;
+ border-radius: 2px;
+}
+
 /* BLOG */
 article.blog {
  max-width: 800px;
