@@ -364,7 +364,8 @@ img {
  margin-bottom: 12px;
 }
 .excerpt:first-child {
- border-color: transparent;
+ border: none;
+ padding-top: 0;
 }
 .excerpt img {
  float: left;

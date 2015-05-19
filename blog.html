@@ -8,8 +8,10 @@ excerpt: Blog posts.
 {% for post in site.posts %}
  {% assign photo = post.portfolio | first %}
  <section class="excerpt"> 
-  {% if photo.photo %}<img src="/{{ photo.photo }}" alt="{{ photo.caption }}"/>{% endif %}
-  <h2><a href="{{ post.url }}">{{ post.date | date: "%d-%m-%Y" }}: {{ post.title }}</a></h2>
+  <h2><a href="{{ post.url }}">
+   {% if photo.photo %}<img src="/{{ photo.photo }}" alt="{{ photo.caption }}"/>{% endif %}
+   {{ post.date | date: "%d-%m-%Y" }}: {{ post.title }}
+  </a></h2>
   {{ post.excerpt }}
   <p><a href="{{ post.url }}">&#8594; Lees verder</a></p>
   <div class="clearfix"></div>
