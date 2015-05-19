@@ -1,20 +1,19 @@
 ---
 excerpt: Contact informatie.
+layout: page
 ---
-{% include head.html %}
-
-<article class="blog">
 <img src="portfolio/belin.jpg" style="width: 300px; float: right; margin-right: 2em" alt="Dit ben ik"/>
-<h2>Over mij</h2>
 
-<p>Fotografie, De kunst om het juiste moment vast te leggen, een gevoel over te brengen en mensen te intrigreren.</p>
+## Over mij
 
-<p>Mijn naam is Belinda Molenaar-Terrisse, woonachtig in Hoogkarspel, Noord-Holland.
-Van kinds af aan ben ik gefascineerd door fotografie. Door middel van workshops heb ik mezelf ontwikkeld. Gedreven door passie probeer ik jullie te inspireren.</p>
+Fotografie, De kunst om het juiste moment vast te leggen, een gevoel over te brengen en mensen te intrigreren.
 
-<p>Mijn interesse gaan uit naar portret-, high fashion- en travel-fotografie.<br/>Beelden met een verhaal die voor eeuwig zijn vastgelegd.</p>
+Mijn naam is Belinda Molenaar-Terrisse, woonachtig in Hoogkarspel, Noord-Holland.
+Van kinds af aan ben ik gefascineerd door fotografie. Door middel van workshops heb ik mezelf ontwikkeld. Gedreven door passie probeer ik jullie te inspireren.
 
-<p>Enjoy!</p>
+Mijn interesse gaan uit naar portret-, high fashion- en travel-fotografie.<br/>Beelden met een verhaal die voor eeuwig zijn vastgelegd.
+
+Enjoy!
 
 <div class="vcard">
     <div class="fn org">Capture the Moment by Belin</div>
@@ -22,7 +21,7 @@ Van kinds af aan ben ik gefascineerd door fotografie. Door middel van workshops 
     <div>E-mail: <a href="mailto:cmbybelin@gmail.com" class="email">cmbybelin@gmail.com</a></div>
 </div>
 
-<p>Mocht je meer willen weten, laat dan een berichtje achter:</p>
+Mocht je meer willen weten, laat dan een berichtje achter:
 
 <form action="https://getsimpleform.com/messages?form_api_token=84cf3f47b43b7b5a616bd93710510116" method="post">
   <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
@@ -37,6 +36,3 @@ Van kinds af aan ben ik gefascineerd door fotografie. Door middel van workshops 
 
   <button type='submit'>Verzend</button>
 </form>
-
-</article>
-{% include tail.html %}

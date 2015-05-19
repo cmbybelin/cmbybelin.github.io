@@ -337,7 +337,7 @@ h1 {
 }
 
 /* BLOG */
-article.blog {
+article.page, article.blog {
  max-width: 800px;
 }
 .blog img {
