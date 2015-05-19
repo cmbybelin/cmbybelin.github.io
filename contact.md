@@ -28,11 +28,11 @@ Mocht je meer willen weten, laat dan een berichtje achter:
   <input type='hidden' name='redirect_to' value='http://cmbybelin.com/contact-thanks.html' />
 
   <label for="f_name">Naam:</label>
-  <input id="f_name" type="text" name="name" style="width:320px" required/>
+  <input id="f_name" type="text" name="name" style="width:320px" required placeholder="Je naam"/>
   <label for="f_email">E-mail:</label>
-  <input id="f_email" type="email" name="email" style="width:320px" required/>
+  <input id="f_email" type="email" name="email" style="width:320px" required placeholder="Je e-mail adres"/>
   <label for="f_message">Bericht:</label>
-  <textarea id="f_message" name="message" style="width:320px" rows="12" required></textarea>
+  <textarea id="f_message" name="message" style="width:320px" rows="12" required placeholder="Type je bericht hier"></textarea>
 
   <button type='submit'>Verzend</button>
 </form>

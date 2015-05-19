@@ -386,8 +386,19 @@ label, button {
  display: block;
  margin-top: 6px;
 }
-textarea {
+button, input, textarea {
  font-family: Josefin-Sans, Arial;
+ font-size: 15px;
+}
+input, textarea {
+ border: 1px solid #aaa;
+ background-color: white;
+}
+button {
+ background: rgb(192, 222, 255);
+ border-radius: 2px;
+ border: 1px solid #aaa;
+ padding: 4px 8px 3px;
 }
 
 
