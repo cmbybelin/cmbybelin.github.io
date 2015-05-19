@@ -25,7 +25,7 @@ color scheme:
 }
 
 body {
- background: #f8f8f8;
+ background: #fefefe;
  color: #5C5750;
  font-size: 15px;
  font-family: Josefin-Sans, Arial;
@@ -115,6 +115,8 @@ a:hover {
 .teaser .img img {
  display: block;
  width: 100%;
+ border: none;
+ padding: 0;
 }
 
 @media (max-width: 740px) {
@@ -220,6 +222,11 @@ h1 {
 
 article.page {
  max-width: 800px;
+}
+
+img {
+ border: 1px solid #aaa;
+ padding: 4px;
 }
 
 .dropdown {
@@ -370,10 +377,6 @@ article.page {
  margin: 0 0 0 16px;
 }
 
-img {
- border: 1px solid #aaa;
- padding: 4px;
-}
 .blog .photo {
  text-align: center;
 }
