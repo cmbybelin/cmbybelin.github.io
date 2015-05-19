@@ -1,0 +1,14 @@
+
+{% include head.html %}
+
+<article class="blog page">
+ <h1>{{ page.title }}</h1>
+ {{ content }}
+
+ {% for photo in page.portfolio %}
+ <p class="photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}"/></p>
+ {% endfor %}
+ 
+</article>
+
+{% include tail.html %}
