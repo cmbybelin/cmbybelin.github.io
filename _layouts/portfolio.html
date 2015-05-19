@@ -43,10 +43,10 @@
        for (var i = 0; i < $caroussel.length; i++) {
          $caroussel[i].addEventListener('touchstart', function (e) {
 	   startX = e.pageX;
+	   event.preventDefault();
 	 });
          $caroussel[i].addEventListener('touchmove', function (e) {
-	   var selectedImg = document.querySelector('.caroussel.selected');
-	   console.log('touchmove', e.pageX);
+	   event.preventDefault();
 	 });
          $caroussel[i].addEventListener('touchend', function (e) {
 	   var selectedImg = document.querySelector('.caroussel.selected');
@@ -67,6 +67,7 @@
 	   } else {
 	     selectedImg.classList.add('selected');
 	   }
+	   event.preventDefault();
 	 });
 
        }
