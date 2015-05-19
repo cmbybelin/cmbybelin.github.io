@@ -20,23 +20,57 @@
  </article>
 
  <script>
-    var $caroussel = document.querySelectorAll('.caroussel');
-    var $thumbnails = document.querySelectorAll('.thumbnails img');
-    for (var i = 0; i < $thumbnails.length; i++) {
-      $thumbnails[i].addEventListener('click', function() {
-        var selectedImg = document.querySelector('.caroussel.selected');
-        var selectedThumbnail = document.querySelector('.thumbnails img.selected');
-        var id = this.getAttribute('rel');
-        if (selectedImg) {
-          selectedImg.classList.remove('selected');
-        }
-        if (selectedThumbnail) {
-          selectedThumbnail.classList.remove('selected');
-        }
-        this.classList.add('selected');
-        document.getElementById(id).classList.add('selected');
-      });
-    }
+    (function (document) {
+       var $caroussel = document.querySelectorAll('.caroussel');
+       var $thumbnails = document.querySelectorAll('.thumbnails img');
+       for (var i = 0; i < $thumbnails.length; i++) {
+	 $thumbnails[i].addEventListener('click', function() {
+	   var selectedImg = document.querySelector('.caroussel.selected');
+	   var selectedThumbnail = document.querySelector('.thumbnails img.selected');
+	   var id = this.getAttribute('rel');
+	   if (selectedImg) {
+	     selectedImg.classList.remove('selected');
+	   }
+	   if (selectedThumbnail) {
+	     selectedThumbnail.classList.remove('selected');
+	   }
+	   this.classList.add('selected');
+	   document.getElementById(id).classList.add('selected');
+	 });
+       }
+
+       var startX;
+       for (var i = 0; i < $caroussel.length; i++) {
+         $caroussel[i].addEventListener('touchstart', function (e) {
+	   startX = e.pageX;
+	 });
+         $caroussel[i].addEventListener('touchmove', function (e) {
+	   var selectedImg = document.querySelector('.caroussel.selected');
+	   console.log('touchmove', e.pageX);
+	 });
+         $caroussel[i].addEventListener('touchend', function (e) {
+	   var selectedImg = document.querySelector('.caroussel.selected');
+	   var delta = document.width / 10;
+	   selectedImg.classList.remove('selected');
+	   if (e.pageX - startX > delta) {
+	     if (selectedImg.previousElementSibling) {
+	       selectedImg.previousElementSibling.classList.add('selected');
+	     } else {
+	       selectedImg.parentElement.lastElementChild.classList.add('selected');
+	     }
+	   } else if (startX - e.pageX > delta) {
+	     if (selectedImg.nextElementSibling) {
+	       selectedImg.nextElementSibling.classList.add('selected');
+	     } else {
+	       selectedImg.parentElement.firstElementChild.classList.add('selected');
+	     }
+	   } else {
+	     selectedImg.classList.add('selected');
+	   }
+	 });
+
+       }
+     })(document);
  </script>
 
 {% include tail.html %}

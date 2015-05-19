@@ -227,6 +227,10 @@ article.page {
 img {
  border: 1px solid #aaa;
  padding: 4px;
+ user-select: none;
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
 }
 
 .dropdown {
