@@ -41,7 +41,7 @@
        var startX;
        for (var i = 0; i < $caroussel.length; i++) {
          $caroussel[i].addEventListener('touchstart', function (e) {
-	   startX = e.pageX;
+	   startX = e.changedTouches[0].screenX;
 	   event.preventDefault();
 	 });
          $caroussel[i].addEventListener('touchmove', function (e) {
@@ -49,15 +49,16 @@
 	 });
          $caroussel[i].addEventListener('touchend', function (e) {
 	   var selectedImg = document.querySelector('.caroussel.selected');
-	   var delta = document.width / 10;
+	   var delta = document.body.clientWidth / 10;
+           var endX = e.changedTouches[0].screenX;
 	   selectedImg.classList.remove('selected');
-	   if (e.pageX - startX > delta) {
+	   if (endX - startX > delta) {
 	     if (selectedImg.previousElementSibling) {
 	       selectedImg.previousElementSibling.classList.add('selected');
 	     } else {
 	       selectedImg.parentElement.lastElementChild.classList.add('selected');
 	     }
-	   } else if (startX - e.pageX > delta) {
+	   } else if (startX - endX > delta) {
 	     if (selectedImg.nextElementSibling) {
 	       selectedImg.nextElementSibling.classList.add('selected');
 	     } else {
