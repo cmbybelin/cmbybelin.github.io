@@ -1,9 +1,16 @@
 # excerpt_separator: "<!--more-->"
 defaults:
-  -
-    scope:
+  - scope:
        path: ""
        type: "posts"
     values:
-        layout: "blog"
+       layout: "blog"
+  - scope:
+       path: ""
+       type: "portfolio"
+    values:
+       layout: "portfolio"
 
+collections:
+  portfolio:
+    output: true

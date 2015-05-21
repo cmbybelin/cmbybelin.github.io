@@ -7,14 +7,14 @@
   <div>
   {% for photo in page.portfolio %}
    <div id="img{{ forloop.index }}" class="caroussel{% if forloop.first %} selected{% endif %}">
-    <img src="{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}"/>
+    <img src="{{ page.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}"/>
     {% if photo.caption %}<p class="caption"><span>{{ photo.caption | newline_to_br }}</span></p>{% endif %}
    </div>
   {% endfor %}
   </div>
   <div class="thumbnails">
   {% for photo in page.portfolio %}
-   <img rel="img{{ forloop.index }}" src="{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}"{% if forloop.first %} class="selected"{% endif %}/>
+   <img rel="img{{ forloop.index }}" src="{{ page.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}"{% if forloop.first %} class="selected"{% endif %}/>
   {% endfor %}
   </div>
  </article>
