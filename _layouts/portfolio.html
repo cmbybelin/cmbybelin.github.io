@@ -6,8 +6,7 @@
  <article class="portfolio">
   <div>
   {% for photo in page.portfolio %}
-   <div id="img{{ forloop.index }}" class="caroussel{% if forloop.first %} selected{% endif %}">
-    <img src="/portfolio/{{ page.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}"/>
+   <div id="img{{ forloop.index }}" class="caroussel{% if forloop.first %} selected{% endif %}" style="background-image: url('/portfolio/{{ page.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }}')"/>
     {% if photo.caption %}<p class="caption"><span>{{ photo.caption | newline_to_br }}</span></p>{% endif %}
    </div>
   {% endfor %}
