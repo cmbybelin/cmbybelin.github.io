@@ -1,0 +1,9 @@
+# excerpt_separator: "<!--more-->"
+defaults:
+  -
+    scope:
+       path: ""
+       type: "posts"
+    values:
+        layout: "blog"
+

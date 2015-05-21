@@ -1,6 +1,5 @@
 ---
 title: On Air
-layout: blog
 portfolio:
   - photo: portfolio/projecten/Lightpainting.jpg
 ---
