@@ -1,3 +1,5 @@
+rm -rf thumbs
 mkdir thumbs
-cp portfolio/* thumbs
-sips --resampleWidth 200 thumbs/*
+cp -r _portfolio/* thumbs
+rm thumbs/*.markdown
+sips --resampleWidth 200 thumbs/*/*
