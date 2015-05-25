@@ -9,7 +9,7 @@ excerpt: Blog posts.
  {% assign photo = post.portfolio | first %}
  <section class="excerpt"> 
   <h2><a href="{{ post.url }}">
-   {% if photo.photo %}<img src="/{{ photo.photo }}" alt="{{ photo.caption }}"/>{% endif %}
+   {% if photo.photo %}<img src="/{{ photo.photo }}" alt="{{ photo.caption }}" draggable="false"/>{% endif %}
    {{ post.date | date: "%d-%m-%Y" }}: {{ post.title }}
   </a></h2>
   {{ post.excerpt }}

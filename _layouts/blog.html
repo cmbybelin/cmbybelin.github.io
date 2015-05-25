@@ -6,7 +6,7 @@
  {{ content }}
 
  {% for photo in page.portfolio %}
- <p class="photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}"/></p>
+ <p class="photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/></p>
  {% endfor %}
  
 </article>
