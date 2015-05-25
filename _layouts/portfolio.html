@@ -41,15 +41,28 @@
        var startX;
        for (var i = 0; i < $caroussel.length; i++) {
          $caroussel[i].addEventListener('touchstart', function (e) {
+           // fade:
+           var selectedImg = document.querySelector('.caroussel.selected');
+           selectedImg.style.transition = 'none';
+           // next/prev:
 	   startX = e.changedTouches[0].screenX;
-	   event.preventDefault();
 	 });
          $caroussel[i].addEventListener('touchmove', function (e) {
-	   event.preventDefault();
+           // fade:
+           var selectedImg = document.querySelector('.caroussel.selected');
+           var width = document.body.clientWidth * 1.2;
+           var endX = e.changedTouches[0].screenX;
+           selectedImg.style.opacity = 1.0 - (Math.abs(endX - startX) / width);
+           // next/prev:
+	   e.preventDefault();
 	 });
          $caroussel[i].addEventListener('touchend', function (e) {
-	   var selectedImg = document.querySelector('.caroussel.selected');
-	   var delta = document.body.clientWidth / 10;
+           // fade:
+           var selectedImg = document.querySelector('.caroussel.selected');
+           selectedImg.style.opacity = '';
+           selectedImg.style.transition = '';
+           // next/prev:
+           var delta = document.body.clientWidth / 10;
            var endX = e.changedTouches[0].screenX;
 	   selectedImg.classList.remove('selected');
 	   if (endX - startX > delta) {
@@ -67,7 +80,6 @@
 	   } else {
 	     selectedImg.classList.add('selected');
 	   }
-	   event.preventDefault();
 	 });
 
        }
