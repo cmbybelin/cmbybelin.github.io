@@ -1,4 +1,6 @@
 # excerpt_separator: "<!--more-->"
+url: http://cmbybelin.com
+name: Capture the Moment by Belin
 defaults:
   - scope:
        path: ""
