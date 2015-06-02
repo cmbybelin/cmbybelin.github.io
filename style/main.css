@@ -30,8 +30,7 @@ body {
  font-size: 15px;
  font-family: Josefin-Sans, Arial;
  line-height: 1.3em;
- padding: 12px;
- padding-bottom: 36px;
+ padding: 0 12px 36px;
 }
 
 header, nav, article {
@@ -39,10 +38,12 @@ header, nav, article {
  margin: 0 auto;
 }
 
-header a, .signature {
- font-size: 45px;
+.title {
+ display: block;
+ padding-top: 12px;
 }
-header a, header a:hover, header a:visited, header a:active, .signature {
+.title, .title:hover, .title:visited, .title:active, .signature {
+ font-size: 45px;
  font-family: Jellyka-Western-Princess, Verdana, Arial;
  line-height: 61px;
  color: rgb(161, 156, 148);
