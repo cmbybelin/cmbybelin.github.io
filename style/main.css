@@ -47,6 +47,7 @@ header, nav, article {
  font-family: Jellyka-Western-Princess, Verdana, Arial;
  line-height: 61px;
  color: rgb(161, 156, 148);
+ text-shadow: 1px 1px 3px #ede6da;
 }
 
 header {
