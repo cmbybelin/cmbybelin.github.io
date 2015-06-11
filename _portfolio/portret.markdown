@@ -3,6 +3,12 @@ title: Portret
 excerpt: Portret
 portfolio_folder: portret
 portfolio:
+  - photo: danique.jpg
+    caption: Danique de Jong
+  - photo: Shirley.jpg
+    caption: Shirley Oostenbrink
+  - photo: Maureen.jpg
+    caption: Maureen Stieltjes
   - photo: Belinda 06.jpg
   - photo: Isabel 1.jpg
     caption: Isabel
@@ -23,3 +29,4 @@ portfolio:
   - photo: model 4.04.jpg
     caption:
 ---
+ 
