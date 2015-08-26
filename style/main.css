@@ -41,6 +41,7 @@ header, nav, article {
 .title {
  display: block;
  padding-top: 12px;
+ white-space: nowrap;
 }
 .title, .title:hover, .title:visited, .title:active, .signature {
  font-size: 45px;
@@ -125,7 +126,7 @@ a:hover {
  body {
   padding: 0px;
  }
- header a, .signature {
+ header .title, .signature {
   font-size: 35px;
  }
  nav ul li {
