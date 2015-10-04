@@ -43,14 +43,15 @@ header, nav, article {
  padding-top: 12px;
  white-space: nowrap;
 }
-.title, .title:hover, .title:visited, .title:active, .signature {
+.title,  .signature {
  font-size: 45px;
  font-family: Jellyka-Western-Princess, Verdana, Arial;
  line-height: 61px;
- color: rgb(161, 156, 148);
  text-shadow: 1px 1px 3px #ede6da;
 }
-
+.title, .title:hover, .title:visited, .title:active {
+ color: rgb(161, 156, 148);
+}
 header {
  border-bottom: 1px solid rgb(73, 73, 68);
 }
