@@ -34,7 +34,7 @@
 	 });
        }
 
-       var startX;
+       var startX, startY;
 
        for (var i = 0; i < $caroussel.length; i++) {
          $caroussel[i].addEventListener('touchstart', function (e) {
@@ -43,14 +43,17 @@
            selectedImg.style.transition = 'none';
            // next/prev:
 	   startX = e.changedTouches[0].screenX;
+	   startY = e.changedTouches[0].screenY;
 	 });
 
          $caroussel[i].addEventListener('touchmove', function (e) {
            // fade:
            var selectedImg = document.querySelector('.caroussel.selected');
-           var width = document.body.clientWidth * 1.2;
+           var width = document.width * 1.2;
+           var height = document.height * 1.2;
            var endX = e.changedTouches[0].screenX;
-           selectedImg.style.opacity = 1.0 - (Math.abs(endX - startX) / width);
+           var endY = e.changedTouches[0].screenY;
+           selectedImg.style.opacity = Math.max(1.0 - Math.max((Math.abs(endX - startX) / width), (Math.abs(endY - startY) / height)), 0.3);
            // next/prev:
 	   e.preventDefault();
 	 });
@@ -61,16 +64,18 @@
            selectedImg.style.opacity = '';
            selectedImg.style.transition = '';
            // next/prev:
-           var delta = document.body.clientWidth / 10;
+           var dWidth = document.width / 6;
+           var dHeight = document.height / 6;
            var endX = e.changedTouches[0].screenX;
+           var endY = e.changedTouches[0].screenY;
 	   selectedImg.classList.remove('selected');
-	   if (endX - startX > delta) {
+	   if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
 	     if (selectedImg.previousElementSibling) {
 	       selectedImg.previousElementSibling.classList.add('selected');
 	     } else {
 	       selectedImg.parentElement.lastElementChild.classList.add('selected');
 	     }
-	   } else if (startX - endX > delta) {
+	   } else if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
 	     if (selectedImg.nextElementSibling) {
 	       selectedImg.nextElementSibling.classList.add('selected');
 	     } else {
