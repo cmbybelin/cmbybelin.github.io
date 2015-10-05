@@ -3,6 +3,7 @@
 
 {% include head.html portfolio_section=page.title %}
 
+ <h2>{{ page.title }}</h2>
  <article class="portfolio">
   <div>
   {% for photo in page.portfolio %}
@@ -69,17 +70,17 @@
            var endX = e.changedTouches[0].screenX;
            var endY = e.changedTouches[0].screenY;
 	   selectedImg.classList.remove('selected');
-	   if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
-	     if (selectedImg.previousElementSibling) {
-	       selectedImg.previousElementSibling.classList.add('selected');
-	     } else {
-	       selectedImg.parentElement.lastElementChild.classList.add('selected');
-	     }
-	   } else if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
+           if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
 	     if (selectedImg.nextElementSibling) {
 	       selectedImg.nextElementSibling.classList.add('selected');
 	     } else {
 	       selectedImg.parentElement.firstElementChild.classList.add('selected');
+	     }
+	   } else if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
+	     if (selectedImg.previousElementSibling) {
+	       selectedImg.previousElementSibling.classList.add('selected');
+	     } else {
+	       selectedImg.parentElement.lastElementChild.classList.add('selected');
 	     }
 	   } else {
 	     selectedImg.classList.add('selected');

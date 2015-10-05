@@ -16,21 +16,22 @@
    <a href="https://www.facebook.com/cmbybelin" title="Facebook"><i class="fa fa-facebook-official"></i></a>&nbsp;&nbsp;
    <a href="/feed.xml" title="RSS feed"><i class="fa fa-rss"></i></a>
   </div>
-  <a class="title" href="/">Capture the Moment</a>
- </header>
- <nav>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li class="dropdown" aria-haspopup="true"><span class="dropdown-title">{% if include.portfolio_section %}{{ include.portfolio_section }}{% else %}Portfolio{% endif %}<span class="caret">&#9660;</span></span>
-    <ul class="subnav">
+  <h1><a href="/">Capture the Moment</a></h1>
+  <nav>
+   <ul>
+    <li class="dropdown" aria-haspopup="true">
+     <span class="dropdown-title small">{% if include.portfolio_section %}{{ include.portfolio_section }}{% else %}Portfolio{% endif %}<span class="caret">&#9660;</span></span>
+     <span class="dropdown-title wide">Portfolio<span class="caret">&#9660;</span></span>
+     <ul class="subnav">
 {% for portfolio in site.portfolio %}
-     <li><a href="{{ portfolio.url }}">{{ portfolio.excerpt }}</a></li>
+      <li><a href="{{ portfolio.url }}">{{ portfolio.excerpt }}</a></li>
 {% endfor %}
-    </ul></li>
+     </ul></li>
     <li><a href="/blog.html">Blog</a></li>
     <li><a href="/contact.html">Contact</a></li>
-  </ul>
- </nav>
+   </ul>
+  </nav>
+ </header>
 
  <script>
   (function (document) {

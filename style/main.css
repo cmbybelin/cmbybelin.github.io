@@ -25,15 +25,12 @@ color scheme:
 }
 
 body {
- background: #fefefe;
+ background: white;
  color: #5C5750;
  font-size: 15px;
  font-family: Josefin-Sans, Arial;
  line-height: 1.3em;
  padding: 0;
-}
-header {
- border-bottom: 1px solid rgb(73, 73, 68);
 }
 header, nav, article {
  max-width: 1280px;
@@ -47,25 +44,33 @@ header h2 {
 article.page {
  max-width: 800px;
 }
+
 h1 {
- text-align: center;
-}
-
-
-.title {
  display: block;
  padding-top: 12px;
  white-space: nowrap;
+ margin: 0;
 }
-.title,  .signature {
+h1,  .signature {
+ color: rgb(161, 156, 148);
+ padding-left: 12px;
  font-size: 35px;
+ font-weight: normal;
  font-family: Jellyka-Western-Princess, Verdana, Arial;
  line-height: 61px;
  text-shadow: 1px 1px 3px #ede6da;
 }
-.title, .title:hover, .title:visited, .title:active {
+h1 a, h1 a:hover, h1 a:visited, h1 a:active {
  color: rgb(161, 156, 148);
 }
+h2 {
+ text-align: center;
+ font-size: 18px;
+ font-weight: normal;
+ margin: 0;
+ display: none;
+}
+
 
 .external-sites {
  float: right;
@@ -80,22 +85,23 @@ h1 {
 }
 
 nav {
- border-top: 1px solid rgb(73, 73, 68);
- margin-bottom: 24px;
- margin-top: 4px;
+ border-bottom: 1px solid rgb(161, 156, 148);
+ margin-bottom: 12px;
+ padding: 0 12px;
+ font-weight: bold;
 }
 
 nav ul {
  padding: 0;
- margin: 4px 0 0;
+ margin: 0;
 }
 
 nav ul li {
  display: inline-block;
  font-size: 18px;
- margin-right: 12px;
- padding-top: 8px;
+ margin-right: 16px;
  white-space: nowrap;
+ padding-top: 8px;
 }
 nav ul li:last-child {
  margin-right: 0;
@@ -132,12 +138,13 @@ img {
  border-top-left-radius: 2px;
  border-top-right-radius: 2px;
 }
-.dropdown .dropdown-title {
- font-weight: bold;
+.dropdown-title {
  padding-left: 12px;
  padding-bottom: 4px;
 }
-
+.dropdown-title.wide {
+ display: none;
+}
 .dropdown.hover {
  background-color: #5C5750;
  color: #ddd;
@@ -377,19 +384,39 @@ button {
  }
 }
 
-@media (min-width: 740px) {
- body {
-  padding: 0 12px 36px;
+@media (min-width: 600px) {
+ h1 {
+  float: left;
+  padding-top: 16px;
  }
- .title, .signature {
-  font-size: 45px;
+ h2 {
+  display: block;
  }
- nav ul li {
-  margin-right: 110px;
+ .dropdown-title.small {
+  display: none;
+ }
+ .dropdown-title.wide {
+  display: inline;
+ }
+
+ nav {
+  text-align: right;
+  clear: right;
+  padding-bottom: 18px;
  }
  .blog img {
   max-width: 600px;
   max-height: 600px;
+ }
+}
+
+@media (min-width: 740px) {
+ body {
+  padding: 0 12px 36px;
+ }
+ h1, .signature {
+  padding-top: 14px;
+  font-size: 45px;
  }
 }
 
