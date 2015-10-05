@@ -2,9 +2,10 @@
 excerpt: Contact informatie.
 layout: page
 ---
-<img src="portfolio/belin.jpg" style="width: 300px; float: right; margin-right: 2em" alt="Dit ben ik"/>
-
 ## Over mij
+
+<img src="portfolio/belin.jpg" class="me" alt="Dit ben ik"/>
+
 
 Fotografie, De kunst om het juiste moment vast te leggen, een gevoel over te brengen en mensen te intrigreren.
 
