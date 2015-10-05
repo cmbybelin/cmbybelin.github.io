@@ -1,6 +1,7 @@
 /*
 color scheme:
- background: #FCF2E1
+ background: #FFFFFF
+ title: 
  text: #5C5750
  accent/hover: #5B8AB2
 */
@@ -52,16 +53,15 @@ h1 {
  margin: 0;
 }
 h1,  .signature {
- color: rgb(161, 156, 148);
+ color: #CCC4D1;
  padding-left: 12px;
  font-size: 35px;
  font-weight: normal;
  font-family: Jellyka-Western-Princess, Verdana, Arial;
  line-height: 61px;
- text-shadow: 1px 1px 3px #ede6da;
 }
 h1 a, h1 a:hover, h1 a:visited, h1 a:active {
- color: rgb(161, 156, 148);
+ color: #CCC4D1;
 }
 h2 {
  text-align: center;
@@ -85,7 +85,8 @@ h2 {
 }
 
 nav {
- border-bottom: 1px solid rgb(161, 156, 148);
+ color: #7D6F85;
+ border-bottom: 1px solid #7D6F85;
  margin-bottom: 12px;
  padding: 0 12px;
  font-weight: bold;
@@ -109,7 +110,7 @@ nav ul li:last-child {
 
 a, a:visited, a:active {
  text-decoration: none;
- color: #5C5750;
+ color: #7D6F85;
 }
 
 a:hover {
@@ -203,7 +204,7 @@ img {
 }
 
 .teaser-sidebar {
- background-color: rgb(73, 73, 68);
+ background-color: #5C5750;
  line-height: 200%;
  vertical-align: top;
  padding: 12px 4px;
