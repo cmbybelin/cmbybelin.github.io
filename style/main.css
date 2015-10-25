@@ -186,12 +186,12 @@ img {
 
 
 /* INDEX */
-.teaser .img {
+.teaser .slideshow {
  display: block;
  width: 100%;
  margin-bottom: 12px;
 }
-.teaser .img img {
+.teaser .slideshow img {
  display: block;
  width: 100%;
  border: none;
@@ -471,7 +471,7 @@ button {
   display: table-row;
  }
 
- .teaser .img {
+ .teaser .slideshow {
   display: table-cell;
   padding-right: 12px;
   margin-bottom: 0;
