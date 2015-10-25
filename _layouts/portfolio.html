@@ -5,13 +5,15 @@
 
  <h2>{{ page.title }}</h2>
  <article class="portfolio">
-  <div>
+  <div class="photo">
   {% for photo in page.portfolio %}
    <div id="img{{ forloop.index }}" class="caroussel{% if forloop.first %} selected{% endif %}" style="background-image: url('/portfolio/{{ page.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }}')"/>
     {% if photo.caption %}<p class="caption"><span>{{ photo.caption | newline_to_br }}</span></p>{% endif %}
    </div>
   {% endfor %}
   </div>
+   <div class="navigate previous"><span>&lt;</span></div>
+   <div class="navigate next"><span>&gt;</span></div>
   <div class="thumbnails">
   {% for photo in page.portfolio %}
    <img rel="img{{ forloop.index }}" src="/thumbs/{{ page.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/>
@@ -25,15 +27,21 @@
        var $thumbnails = document.querySelectorAll('.thumbnails img');
 
        for (var i = 0; i < $thumbnails.length; i++) {
-	 $thumbnails[i].addEventListener('click', function() {
-	   var selectedImg = document.querySelector('.caroussel.selected');
-	   var id = this.getAttribute('rel');
-	   if (selectedImg) {
-	     selectedImg.classList.remove('selected');
-	   }
-	   document.getElementById(id).classList.add('selected');
-	 });
+         $thumbnails[i].addEventListener('click', function() {
+           var selectedImg = document.querySelector('.caroussel.selected');
+           var id = this.getAttribute('rel');
+           if (selectedImg) {
+             selectedImg.classList.remove('selected');
+           }
+           document.getElementById(id).classList.add('selected');
+         });
        }
+
+       var $next = document.querySelector('.navigate.next');
+       var $previous = document.querySelector('.navigate.previous');
+
+       $next.addEventListener('click', selectNext);
+       $previous.addEventListener('click', selectPrevious);
 
        var startX, startY;
 
@@ -43,9 +51,9 @@
            var selectedImg = document.querySelector('.caroussel.selected');
            selectedImg.style.transition = 'none';
            // next/prev:
-	   startX = e.changedTouches[0].screenX;
-	   startY = e.changedTouches[0].screenY;
-	 });
+           startX = e.changedTouches[0].screenX;
+           startY = e.changedTouches[0].screenY;
+         });
 
          $caroussel[i].addEventListener('touchmove', function (e) {
            // fade:
@@ -56,36 +64,46 @@
            var endY = e.changedTouches[0].screenY;
            selectedImg.style.opacity = Math.max(1.0 - Math.max((Math.abs(endX - startX) / width), (Math.abs(endY - startY) / height)), 0.3);
            // next/prev:
-	   e.preventDefault();
-	 });
+           e.preventDefault();
+         });
 
          $caroussel[i].addEventListener('touchend', function (e) {
-           // fade:
-           var selectedImg = document.querySelector('.caroussel.selected');
-           selectedImg.style.opacity = '';
-           selectedImg.style.transition = '';
-           // next/prev:
            var dWidth = document.width / 6;
            var dHeight = document.height / 6;
            var endX = e.changedTouches[0].screenX;
            var endY = e.changedTouches[0].screenY;
-	   selectedImg.classList.remove('selected');
            if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
-	     if (selectedImg.nextElementSibling) {
-	       selectedImg.nextElementSibling.classList.add('selected');
-	     } else {
-	       selectedImg.parentElement.firstElementChild.classList.add('selected');
-	     }
-	   } else if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
-	     if (selectedImg.previousElementSibling) {
-	       selectedImg.previousElementSibling.classList.add('selected');
-	     } else {
-	       selectedImg.parentElement.lastElementChild.classList.add('selected');
-	     }
-	   } else {
-	     selectedImg.classList.add('selected');
-	   }
-	 });
+             selectNext();
+           } else if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
+             selectPrevious();
+           }
+         });
+
+         function unselect() {
+           var selectedImg = document.querySelector('.caroussel.selected');
+           selectedImg.style.opacity = '';
+           selectedImg.style.transition = '';
+           selectedImg.classList.remove('selected');
+           return selectedImg;
+         }
+
+         function selectNext() {
+           var selectedImg = unselect();
+           if (selectedImg.nextElementSibling) {
+             selectedImg.nextElementSibling.classList.add('selected');
+           } else {
+             selectedImg.parentElement.firstElementChild.classList.add('selected');
+           }
+         }
+
+         function selectPrevious() {
+           var selectedImg = unselect();
+           if (selectedImg.previousElementSibling) {
+             selectedImg.previousElementSibling.classList.add('selected');
+           } else {
+             selectedImg.parentElement.lastElementChild.classList.add('selected');
+           }
+         }
        }
      })(document);
  </script>

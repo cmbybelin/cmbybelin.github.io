@@ -265,7 +265,7 @@ article a {
 }
 .thumbnails {
  position: absolute;
- bottom: 8px;
+ bottom: 0px;
  height: 64px;
  left: 8px;
  width: calc(100% - 16px);
@@ -282,13 +282,22 @@ article a {
 .thumbnails img.selected {
  border: 1px solid white;
 }
-
+.photo {
+ position: absolute;
+ top: 120px;
+ bottom: 72px;
+ left: 0;
+ right: 0;
+}
+.navigate {
+ display: none;
+}
 .caroussel {
  position: absolute;
- top: 132px;
- bottom: 80px;
+ top: 0;
+ bottom: 0;
  left: 0;
- width: 100%;
+ right: 0;
  background-size: contain;
  background-position: center;
  background-repeat: no-repeat;
@@ -404,6 +413,34 @@ button {
   text-align: right;
   clear: right;
   padding-bottom: 18px;
+ }
+ .navigate {
+  display: block;
+  position: absolute;
+  top: 120px;
+  bottom: 72px;
+  width: 30%;
+  text-align: center;
+  font-size: 400%;
+  color: #CCC4D1;
+  padding-top: 20%;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+ }
+ .navigate span {
+  visibility: hidden;
+ }
+ .navigate:hover span {
+  visibility: visible;
+ }
+ .navigate.previous {
+  left: 0;
+ }
+ .navigate.next {
+  right: 0;
  }
  .blog img {
   max-width: 600px;
