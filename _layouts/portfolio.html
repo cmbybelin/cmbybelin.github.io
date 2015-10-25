@@ -41,69 +41,78 @@
        var $previous = document.querySelector('.navigate.previous');
 
        $next.addEventListener('click', selectNext);
+       $next.addEventListener('touchstart', handleTouchStart);
+       $next.addEventListener('touchmove', handleTouchMove);
+       $next.addEventListener('touchend', handleTouchEnd);
        $previous.addEventListener('click', selectPrevious);
+       $previous.addEventListener('touchstart', handleTouchStart);
+       $previous.addEventListener('touchmove', handleTouchMove);
+       $previous.addEventListener('touchend', handleTouchEnd);
 
        var startX, startY;
 
        for (var i = 0; i < $caroussel.length; i++) {
-         $caroussel[i].addEventListener('touchstart', function (e) {
-           // fade:
-           var selectedImg = document.querySelector('.caroussel.selected');
-           selectedImg.style.transition = 'none';
-           // next/prev:
-           startX = e.changedTouches[0].screenX;
-           startY = e.changedTouches[0].screenY;
-         });
+         $caroussel[i].addEventListener('touchstart', handleTouchStart);
+         $caroussel[i].addEventListener('touchmove', handleTouchMove);
+         $caroussel[i].addEventListener('touchend', handleTouchEnd);
+       }
 
-         $caroussel[i].addEventListener('touchmove', function (e) {
-           // fade:
-           var selectedImg = document.querySelector('.caroussel.selected');
-           var width = document.width * 1.2;
-           var height = document.height * 1.2;
-           var endX = e.changedTouches[0].screenX;
-           var endY = e.changedTouches[0].screenY;
-           selectedImg.style.opacity = Math.max(1.0 - Math.max((Math.abs(endX - startX) / width), (Math.abs(endY - startY) / height)), 0.3);
-           // next/prev:
-           e.preventDefault();
-         });
+       function handleTouchStart(e) {
+         // fade:
+         var selectedImg = document.querySelector('.caroussel.selected');
+         selectedImg.style.transition = 'none';
+         // next/prev:
+         startX = e.changedTouches[0].screenX;
+         startY = e.changedTouches[0].screenY;
+       }
 
-         $caroussel[i].addEventListener('touchend', function (e) {
-           var dWidth = document.width / 6;
-           var dHeight = document.height / 6;
-           var endX = e.changedTouches[0].screenX;
-           var endY = e.changedTouches[0].screenY;
-           if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
-             selectNext();
-           } else if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
-             selectPrevious();
-           }
-         });
+       function handleTouchMove(e) {
+	 // fade:
+	 var selectedImg = document.querySelector('.caroussel.selected');
+	 var width = document.width * 1.2;
+	 var height = document.height * 1.2;
+	 var endX = e.changedTouches[0].screenX;
+	 var endY = e.changedTouches[0].screenY;
+	 selectedImg.style.opacity = Math.max(1.0 - Math.max((Math.abs(endX - startX) / width), (Math.abs(endY - startY) / height)), 0.3);
+	 e.preventDefault();
+       }
 
-         function unselect() {
-           var selectedImg = document.querySelector('.caroussel.selected');
-           selectedImg.style.opacity = '';
-           selectedImg.style.transition = '';
-           selectedImg.classList.remove('selected');
-           return selectedImg;
-         }
+       function handleTouchEnd(e) {
+	 var dWidth = document.width / 6;
+	 var dHeight = document.height / 6;
+	 var endX = e.changedTouches[0].screenX;
+	 var endY = e.changedTouches[0].screenY;
+	 if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
+	   selectNext();
+	 } else if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
+	   selectPrevious();
+	 }
+       }
 
-         function selectNext() {
-           var selectedImg = unselect();
-           if (selectedImg.nextElementSibling) {
-             selectedImg.nextElementSibling.classList.add('selected');
-           } else {
-             selectedImg.parentElement.firstElementChild.classList.add('selected');
-           }
-         }
+       function unselect() {
+	 var selectedImg = document.querySelector('.caroussel.selected');
+	 selectedImg.style.opacity = '';
+	 selectedImg.style.transition = '';
+	 selectedImg.classList.remove('selected');
+	 return selectedImg;
+       }
 
-         function selectPrevious() {
-           var selectedImg = unselect();
-           if (selectedImg.previousElementSibling) {
-             selectedImg.previousElementSibling.classList.add('selected');
-           } else {
-             selectedImg.parentElement.lastElementChild.classList.add('selected');
-           }
-         }
+       function selectNext() {
+	 var selectedImg = unselect();
+	 if (selectedImg.nextElementSibling) {
+	   selectedImg.nextElementSibling.classList.add('selected');
+	 } else {
+	   selectedImg.parentElement.firstElementChild.classList.add('selected');
+	 }
+       }
+
+       function selectPrevious() {
+	 var selectedImg = unselect();
+	 if (selectedImg.previousElementSibling) {
+	   selectedImg.previousElementSibling.classList.add('selected');
+	 } else {
+	   selectedImg.parentElement.lastElementChild.classList.add('selected');
+	 }
        }
      })(document);
  </script>

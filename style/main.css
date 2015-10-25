@@ -414,34 +414,6 @@ button {
   clear: right;
   padding-bottom: 18px;
  }
- .navigate {
-  display: block;
-  position: absolute;
-  top: 120px;
-  bottom: 72px;
-  width: 30%;
-  text-align: center;
-  font-size: 400%;
-  color: #CCC4D1;
-  padding-top: 20%;
-  cursor: pointer;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
- }
- .navigate span {
-  visibility: hidden;
- }
- .navigate:hover span {
-  visibility: visible;
- }
- .navigate.previous {
-  left: 0;
- }
- .navigate.next {
-  right: 0;
- }
  .blog img {
   max-width: 600px;
   max-height: 600px;
@@ -455,6 +427,39 @@ button {
  h1, .signature {
   padding-top: 14px;
   font-size: 45px;
+ }
+ .navigate {
+  display: block;
+  position: absolute;
+  top: 120px;
+  bottom: 72px;
+  width: 30%;
+  font-size: 400%;
+  color: #CCC4D1;
+  padding-top: 20%;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+ }
+ .navigate span {
+  transition: opacity ease 0.38s;
+  opacity: 0.3;
+ }
+ .navigate:hover span {
+  opacity: 1;
+ }
+ .navigate.previous {
+  left: 0;
+  text-align: left;
+  padding-left: 1em;
+ }
+ .navigate.next {
+  right: 0;
+  text-align: right;
+  padding-right: 1em;
  }
 }
 
