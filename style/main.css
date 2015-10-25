@@ -42,6 +42,9 @@ header h2 {
  margin-left: 2em;
  vertical-align: bottom;
 }
+article {
+ clear: both;
+}
 article.page {
  max-width: 800px;
 }
@@ -402,6 +405,9 @@ button {
  h2 {
   display: block;
  }
+ .photo {
+  top: 108px;
+ }
  .dropdown-title.small {
   display: none;
  }
@@ -412,7 +418,6 @@ button {
  nav {
   text-align: right;
   clear: right;
-  padding-bottom: 18px;
  }
  .blog img {
   max-width: 600px;
@@ -434,7 +439,7 @@ button {
  .navigate {
   display: block;
   position: absolute;
-  top: 120px;
+  top: 108px;
   bottom: 72px;
   width: 30%;
   font-size: 400%;
