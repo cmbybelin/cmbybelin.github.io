@@ -397,7 +397,7 @@ button {
 @media (min-width: 600px) {
  h1 {
   float: left;
-  padding-top: 16px;
+  padding-top: 18px;
  }
  h2 {
   display: block;
@@ -425,8 +425,11 @@ button {
   padding: 0 12px 36px;
  }
  h1, .signature {
-  padding-top: 14px;
+  padding-top: 16px;
   font-size: 45px;
+ }
+ .signature {
+  padding-top: 6px;
  }
  .navigate {
   display: block;
