@@ -266,6 +266,13 @@ article a {
  max-width: calc(100% - 10px);
  max-height: calc(100% - 10px);
 }
+.portfolio .photo {
+ position: absolute;
+ top: 120px;
+ bottom: 72px;
+ left: 0;
+ right: 0;
+}
 .thumbnails {
  position: absolute;
  bottom: 0px;
@@ -284,13 +291,6 @@ article a {
 }
 .thumbnails img.selected {
  border: 1px solid white;
-}
-.photo {
- position: absolute;
- top: 120px;
- bottom: 72px;
- left: 0;
- right: 0;
 }
 .navigate {
  display: none;
