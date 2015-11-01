@@ -1,6 +1,6 @@
 ---
-title: Flora &amp; fauna
-excerpt: Flora &amp; fauna
+title: Flora ...
+excerpt: Flora &amp; Fauna
 portfolio_folder: florafauna
 portfolio:
   - photo: Belinda 08.jpg

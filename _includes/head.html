@@ -17,17 +17,17 @@
 <span class="logo-by-belin">by Belin</span></a></h1>
   <nav>
    <ul>
-    <li><a href="/">Home</a></li>
-    <li class="dropdown" aria-haspopup="true">
-     <span class="dropdown-title small">{% if include.portfolio_section %}{{ include.portfolio_section }}{% else %}Portfolio{% endif %}<span class="caret">&#9660;</span></span>
-     <span class="dropdown-title wide">Portfolio<span class="caret">&#9660;</span></span>
+    <li class="{% if page.id == 'home' %}active{% endif %}"><a href="/">Home</a></li>
+    <li class="dropdown{% if include.portfolio_section %} active{% endif %}" aria-haspopup="true">
+     <span class="dropdown-title small">{% if include.portfolio_section %}{{ include.portfolio_section }}{% else %}Portfolio{% endif %}</span>
+     <span class="dropdown-title wide">Portfolio</span>
      <ul class="subnav">
 {% for portfolio in site.portfolio %}
       <li><a href="{{ portfolio.url }}">{{ portfolio.excerpt }}</a></li>
 {% endfor %}
      </ul></li>
-    <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/contact.html">Contact</a></li>
+    <li class="{% if page.id == 'blog' or page.layout == 'blog' %}active{% endif %}"><a href="/blog.html">Blog</a></li>
+    <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/contact.html">Contact</a></li>
    </ul>
   </nav>
  </header>

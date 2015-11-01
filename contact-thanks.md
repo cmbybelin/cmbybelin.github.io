@@ -1,4 +1,5 @@
 ---
+id: contact
 excerpt: Contact informatie.
 layout: page
 ---

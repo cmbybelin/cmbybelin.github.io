@@ -29,7 +29,7 @@ body {
 }
 header, nav, article {
  max-width: 1280px;
- margin: 0 auto;
+ margin: 0 auto 8px;
 }
 header h2 {
  display: inline;
@@ -87,18 +87,20 @@ nav {
 nav ul {
  padding: 0;
  margin: 0;
- text-align: center;
 }
 
 nav ul li {
  display: inline-block;
  font-size: 18px;
- margin-right: 16px;
  white-space: nowrap;
- padding-top: 8px;
+ padding: 8px 8px 4px 8px;
+ margin: 0;
+ border-bottom: 1px solid #7D6F85;
+ width: 90px;
 }
-nav ul li:last-child {
- margin-right: 0;
+
+nav ul li.active {
+ border-bottom-width: 2.5px;
 }
 
 a, a:visited, a:active {
@@ -119,22 +121,11 @@ img {
  -ms-user-select: none;
 }
 
-.caret {
- font-size: small;
- padding-left: 4px;
-}
-
 /* MENU */
 .dropdown {
- margin-left: -12px;
- padding-right: 12px;
  cursor: pointer;
  border-top-left-radius: 2px;
  border-top-right-radius: 2px;
-}
-.dropdown-title {
- padding-left: 12px;
- padding-bottom: 4px;
 }
 .dropdown-title.wide {
  display: none;
@@ -148,7 +139,7 @@ img {
  display: none;
  background-color: rgba(92, 87, 80, .8) /* #5C5750 */;
  padding: 0 12px 24px;
- margin: 0;
+ margin: 4px 0 0 -8px;
  border-top-right-radius: 2px;
  border-bottom-left-radius: 12px;
  border-bottom-right-radius: 12px;
@@ -162,6 +153,7 @@ img {
  text-align: left;
  font-size: smaller;
  border-bottom: 1px solid #ddd;
+ width: auto;
 }
 .subnav li a {
  color: #ddd;
@@ -202,7 +194,7 @@ article a {
 }
 .portfolio .photo {
  position: absolute;
- top: 150px;
+ top: 156px;
  bottom: 72px;
  left: 0;
  right: 0;
