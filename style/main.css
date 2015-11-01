@@ -23,7 +23,7 @@ body {
  background: white;
  color: #5C5750;
  font-size: 15px;
- font-family: Josefin-Sans, Arial;
+ font-family: 'Josefin-Sans', Arial;
  line-height: 1.3em;
  padding: 0;
 }
@@ -45,14 +45,12 @@ article.page {
 
 h1 {
  display: block;
- padding-top: 12px;
  white-space: nowrap;
  margin: 0;
  color: #CCC4D1;
  padding-left: 12px;
  font-size: 35px;
  font-weight: normal;
- font-family: Jellyka-Western-Princess, Verdana, Arial;
  line-height: 61px;
 }
 h1 a, h1 a:hover, h1 a:visited, h1 a:active {
@@ -70,19 +68,18 @@ h2 {
  line-height: 1.0em;
  text-align: right;
  width: 244px;
- margin: 0 auto;
+ margin: 20px auto;
 }
 .logo-photography {
  font-family: 'Droid Serif', serif;
  float: left;
 }
 .logo-by-belin {
+ font-family: 'Jellyka-Western-Princess', Verdana, Arial;
  clear: left;
 }
 nav {
  color: #7D6F85;
- margin-bottom: 12px;
- padding: 0 12px;
  font-weight: bold;
  letter-spacing: .6pt;
 }
@@ -90,6 +87,7 @@ nav {
 nav ul {
  padding: 0;
  margin: 0;
+ text-align: center;
 }
 
 nav ul li {
@@ -204,7 +202,7 @@ article a {
 }
 .portfolio .photo {
  position: absolute;
- top: 120px;
+ top: 150px;
  bottom: 72px;
  left: 0;
  right: 0;
@@ -336,13 +334,17 @@ button {
 @media (min-width: 600px) {
  h1 {
   float: left;
-  padding-top: 18px;
  }
  h2 {
   display: block;
  }
- .photo {
-  top: 108px;
+ nav {
+  float: right;
+  margin-top: 35px;
+  margin-right:20px;
+ }
+ .portfolio .photo {
+  top: 142px;
  }
  .dropdown-title.small {
   display: none;
@@ -351,10 +353,6 @@ button {
   display: inline;
  }
 
- nav {
-  text-align: right;
-  clear: right;
- }
  .blog img {
   max-width: 600px;
   max-height: 600px;
@@ -366,7 +364,6 @@ button {
   padding: 0 12px 36px;
  }
  h1 {
-  padding-top: 16px;
   font-size: 45px;
  }
  .logo {
