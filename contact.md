@@ -17,15 +17,16 @@ Mijn interesse gaan uit naar portret-, high fashion- en travel-fotografie.<br/>B
 Enjoy!
 
 <div class="vcard">
-    <div class="fn org">Capture the Moment by Belin</div>
+    <div class="fn org">Photography by Belin</div>
     <div>Telefoon: <span class="tel">06-1375 9292</span></div>
     <div>E-mail: <a href="mailto:cmbybelin@gmail.com" class="email">cmbybelin@gmail.com</a></div>
+    <div>Facebook: <a href="https://www.facebook.com/cmbybelin" class="facebook">facebook.com/cmbybelin</a></div>
+
 </div>
 
 Mocht je meer willen weten, laat dan een berichtje achter:
 
 <form action="https://getsimpleform.com/messages?form_api_token=84cf3f47b43b7b5a616bd93710510116" method="post">
-  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
   <input type='hidden' name='redirect_to' value='http://cmbybelin.com/contact-thanks.html' />
 
   <label for="f_name">Naam:</label>
