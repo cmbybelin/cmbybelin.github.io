@@ -74,22 +74,21 @@ h2 {
  display: none;
 }
 
-
-.external-sites {
- float: right;
- margin-top: 4px;
-}
-.external-sites a {
- font-size: 24px;
-}
-
-.signature {
+.logo {
+ line-height: 1.0em;
  text-align: right;
+ width: 244px;
+ margin: 0 auto;
 }
-
+.logo-photography {
+ font-family: 'Droid Serif', serif;
+ float: left;
+}
+.logo-by-belin {
+ clear: left;
+}
 nav {
  color: #7D6F85;
- border-bottom: 1px solid #7D6F85;
  margin-bottom: 12px;
  padding: 0 12px;
  font-weight: bold;
@@ -432,6 +431,9 @@ button {
  h1, .signature {
   padding-top: 16px;
   font-size: 45px;
+ }
+ .logo {
+  width: 313px;
  }
  .signature {
   padding-top: 6px;
