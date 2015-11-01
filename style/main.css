@@ -54,8 +54,6 @@ h1 {
  padding-top: 12px;
  white-space: nowrap;
  margin: 0;
-}
-h1,  .signature {
  color: #CCC4D1;
  padding-left: 12px;
  font-size: 35px;
@@ -198,62 +196,6 @@ img {
  width: 100%;
  border: none;
  padding: 0;
-}
-
-.teaser-sidebar span, .teaser-sidebar a {
- margin: 0 .4em;
- text-decoration: none;
-}
-
-.teaser-sidebar {
- background-color: #5C5750;
- line-height: 200%;
- vertical-align: top;
- padding: 12px 4px;
-}
-
-.teaser-sidebar .newborn {
- font-family: Courier New, Courier, monotype;
- font-size: 27px;
- color: #bbb;
- margin-top: .4em;
-}
-.teaser-sidebar .portrait {
- font-family: Scriptina;
- font-size: 35px;
- text-align: right;
- color: #eee;
-}
-.teaser-sidebar .travel {
- font-family: American Typewriter, Times New Roman, serif;
- font-size: 55px;
- margin-bottom: .4em;
- color: #eee;
-}
-.teaser-sidebar .landscape {
- font-family: Papyrus;
- font-size: 24px;
- text-align: right;
- color: #eee;
-}
-.teaser-sidebar .details {
- font-family: Courier New, Courier, monotype;
- font-size: 28px;
- color: #bbb;
-}
-.teaser-sidebar .family {
- font-family: Scriptina;
- font-size: 51px;
- color: #bbb;
- margin-bottom: .4em;
-}
-
-.teaser-sidebar .portrait:hover,
-.teaser-sidebar .travel:hover,
-.teaser-sidebar .landscape:hover,
-.teaser-sidebar .details:hover {
- text-decoration: none;
- text-shadow: 0 0 5px #aaa;
 }
 
 article a {
@@ -428,15 +370,12 @@ button {
  body {
   padding: 0 12px 36px;
  }
- h1, .signature {
+ h1 {
   padding-top: 16px;
   font-size: 45px;
  }
  .logo {
   width: 313px;
- }
- .signature {
-  padding-top: 6px;
  }
  .navigate {
   display: block;
@@ -472,28 +411,3 @@ button {
   padding-right: 1em;
  }
 }
-
-@media (min-width: 900px) {
- .signature {
-  margin-right: 200px;
- }
- .teaser {
-  display: table-row;
- }
-
- .teaser .slideshow {
-  display: table-cell;
-  padding-right: 12px;
-  margin-bottom: 0;
- }
-
-.teaser-sidebar {
-  display: table-cell;
-  width: 180px;
- }
- .teaser-sidebar span, .teaser-sidebar a {
-  display: block;
-  margin: 0 0 1.2em 0;
- }
-}
-
