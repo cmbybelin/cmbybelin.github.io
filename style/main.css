@@ -26,6 +26,7 @@ body {
  font-family: 'Josefin-Sans', Arial;
  line-height: 1.3em;
  padding: 0;
+ min-width: 460px;
 }
 header, nav, article {
  max-width: 1280px;
@@ -82,6 +83,7 @@ nav {
  color: #7D6F85;
  font-weight: bold;
  letter-spacing: .6pt;
+ text-align: center;
 }
 
 nav ul {
@@ -271,7 +273,6 @@ article a {
 }
 .excerpt:first-child {
  border: none;
- padding-top: 0;
 }
 .excerpt img {
  float: left;
@@ -324,42 +325,28 @@ button {
 }
 
 @media (min-width: 600px) {
- h1 {
-  float: left;
- }
- h2 {
-  display: block;
- }
- nav {
-  float: right;
-  margin-top: 35px;
-  margin-right:20px;
- }
- .portfolio .photo {
-  top: 142px;
- }
- .dropdown-title.small {
-  display: none;
- }
- .dropdown-title.wide {
-  display: inline;
- }
-
  .blog img {
   max-width: 600px;
   max-height: 600px;
  }
 }
 
-@media (min-width: 740px) {
+@media (min-width: 760px) {
+ .logo {
+  float: left;
+  margin-bottom: 0;
+ }
+ h2 {
+  display: block;
+ }
  body {
   padding: 0 12px 36px;
  }
- h1 {
-  font-size: 45px;
- }
- .logo {
-  width: 313px;
+ nav {
+  float: right;
+  margin-top: 35px;
+  margin-right:20px;
+  text-align: left;
  }
  .navigate {
   display: block;
@@ -393,5 +380,20 @@ button {
   right: 0;
   text-align: right;
   padding-right: 1em;
+ }
+ .dropdown-title.small {
+  display: none;
+ }
+ .dropdown-title.wide {
+  display: inline;
+ }
+ .portfolio .photo {
+  top: 146px;
+ }
+}
+@media (min-width: 830px) {
+ .logo {
+  font-size: 45px;
+  width: 313px;
  }
 }
