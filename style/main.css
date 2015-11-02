@@ -62,7 +62,6 @@ h2 {
  font-size: 18px;
  font-weight: normal;
  margin: 0;
- display: none;
 }
 
 .logo {
@@ -190,6 +189,9 @@ article a {
 }
 
 /* PORTFOLIO */
+.portfolio h2 {
+ display: none;
+}
 .portfolio img {
  max-width: calc(100% - 10px);
  max-height: calc(100% - 10px);
@@ -336,9 +338,6 @@ button {
   float: left;
   margin-bottom: 0;
  }
- h2 {
-  display: block;
- }
  body {
   padding: 0 12px 36px;
  }
@@ -386,6 +385,9 @@ button {
  }
  .dropdown-title.wide {
   display: inline;
+ }
+ .portfolio h2 {
+  display: block;
  }
  .portfolio .photo {
   top: 146px;
