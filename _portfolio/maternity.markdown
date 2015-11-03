@@ -1,6 +1,7 @@
 ---
 title: Maternity
 excerpt: Maternity
+order: 2
 portfolio_folder: maternity
 portfolio:
   - photo: 1.15a.jpg

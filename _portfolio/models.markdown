@@ -1,6 +1,7 @@
 ---
 title: Models
 excerpt: Models
+order: 3
 portfolio_folder: models
 portfolio:
   - photo: m01.01.jpg

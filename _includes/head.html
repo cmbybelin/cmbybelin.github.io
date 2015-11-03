@@ -22,7 +22,8 @@
      <span class="dropdown-title small">{% if include.portfolio_section %}{{ include.portfolio_section }}{% else %}Portfolio{% endif %}</span>
      <span class="dropdown-title wide">Portfolio</span>
      <ul class="subnav">
-{% for portfolio in site.portfolio %}
+{% assign portfolio_ordered = site.portfolio | sort: 'order' %}
+{% for portfolio in portfolio_ordered %}
       <li><a href="{{ portfolio.url }}">{{ portfolio.excerpt }}</a></li>
 {% endfor %}
      </ul></li>
