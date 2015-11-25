@@ -145,6 +145,7 @@ img {
  border-bottom-left-radius: 12px;
  border-bottom-right-radius: 12px;
  position: absolute;
+ min-width: 82px;
  z-index: 999;
 }
 .subnav li {
@@ -390,12 +391,15 @@ button {
   display: block;
  }
  .portfolio .photo {
-  top: 146px;
+  top: 124px;
  }
 }
 @media (min-width: 830px) {
  .logo {
   font-size: 45px;
   width: 313px;
+ }
+ .portfolio .photo {
+  top: 146px;
  }
 }
