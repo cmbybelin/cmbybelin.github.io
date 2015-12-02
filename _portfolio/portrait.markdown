@@ -1,8 +1,8 @@
 ---
-title: Models
-excerpt: Models
+title: Portrait
+excerpt: Portrait
 order: 3
-portfolio_folder: models
+portfolio_folder: portrait
 portfolio:
   - photo: m01.01.jpg
   - photo: m01.02.jpg
