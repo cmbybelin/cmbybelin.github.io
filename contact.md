@@ -28,7 +28,7 @@ Enjoy!
 Mocht je meer willen weten, laat dan een berichtje achter:
 
 <form action="https://getsimpleform.com/messages?form_api_token=84cf3f47b43b7b5a616bd93710510116" method="post">
-  <input type='hidden' name='redirect_to' value='http://cmbybelin.com/contact-thanks.html' />
+  <input type='hidden' name='redirect_to' value='{{ site.url }}/contact-thanks.html' />
 
   <label for="f_name">Naam:</label>
   <input id="f_name" type="text" name="name" style="width:320px" required placeholder="Je naam"/>
