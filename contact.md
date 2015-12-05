@@ -18,7 +18,7 @@ Mijn interesse gaan uit naar portret-, high fashion- en travel-fotografie.<br/>B
 Enjoy!
 
 <div class="vcard">
-    <div class="fn org">Photography by Belin</div>
+    <div class="fn org">Belinda Terrisse portrait photography</div>
     <div>Telefoon: <span class="tel">06-1375 9292</span></div>
     <div>E-mail: <a href="mailto:cmbybelin@gmail.com" class="email">cmbybelin@gmail.com</a></div>
     <div>Facebook: <a href="https://www.facebook.com/cmbybelin" class="facebook">facebook.com/cmbybelin</a></div>
