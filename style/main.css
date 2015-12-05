@@ -6,24 +6,14 @@ color scheme:
  accent/hover: #5B8AB2
 */
 
-@font-face {
-  font-family: "Josefin-Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: url("Josefin-Sans/JosefinSans-Regular.ttf") format("opentype");
-}
-@font-face {
-  font-family: "Jellyka-Western-Princess";
-  font-style: normal;
-  font-weight: normal;
-  src: url("jellyka_western_princess/Jellyka Western Princess.ttf") format("opentype");
-}
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+@import url(https://fonts.googleapis.com/css?family=Halant:400,500,600);
 
 body {
  background: white;
  color: #5C5750;
  font-size: 15px;
- font-family: 'Josefin-Sans', Arial;
+ font-family: 'Josefin Sans', Arial, sans-serif;
  line-height: 1.3em;
  padding: 0;
  min-width: 460px;
@@ -70,19 +60,11 @@ h2 {
  width: 244px;
  margin: 20px auto;
 }
-.logo-photography {
- font-family: 'Droid Serif', serif;
- float: left;
-}
-.logo-by-belin {
- font-family: 'Jellyka-Western-Princess', Verdana, Arial;
- clear: left;
-}
 nav {
  color: #7D6F85;
- font-weight: bold;
  letter-spacing: .6pt;
  text-align: center;
+ font-weight: thin;
 }
 
 nav ul {
@@ -297,8 +279,9 @@ label, button {
  margin-top: 6px;
 }
 button, input, textarea {
- font-family: Josefin-Sans, Arial;
+ font-family: 'Josefin Sans', Arial, sans-serif;
  font-size: 15px;
+ font-weight: 100;
 }
 input, textarea {
  border: 1px solid #aaa;
