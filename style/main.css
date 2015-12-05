@@ -43,21 +43,22 @@ h1 {
  font-size: 35px;
  font-weight: normal;
  line-height: 61px;
+ font-family: 'Halant', serif;
 }
 h1 a, h1 a:hover, h1 a:visited, h1 a:active {
  color: #CCC4D1;
 }
 h2 {
  text-align: center;
+ font-family: 'Halant', serif;
  font-size: 18px;
  font-weight: normal;
  margin: 0;
 }
 
 .logo {
- line-height: 1.0em;
- text-align: right;
- width: 244px;
+ display: block;
+ width: 180px;
  margin: 20px auto;
 }
 nav {
@@ -74,7 +75,7 @@ nav ul {
 
 nav ul li {
  display: inline-block;
- font-size: 18px;
+ font-size: 16px;
  white-space: nowrap;
  padding: 8px 8px 4px 8px;
  margin: 0;
@@ -181,7 +182,7 @@ article a {
 }
 .portfolio .photo {
  position: absolute;
- top: 156px;
+ top: 194px;
  bottom: 72px;
  left: 0;
  right: 0;
@@ -318,23 +319,13 @@ button {
 }
 
 @media (min-width: 760px) {
- .logo {
-  float: left;
-  margin-bottom: 0;
- }
  body {
   padding: 0 12px 36px;
- }
- nav {
-  float: right;
-  margin-top: 35px;
-  margin-right:20px;
-  text-align: left;
  }
  .navigate {
   display: block;
   position: absolute;
-  top: 108px;
+  top: 216px;
   bottom: 72px;
   width: 30%;
   font-size: 400%;
@@ -374,15 +365,11 @@ button {
   display: block;
  }
  .portfolio .photo {
-  top: 124px;
+  top: 216px;
  }
 }
 @media (min-width: 830px) {
- .logo {
-  font-size: 45px;
-  width: 313px;
- }
  .portfolio .photo {
-  top: 146px;
+  top: 216px;
  }
 }
