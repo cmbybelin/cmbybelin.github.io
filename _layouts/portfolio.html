@@ -8,7 +8,8 @@ id: portfolio
   <h2>{{ page.excerpt }}</h2>
   <div class="photo">
   {% for photo in page.portfolio %}
-   <div id="img{{ forloop.index }}" class="caroussel{% if forloop.first %} selected{% endif %}" style="background-image: url('/portfolio/{{ page.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }}')"/>
+   <div id="img{{ forloop.index }}" class="caroussel{% if forloop.first %} selected{% endif %}">
+    <img src="/portfolio/{{ page.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }}" draggable="false"/>
     {% if photo.caption %}<p class="caption"><span>{{ photo.caption | newline_to_br }}</span></p>{% endif %}
    </div>
   {% endfor %}

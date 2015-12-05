@@ -164,8 +164,6 @@ img {
 .teaser .slideshow img {
  display: block;
  width: 100%;
- border: none;
- padding: 0;
 }
 
 article a {
@@ -211,6 +209,7 @@ article a {
 }
 .caroussel {
  position: absolute;
+ display: block;
  top: 0;
  bottom: 0;
  left: 0;
@@ -222,6 +221,7 @@ article a {
  visibility: hidden;
  opacity: 0;
  text-align: center;
+ margin: 0 auto;
 }
 .caroussel.selected {
  visibility: visible;
@@ -338,11 +338,6 @@ button {
   color: #CCC4D1;
   padding-top: 20%;
   cursor: pointer;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
  }
  .navigate span {
   transition: opacity ease 0.38s;
