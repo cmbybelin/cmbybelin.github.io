@@ -180,28 +180,12 @@ article a {
 .portfolio .photo {
  position: absolute;
  top: 194px;
- bottom: 72px;
+ bottom: 8px;
  left: 0;
  right: 0;
 }
 .thumbnails {
- position: absolute;
- bottom: 0px;
- height: 64px;
- left: 8px;
- width: calc(100% - 16px);
- text-align: center;
- white-space: nowrap;
- overflow-x: scroll;
-}
-.thumbnails img {
- height: 64px;
- width: auto;
- border: 1px solid transparent;
- padding: 0;
-}
-.thumbnails img.selected {
- border: 1px solid white;
+ display: none;
 }
 .navigate {
  display: none;
@@ -317,6 +301,7 @@ button {
  }
 }
 
+/* iPad and up: */
 @media (min-width: 760px) {
  body {
   padding: 0 12px 36px;
@@ -326,6 +311,26 @@ button {
  }
  .subnav {
   min-width: 112px;
+ }
+ .thumbnails {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  height: 64px;
+  left: 8px;
+  width: calc(100% - 16px);
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+ }
+ .thumbnails img {
+  height: 64px;
+  width: auto;
+  border: 1px solid transparent;
+  padding: 0;
+ }
+ .thumbnails img.selected {
+  border: 1px solid white;
  }
  .navigate {
   display: block;
@@ -366,6 +371,7 @@ button {
  }
  .portfolio .photo {
   top: 216px;
+  bottom: 72px;
  }
 }
 @media (min-width: 830px) {
