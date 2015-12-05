@@ -16,7 +16,6 @@ body {
  font-family: 'Josefin Sans', Arial, sans-serif;
  line-height: 1.3em;
  padding: 0;
- min-width: 460px;
 }
 header, nav, article {
  max-width: 1280px;
@@ -80,7 +79,7 @@ nav ul li {
  padding: 8px 8px 4px 8px;
  margin: 0;
  border-bottom: 1px solid #7D6F85;
- width: 90px;
+ min-width: 70px;
 }
 
 nav ul li.active {
