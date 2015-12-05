@@ -322,6 +322,12 @@ button {
  body {
   padding: 0 12px 36px;
  }
+ nav ul li {
+  width: 120px;
+ }
+ .subnav {
+  min-width: 112px;
+ }
  .navigate {
   display: block;
   position: absolute;
