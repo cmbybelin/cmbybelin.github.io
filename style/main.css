@@ -19,7 +19,7 @@ body {
 }
 header, nav, article {
  max-width: 1280px;
- margin: 0 auto 8px;
+ margin: 0 auto 16px;
 }
 header h2 {
  display: inline;
@@ -104,71 +104,28 @@ img {
  -ms-user-select: none;
 }
 
-/* MENU */
-.dropdown {
- cursor: pointer;
- border-top-left-radius: 2px;
- border-top-right-radius: 2px;
-}
-.dropdown-title.wide {
- display: none;
-}
-.dropdown.hover {
- background-color: #5C5750;
- color: #ddd;
-}
-
-.subnav {
- display: none;
- background-color: rgba(92, 87, 80, .8) /* #5C5750 */;
- padding: 0 12px 24px;
- margin: 4px 0 0 -8px;
- border-top-right-radius: 2px;
- border-bottom-left-radius: 12px;
- border-bottom-right-radius: 12px;
- position: absolute;
- min-width: 82px;
- z-index: 999;
-}
-.subnav li {
- display: block;
- margin: 0;
- padding: 0;
- text-align: left;
- font-size: smaller;
- border-bottom: 1px solid #ddd;
- width: auto;
-}
-.subnav li a {
- color: #ddd;
- display: block;
- padding-top: 16px;
-}
-.subnav li a:hover {
- color: #fff;
-}
-
-
-.dropdown.hover .subnav {
- display: block;
-}
-
-
 /* INDEX */
-.teaser .slideshow {
+.slideshow,
+.slideshow a,
+.slideshow img {
  display: block;
  width: 100%;
- margin-bottom: 12px;
 }
-.teaser .slideshow img {
- display: block;
- width: 100%;
+.slideshow {
+ margin-bottom: 32px;
 }
 
 article a {
  text-decoration: underline;
 }
 
+.info section {
+ margin: 16px;
+}
+.info img {
+ max-width: 200px;
+ max-height: 100px;
+}
 /* PORTFOLIO */
 .portfolio h2 {
  display: none;
@@ -179,7 +136,7 @@ article a {
 }
 .portfolio .photo {
  position: absolute;
- top: 194px;
+ top: 200px;
  bottom: 8px;
  left: 0;
  right: 0;
@@ -195,8 +152,8 @@ article a {
  display: block;
  top: 0;
  bottom: 0;
- left: 0;
- right: 0;
+ left: 8px;
+ right: 8px;
  background-size: contain;
  background-position: center;
  background-repeat: no-repeat;
@@ -299,6 +256,11 @@ button {
   max-width: 600px;
   max-height: 600px;
  }
+ .info section {
+  width:calc(100% / 3 - 32px);
+  display: inline-block;
+  vertical-align: top
+ }
 }
 
 /* iPad and up: */
@@ -335,7 +297,7 @@ button {
  .navigate {
   display: block;
   position: absolute;
-  top: 216px;
+  top: 200px;
   bottom: 72px;
   width: 30%;
   font-size: 400%;
@@ -370,12 +332,6 @@ button {
   display: block;
  }
  .portfolio .photo {
-  top: 216px;
   bottom: 72px;
- }
-}
-@media (min-width: 830px) {
- .portfolio .photo {
-  top: 216px;
  }
 }
