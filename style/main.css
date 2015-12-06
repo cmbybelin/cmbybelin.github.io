@@ -35,6 +35,7 @@ article {
 }
 article.page {
  max-width: 800px;
+ min-height: 700px;
 }
 article, footer {
  padding: 0 8px;
