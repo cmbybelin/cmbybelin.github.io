@@ -1,7 +1,7 @@
 /*
 color scheme:
  background: #FFFFFF
- title: 
+ title:
  text: #5C5750
  accent/hover: #5B8AB2
 */
@@ -123,6 +123,7 @@ img {
  width: 100%;
  margin: 0 auto;
  box-sizing: border-box;
+ max-width:800px;
 }
 
 article a {
