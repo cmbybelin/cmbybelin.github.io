@@ -119,11 +119,11 @@ img {
 /* INDEX */
 
 .static-bg {
+ position: absolute;
  background-image: url(/portfolio/portrait/M02.01.jpg);
  background-repeat: no-repeat;
  background-size: cover;
  background-position: top center;
- position: fixed;
  top: 0;
  height: 700px;
  left: 0;
