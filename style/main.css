@@ -291,7 +291,7 @@ button {
  }
  footer section {
   display: inline-block;
-  width: calc(100% / 3);
+  width: calc(99.99% / 3);
   box-sizing: border-box;
   vertical-align: top;
  }
