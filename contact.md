@@ -7,13 +7,14 @@ layout: page
 
 <img src="portfolio/belin.jpg" class="me" alt="Dit ben ik"/>
 
-
 Fotografie, De kunst om het juiste moment vast te leggen, een gevoel over te brengen en mensen te intrigreren.
 
 Mijn naam is Belinda Molenaar-Terrisse, woonachtig in Hoogkarspel, Noord-Holland.
-Van kinds af aan ben ik gefascineerd door fotografie. Door middel van workshops heb ik mezelf ontwikkeld. Gedreven door passie probeer ik jullie te inspireren.
+Van kinds af aan ben ik gefascineerd door fotografie. Door middel van workshops heb ik mezelf ontwikkeld.
+Gedreven door passie probeer ik jullie te inspireren.
 
-Mijn interesse gaan uit naar portret-, high fashion- en travel-fotografie.<br/>Beelden met een verhaal die voor eeuwig zijn vastgelegd.
+Mijn interesse gaan uit naar new born-, portret- en high fashionfotografie.<br/>
+Beelden met een verhaal die voor eeuwig zijn vastgelegd.
 
 Enjoy!
 
