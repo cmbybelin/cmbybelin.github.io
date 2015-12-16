@@ -1,7 +1,7 @@
 ---
 title: On Air
 portfolio:
-  - photo: portfolio/projecten/Lightpainting.jpg
+  - photo: portfolio/portrait/M02.01.jpg
 ---
 
 Yes... Mijn eigen Website is On Air. En nu nog tijd vrij maken om het bij te houden :)
