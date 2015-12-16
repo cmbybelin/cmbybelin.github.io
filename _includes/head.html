@@ -27,27 +27,6 @@
     {% for portfolio in portfolio_ordered %}
       --><li class="{% if page.portfolio_folder == portfolio.portfolio_folder %}active{% endif %}"><a href="{{ portfolio.url }}">{{ portfolio.excerpt }}</a></li><!--
     {% endfor %}
-    - -><li class="{% if page.id == 'blog' or page.layout == 'blog' %}active{% endif %}"><a href="/blog.html">Blog</a></li><!- -
-    - -><li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/contact.html">Contact</a></li>
    --></ul>
   </nav>
  </header>
-
- <script>
-  (function (document) {
-    var $dropdowns = document.querySelectorAll('.dropdown');
-    for (var i = 0; i < $dropdowns.length; i++) {
-      $dropdowns[i].addEventListener('click', function (event) {
-        event.stopPropagation();
-        this.classList.toggle('hover');
-      });
-    };
-
-    document.addEventListener('click', function () {
-      var $dropdowns = document.querySelectorAll('.dropdown');
-      for (var i = 0; i < $dropdowns.length; i++) {
-        $dropdowns[i].classList.remove('hover');
-      }
-    });
-  })(document);
- </script>
