@@ -88,7 +88,7 @@ nav ul li {
  padding: 8px 8px 4px 8px;
  margin: 0;
  border-bottom: 1px solid #7D6F85;
- min-width: 70px;
+ min-width: 50px;
 }
 
 nav ul li.active {
@@ -125,13 +125,15 @@ img {
  background-size: cover;
  background-position: top center;
  top: 0;
- height: 700px;
+ height: 750px;
  left: 0;
  right: 0;
  z-index: -1;
+ max-width: 1296px;
+ margin: 0 auto;
 }
 .static-bg-padding {
- height: 450px;
+ height: 500px;
 }
 
 article a {
@@ -141,7 +143,9 @@ article a {
 footer {
  background-color: #585751;
  color: white;
- margin-top: 32px;
+ min-height: 300px;
+ max-width: 1280px;
+ margin: 32px auto 0;
 }
 footer > div {
  max-width: 800px;
@@ -278,6 +282,12 @@ button {
 /* MISC */
 .clearfix {
   clear: both;
+}
+
+@media (min-width: 370px) { /* iPhone 6 */
+ nav ul li {
+  min-width: 70px;
+ }
 }
 
 @media (min-width: 440px) {
