@@ -316,7 +316,7 @@ button {
 /* iPad and up: */
 @media (min-width: 760px) {
  nav ul li {
-  width: 120px;
+  width: 130px;
  }
  .thumbnails {
   display: block;
