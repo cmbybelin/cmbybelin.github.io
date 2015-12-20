@@ -78,21 +78,24 @@ nav {
 
 nav ul {
  padding: 0;
- margin: 0;
+ margin: 0 auto;
+ max-width: 550px;
+ border-bottom: 1px solid #585751;
 }
 
 nav ul li {
  display: inline-block;
  font-size: 16px;
  white-space: nowrap;
- padding: 8px 8px 4px 8px;
- margin: 0;
- border-bottom: 1px solid #7D6F85;
- min-width: 50px;
+ margin: 0 0 -1px 0;
+ min-width: 76px;
+ line-height: 32px;
 }
 
 nav ul li.active {
  border-bottom-width: 2.5px;
+ border-bottom: 2px solid #585751;
+ margin-bottom: -2px;
 }
 
 a, a:visited, a:active {
@@ -152,7 +155,7 @@ footer > div {
  margin: 0 auto;
 }
 footer section {
- padding: 32px 0;
+ padding: 32px 8px;
 }
 footer img {
  max-width: 200px;
@@ -286,7 +289,7 @@ button {
 
 @media (min-width: 370px) { /* iPhone 6 */
  nav ul li {
-  min-width: 70px;
+  min-width: 86px;
  }
 }
 
@@ -308,8 +311,13 @@ button {
   box-sizing: border-box;
   vertical-align: top;
  }
- footer section + section {
-  padding-left: 32px;
+ footer section:first-child {
+  padding-left: 0;
+  padding-right: 16px;
+ }
+ footer section:last-child {
+  padding-left: 16px;
+  padding-right: 0;
  }
 }
 
