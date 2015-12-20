@@ -1,41 +1,81 @@
 ---
 id: contact
-excerpt: Contact informatie.
+excerpt: Contact information
 layout: page
 ---
-<h2 lang="nl">Over mij</h2>
-<h2 lang="en">About me</h2>
+
+<div lang="nl" markdown="1">
+
+## Over mij
 
 <img src="portfolio/belin.jpg" class="me" alt="Dit ben ik"/>
 
-<p lang='nl'>Fotografie. De kunst om het juiste moment vast te leggen, een gevoel over te brengen en mensen te intrigreren.</p>
-<p lang='en'>Photography. The art to persist the right moment, to transfer a feeling and intrigue people.</p>
+Fotografie. De kunst om het juiste moment vast te leggen, een gevoel over te brengen en mensen te intrigreren.
 
-<p lang="nl">Mijn naam is Belinda Molenaar-Terrisse, woonachtig in Hoogkarspel, Noord-Holland.
+Mijn naam is Belinda Molenaar-Terrisse, woonachtig in Hoogkarspel, Noord-Holland.
 Van kinds af aan ben ik gefascineerd door fotografie. Door middel van workshops heb ik mezelf ontwikkeld.
-Gedreven door passie probeer ik jullie te inspireren.</p>
-<p lang="en">My name is Belinda Molenaar-Terrisse. I live in Hoogkarspel, The Netherlands. Even as a child I was facinated by photography. I educated myself by following workshops. Driven by passion I'm attempting to inspire you.</p>
+Gedreven door passie probeer ik jullie te inspireren.
 
-<p lang='nl'>Mijn interesse gaan uit naar new born-, portret- en high fashionfotografie.<br/>
-Beelden met een verhaal die voor eeuwig zijn vastgelegd.</p>
-<p lang="en">My specialty is new born, portrait and high fashion photography. Images with a story for ever to be preserved.</p>
+Mijn interesse gaan uit naar new born-, portret- en high fashionfotografie.<br/>
+Beelden met een verhaal die voor eeuwig zijn vastgelegd.
 
-<p>Enjoy!</p>
+Enjoy!
+
+</div>
+
+<div lang="en" markdown="1">
+
+## About me
+
+<img src="portfolio/belin.jpg" class="me" alt="This is me"/>
+
+Photography. The art to capture the right moment, to transfer a feeling and intrigue people.
+
+My name is Belinda Molenaar-Terrisse. I live in Hoogkarspel, The Netherlands. Even as a child I was facinated by photography. I educated myself by following workshops. Driven by passion I'm attempting to inspire you.
+
+My specialty is new born, portrait and high fashion photography. Images with a story for ever to be preserved.
+
+Enjoy!
+
+</div>
 
 {% include vcard.html %}
  
-<p lang="nl">Mocht je meer willen weten, laat dan een berichtje achter:</p>
-<p lang="en">If you want to learn more, please send me a message:</p>
+<div lang="nl" markdown="1">
+
+Mocht je meer willen weten, laat dan een berichtje achter:
 
 <form action="https://getsimpleform.com/messages?form_api_token=84cf3f47b43b7b5a616bd93710510116" method="post">
   <input type='hidden' name='redirect_to' value='{{ site.url }}/contact-thanks.html' />
 
-  <label lang="nl" for="f_name">Naam:</label>
+  <label for="f_name">Naam:</label>
   <input id="f_name" type="text" name="name" style="width:320px" required placeholder="Je naam"/>
-  <label ;ang="nl" for="f_email">E-mail:</label>
+  <label for="f_email">E-mail:</label>
   <input id="f_email" type="email" name="email" style="width:320px" required placeholder="Je e-mail adres"/>
-  <label lang="nl" for="f_message">Bericht:</label>
+  <label for="f_message">Bericht:</label>
   <textarea id="f_message" name="message" style="width:320px" rows="12" required placeholder="Type je bericht hier"></textarea>
 
-  <button lang="nl" type='submit'>Verzend</button>
+  <button type='submit'>Verzend</button>
 </form>
+
+</div>
+
+<div lang="en" markdown="1">
+
+If you want to learn more, please send me a message:
+
+<form action="https://getsimpleform.com/messages?form_api_token=84cf3f47b43b7b5a616bd93710510116" method="post">
+  <input type='hidden' name='redirect_to' value='{{ site.url }}/contact-thanks.html' />
+
+  <label for="f_name">Name:</label>
+  <input id="f_name" type="text" name="name" style="width:320px" required placeholder="Your name"/>
+  <label for="f_email">E-mail:</label>
+  <input id="f_email" type="email" name="email" style="width:320px" required placeholder="Your e-mail address"/>
+  <label for="f_message">Message:</label>
+  <textarea id="f_message" name="message" style="width:320px" rows="12" required placeholder="Type your message here"></textarea>
+
+  <button type='submit'>Send</button>
+</form>
+
+
+</div>
