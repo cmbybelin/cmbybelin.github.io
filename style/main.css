@@ -271,7 +271,10 @@ button {
 .me {
  width: 300px;
 }
-
+.vcard .fa {
+ width: 1.5em;
+ display: inline-block;
+}
 /* MISC */
 .clearfix {
   clear: both;
@@ -365,4 +368,10 @@ button {
  .portfolio .photo {
   bottom: 72px;
  }
+}
+
+/* Multi lingual */
+.lang-nl *[lang='en'],
+.lang-en *[lang='nl'] {
+ display: none;
 }
