@@ -79,15 +79,18 @@ nav {
 nav ul {
  padding: 0;
  margin: 0 auto;
- max-width: 550px;
+ max-width: 304px;
  border-bottom: 1px solid #585751;
 }
 
 nav ul li {
  display: inline-block;
+ margin: 0 0 -1px 0;
+}
+nav li a {
+ display: inline-block;
  font-size: 16px;
  white-space: nowrap;
- margin: 0 0 -1px 0;
  min-width: 76px;
  line-height: 32px;
 }
@@ -288,7 +291,10 @@ button {
 }
 
 @media (min-width: 370px) { /* iPhone 6 */
- nav ul li {
+ nav ul {
+  max-width: 374px;
+ }
+ nav li a {
   min-width: 86px;
  }
 }
@@ -323,7 +329,10 @@ button {
 
 /* iPad and up: */
 @media (min-width: 760px) {
- nav ul li {
+ nav ul {
+  max-width: 550px;
+ }
+ nav li a {
   width: 130px;
  }
  .thumbnails {
