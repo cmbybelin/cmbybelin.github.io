@@ -70,7 +70,7 @@ h2 {
  border: none;
 }
 nav {
- color: #7D6F85;
+ color: #585751;
  letter-spacing: .6pt;
  text-align: center;
  font-weight: thin;
@@ -80,7 +80,7 @@ nav ul {
  padding: 0;
  margin: 0 auto;
  max-width: 304px;
- border-bottom: 1px solid #585751;
+ border-bottom: 1px solid rgba(88, 87, 81, .6);
 }
 
 nav ul li {
@@ -97,12 +97,12 @@ nav li a {
 
 nav ul li.active {
  border-bottom-width: 2.5px;
- border-bottom: 2px solid #585751;
+ border-bottom: 2px solid rgba(88, 87, 81, .6);
  margin-bottom: -2px;
 }
 
 a, a:visited, a:active {
- color: #7D6F85;
+ color: #585751;
 }
 
 a:hover {
