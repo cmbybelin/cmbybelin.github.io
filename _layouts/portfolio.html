@@ -53,9 +53,15 @@ id: portfolio
        var startX, startY;
 
        for (var i = 0; i < $caroussel.length; i++) {
+         $caroussel[i].addEventListener('click', toggleFullScreen);
          $caroussel[i].addEventListener('touchstart', handleTouchStart);
          $caroussel[i].addEventListener('touchmove', handleTouchMove);
          $caroussel[i].addEventListener('touchend', handleTouchEnd);
+       }
+
+       function toggleFullScreen(e) {
+         var container = document.querySelector('.portfolio');
+         container.classList.toggle('full-screen');
        }
 
        function handleTouchStart(e) {

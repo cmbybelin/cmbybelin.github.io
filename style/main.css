@@ -183,12 +183,39 @@ footer img {
  bottom: 8px;
  left: 0;
  right: 0;
+ z-index: 99;
+ background-color: rgba(255, 255, 255, 0);
+ transition: top ease .6s, bottom .6s ease, background .6s linear;
+}
+.portfolio .photo img {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ margin: auto;
+ background-color: white;
+ cursor: zoom-in;
 }
 .thumbnails {
  display: none;
 }
 .navigate {
  display: none;
+ position: absolute;
+ top: 200px;
+ bottom: 72px;
+ width: 16%;
+ z-index: 101;
+ font-size: 400%;
+ color: #CCC4D1;
+ padding-top: 20%;
+ cursor: pointer;
+ user-select: none;
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .caroussel {
  position: absolute;
@@ -229,6 +256,15 @@ footer img {
  color: #f8f8f8;
  padding: 4px 12px;
  border-radius: 2px;
+}
+/* PORTFOLIO full screen */
+.portfolio.full-screen .photo {
+ top: 8px;
+ bottom: 8px;
+ background-color: rgba(255, 255, 255, 0.9);
+}
+.portfolio.full-screen .photo img {
+ cursor: zoom-out;
 }
 
 /* BLOG */
@@ -357,19 +393,6 @@ button {
  }
  .navigate {
   display: block;
-  position: absolute;
-  top: 200px;
-  bottom: 72px;
-  width: 30%;
-  font-size: 400%;
-  color: #CCC4D1;
-  padding-top: 20%;
-  cursor: pointer;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
  }
  .navigate span {
   transition: opacity ease 0.38s;
