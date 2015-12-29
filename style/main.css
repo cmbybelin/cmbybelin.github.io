@@ -365,6 +365,11 @@ button {
   color: #CCC4D1;
   padding-top: 20%;
   cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
  }
  .navigate span {
   transition: opacity ease 0.38s;
