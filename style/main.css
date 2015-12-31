@@ -62,7 +62,9 @@ h2 {
  font-size: 18px;
  margin: 0;
 }
-
+p {
+ margin-bottom: .6em;
+}
 .logo {
  display: block;
  width: 180px;
@@ -320,6 +322,10 @@ button {
 .vcard .fa {
  width: 1.5em;
  display: inline-block;
+}
+.socialmedia {
+ margin-left: 2em;
+ word-spacing: .6em;
 }
 /* MISC */
 .clearfix {
