@@ -138,7 +138,9 @@ img {
  right: 0;
  z-index: -1;
  max-width: 1296px;
- margin: 0 auto;
+ margin: 0;
+ left: 50%;
+ margin-left: -648px;
 }
 .static-bg-padding {
  height: 500px;
