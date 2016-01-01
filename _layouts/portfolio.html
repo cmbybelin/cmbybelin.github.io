@@ -45,12 +45,10 @@ id: portfolio
        $next.addEventListener('touchstart', handleTouchStart, false);
        $next.addEventListener('touchmove', handleTouchMove, false);
        $next.addEventListener('touchend', handleTouchEnd, false);
-       //$next.addEventListener('touchcancel', handleTouchEnd, false);
        $previous.addEventListener('click', selectPrevious);
        $previous.addEventListener('touchstart', handleTouchStart, false);
        $previous.addEventListener('touchmove', handleTouchMove, false);
        $previous.addEventListener('touchend', handleTouchEnd, false);
-       //$previous.addEventListener('touchcancel', handleTouchEnd, false);
 
        var startX, startY;
 
@@ -59,7 +57,6 @@ id: portfolio
          $caroussel[i].addEventListener('touchstart', handleTouchStart, false);
          $caroussel[i].addEventListener('touchmove', handleTouchMove, false);
          $caroussel[i].addEventListener('touchend', handleTouchEnd, false);
-         //$caroussel[i].addEventListener('touchcancel', handleTouchEnd, false);
        }
 
        function toggleFullScreen() {
