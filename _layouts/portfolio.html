@@ -42,24 +42,27 @@ id: portfolio
        var $previous = document.querySelector('.navigate.previous');
 
        $next.addEventListener('click', selectNext);
-       $next.addEventListener('touchstart', handleTouchStart);
-       $next.addEventListener('touchmove', handleTouchMove);
-       $next.addEventListener('touchend', handleTouchEnd);
+       $next.addEventListener('touchstart', handleTouchStart, false);
+       $next.addEventListener('touchmove', handleTouchMove, false);
+       $next.addEventListener('touchend', handleTouchEnd, false);
+       //$next.addEventListener('touchcancel', handleTouchEnd, false);
        $previous.addEventListener('click', selectPrevious);
-       $previous.addEventListener('touchstart', handleTouchStart);
-       $previous.addEventListener('touchmove', handleTouchMove);
-       $previous.addEventListener('touchend', handleTouchEnd);
+       $previous.addEventListener('touchstart', handleTouchStart, false);
+       $previous.addEventListener('touchmove', handleTouchMove, false);
+       $previous.addEventListener('touchend', handleTouchEnd, false);
+       //$previous.addEventListener('touchcancel', handleTouchEnd, false);
 
        var startX, startY;
 
        for (var i = 0; i < $caroussel.length; i++) {
          $caroussel[i].addEventListener('click', toggleFullScreen);
-         $caroussel[i].addEventListener('touchstart', handleTouchStart);
-         $caroussel[i].addEventListener('touchmove', handleTouchMove);
-         $caroussel[i].addEventListener('touchend', handleTouchEnd);
+         $caroussel[i].addEventListener('touchstart', handleTouchStart, false);
+         $caroussel[i].addEventListener('touchmove', handleTouchMove, false);
+         $caroussel[i].addEventListener('touchend', handleTouchEnd, false);
+         //$caroussel[i].addEventListener('touchcancel', handleTouchEnd, false);
        }
 
-       function toggleFullScreen(e) {
+       function toggleFullScreen() {
          var container = document.querySelector('.portfolio');
          container.classList.toggle('full-screen');
        }
@@ -71,29 +74,36 @@ id: portfolio
          // next/prev:
          startX = e.changedTouches[0].screenX;
          startY = e.changedTouches[0].screenY;
+	 e.preventDefault();
+         return false;
        }
 
        function handleTouchMove(e) {
 	 // fade:
 	 var selectedImg = document.querySelector('.caroussel.selected');
-	 var width = document.width * 1.2;
-	 var height = document.height * 1.2;
+	 var width = window.innerWidth * 1.2;
+	 var height = window.innerHeight * 1.2;
 	 var endX = e.changedTouches[0].screenX;
 	 var endY = e.changedTouches[0].screenY;
 	 selectedImg.style.opacity = Math.max(1.0 - Math.max((Math.abs(endX - startX) / width), (Math.abs(endY - startY) / height)), 0.3);
 	 e.preventDefault();
+         return false;
        }
 
        function handleTouchEnd(e) {
-	 var dWidth = document.width / 6;
-	 var dHeight = document.height / 6;
+	 var dWidth = window.innerWidth / 6;
+	 var dHeight = window.innerHeight / 6;
 	 var endX = e.changedTouches[0].screenX;
 	 var endY = e.changedTouches[0].screenY;
-	 if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
+         if (startX === endX && startY === endY) {
+           toggleFullScreen();
+         } else if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
 	   selectNext();
 	 } else if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
 	   selectPrevious();
 	 }
+	 e.preventDefault();
+         return false;
        }
 
        function unselect() {
