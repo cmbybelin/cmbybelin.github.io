@@ -45,7 +45,7 @@ Enjoy!
 
 Mocht je meer willen weten, laat dan een berichtje achter:
 
-<form action="https://getsimpleform.com/messages?form_api_token=84cf3f47b43b7b5a616bd93710510116" method="post">
+<form action="{{ site.email_post_url }}" method="post">
   <input type='hidden' name='redirect_to' value='{{ site.url }}/contact-thanks.html' />
 
   <label for="f_name">Naam:</label>
@@ -64,7 +64,7 @@ Mocht je meer willen weten, laat dan een berichtje achter:
 
 If you want to learn more, please send me a message:
 
-<form action="https://getsimpleform.com/messages?form_api_token=84cf3f47b43b7b5a616bd93710510116" method="post">
+<form action="{{ site.email_post_url }}" method="post">
   <input type='hidden' name='redirect_to' value='{{ site.url }}/contact-thanks.html' />
 
   <label for="f_name">Name:</label>
