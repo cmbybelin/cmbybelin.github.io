@@ -1,6 +1,7 @@
 # excerpt_separator: "<!--more-->"
 url: http://belindaterrisse.com
 name: Belinda Terrisse Portrait photography
+email_post_url: https://getsimpleform.com/messages?form_api_token=f4f995dca59e3f566b7d974bf51b46f4
 defaults:
   - scope:
        path: ""
