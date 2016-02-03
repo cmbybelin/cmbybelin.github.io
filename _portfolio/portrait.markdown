@@ -1,6 +1,6 @@
 ---
 title: Portrait
-excerpt: Portrait
+description: Portrait
 order: 3
 portfolio_folder: portrait
 portfolio:

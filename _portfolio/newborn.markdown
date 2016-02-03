@@ -1,6 +1,6 @@
 ---
 title: New born
-excerpt: New born
+description: New born
 order: 1
 portfolio_folder: newborn
 portfolio:

@@ -1,11 +1,11 @@
 ---
 id: blog
-excerpt: Blog posts.
+title: Blog
+description: Blog posts
 ---
 {% include head.html %}
 
 <article class="page">
-
 {% for post in site.posts %}
  {% assign photo = post.portfolio | first %}
  <section class="excerpt"> 

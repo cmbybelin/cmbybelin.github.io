@@ -1,6 +1,6 @@
 ---
 title: Maternity
-excerpt: Maternity
+description: Maternity
 order: 2
 portfolio_folder: maternity
 portfolio:
