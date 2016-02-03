@@ -11,6 +11,7 @@ email_post_url: https://getsimpleform.com/messages?form_api_token=f4f995dca59e3f
 
 gems:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-seo-tag
 
 defaults:
