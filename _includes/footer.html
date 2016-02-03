@@ -8,7 +8,9 @@
  </section><section>
   <h2 lang="nl">Agenda</h2>
   <h2 lang="en">Upcoming</h2>
-  <p>6-2-2016 Mini valentine shoot in Hoogkarspel</p>
+  {% for entry in site.data.agenda %}
+  <p><strong>{{ entry.date }}</strong>: {{ entry.event }}</p>
+  {% endfor %}
  </section><section>
   <h2><a href="/blog.html">Blog</a></h2>
   {% assign post = site.posts.first %}
