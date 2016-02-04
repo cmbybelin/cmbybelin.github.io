@@ -169,6 +169,11 @@ footer img {
  max-height: 100px;
  background-color: #eee;
 }
+.copyright {
+ text-align: center;
+ color: #ccc;
+ font-size: 80%;
+}
 .info a, .info a:hover, .info a:visited, .info a:active {
  color: white;
 }

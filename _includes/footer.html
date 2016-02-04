@@ -19,4 +19,4 @@
    {{ post.date | date: "%d-%m-%Y" }}: {{ post.title }}
   </a></p>
   {% if photo.photo %}<img src="/{{ photo.photo }}" alt="{{ photo.caption }}" draggable="false"/>{% endif %}
- </section></div></footer>
+ </section></div><div class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} Belinda Terrisse portrait photography</div></footer>
