@@ -36,10 +36,9 @@
   <nav>
    <ul>
     <li class="{% if page.id == 'home' %}active{% endif %}"><a href="/">Home</a></li><!--
-    {% assign portfolio_ordered = site.portfolio | sort: 'order' %}
-    {% for portfolio in portfolio_ordered %}
-      --><li class="{% if page.portfolio_folder == portfolio.portfolio_folder %}active{% endif %}"><a href="{{ portfolio.url }}">{{ portfolio.title }}</a></li><!--
-    {% endfor %}
+    --><li class="{% if page.id == 'portfolio' or page.layout == 'portfolio' %}active{% endif %}"><a href="/portfolio.html">Portfolio</a></li><!--
+   --><li class="{% if page.id == 'pricelist' %}active{% endif %}"><a href="/pricelist.html" lang="en">Price list</a><a href="/pricelist.html" lang="nl">Prijslijst</a></li><!--
+   --><li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/contact.html">Contact</a></li><!--
    --></ul>
   </nav>
  </header>

@@ -1,0 +1,18 @@
+---
+id: portfolio
+title: Portfolio
+description: Portfolio
+---
+{% include head.html %}
+{% assign portfolio_ordered = site.portfolio | sort: 'order' %}
+
+<article class="page">
+<ul class="portfolio-index"><!--
+{% for portfolio in portfolio_ordered %}
+  {% assign photo = portfolio.portfolio | first %}
+  --><li><a href="{{ portfolio.url }}"><img src="/thumbs/{{ portfolio.portfolio_folder }}/{{ photo.photo }}"><br/>{{ portfolio.title }}</a></li><!--
+{% endfor %}
+  --></ul>
+</article>
+{% include footer.html %}
+{% include tail.html %}
