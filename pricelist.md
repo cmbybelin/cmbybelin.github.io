@@ -15,7 +15,7 @@ Onderstaand vind je mijn prijslijst. Mocht je vragen hebben of bepaalde wensen, 
 * 4 uur nabewerking
 * incl. vakafdruk naar keuze 20x30 ter waarde van &euro; 15,--
 * incl. 10 digitale hoge resolutie bestanden
-* Afhankelijk van de shoot kunnen we gebruik maken van props, accessoires en visagie
+* Afhankelijk van de shoot kunnen we gebruik maken van props en accessoires
 
 
 ### Cake Smash	&euro; 125,--
@@ -43,7 +43,7 @@ Onderstaand vind je mijn prijslijst. Mocht je vragen hebben of bepaalde wensen, 
 * 4 uur nabewerking van jullie foto’s
 * incl. vakafdruk naar keuze 20x30 ter waarde van &euro; 15,--
 * incl. 10 digitale hoge resolutie bestanden 
-* Afhankelijk van de shoot kunnen we gebruik maken van props, accessoires en visagie
+* Afhankelijk van de shoot kunnen we gebruik maken van props en accessoires
 
 
 ### Bruidsfotografie vanaf 4 uur voor &euro; 550,--
