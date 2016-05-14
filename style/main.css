@@ -390,11 +390,16 @@ button {
   max-width: 600px;
   max-height: 600px;
  }
+ footer > div {
+  text-align: center;
+ }
  footer section {
   display: inline-block;
-  width: 33.33%;
+  width: 50%;
   box-sizing: border-box;
   vertical-align: top;
+  max-width: 280px;
+  text-align: left;
  }
  footer section:first-child {
   padding-left: 0;
