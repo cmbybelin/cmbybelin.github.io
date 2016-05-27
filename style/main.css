@@ -366,7 +366,7 @@ button {
   max-width: 374px;
  }
  nav li a {
-  min-width: 72px;
+  min-width: 86px;
  }
 }
 
@@ -417,7 +417,7 @@ button {
   max-width: 550px;
  }
  nav li a {
-  width: 105px;
+  width: 130px;
  }
  .thumbnails {
   display: block;
