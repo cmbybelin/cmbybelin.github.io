@@ -32,3 +32,6 @@ My specialty is new born, portrait and high fashion photography. Images with a s
 Enjoy!
 
 </div>
+
+<div class="clearfix"></div>
+

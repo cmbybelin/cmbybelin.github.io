@@ -2,6 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 @import url(https://fonts.googleapis.com/css?family=Halant:400,500,600);
 
+html {
+ -webkit-text-size-adjust: 100%;
+}
+
 body {
  background: white;
  color: #5C5750;
@@ -15,6 +19,9 @@ body {
 h1, h2, .fn.org {
  font-family: 'Halant', serif;
  font-weight: normal;
+}
+h2 {
+ text-align: center;
 }
 
 a, a:visited, a:active {
@@ -69,15 +76,12 @@ footer {
 .me {
  max-width: 300px;
 }
-
-/* VCARD */
-.vcard .fa {
- width: 1.5em;
- display: inline-block;
-}
-.socialmedia {
- margin-left: 2em;
- word-spacing: .6em;
+@media (min-width: 600px) {
+ .me {
+  float: left;
+  max-width: 40%;
+  margin-right: 16px;
+ }
 }
 
 /* PORTFOLIO */
@@ -93,10 +97,43 @@ footer {
  //height: 60vw;
  width: 100%;
 }
-#portfolio div {
+#portfolio .photo {
  display: block;
  height: 100vw;
  width: 100%;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center center;
+}
+
+@media (min-width: 600px) {
+ #portfolio .photo {
+  height: 50vw; /* IE does not support vmin */
+  width: 50%;
+  float: left;
+ }
+}
+@media (min-height: 600px) {
+ #portfolio .photo {
+  height: 50vh; /* IE does not support vmin */
+  width: 50%;
+ }
+}
+@media (min-width: 1200px) {
+ #portfolio .photo {
+  height: 25vw; /* IE does not support vmin */
+  width: 25%;
+ }
+}
+
+/* VCARD */
+.vcard .fa {
+ width: 1.5em;
+ display: inline-block;
+}
+.socialmedia {
+ margin-left: 2em;
+ word-spacing: .6em;
 }
 
 /* CONTACT */

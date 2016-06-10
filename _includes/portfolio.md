@@ -3,6 +3,6 @@
 <!--
 {% for portfolio in portfolio_ordered %}
   {% assign photo = portfolio.portfolio | first %}
-  --><a href="{{ portfolio.url }}"><img src="/portfolio/{{ portfolio.portfolio_folder }}/{{ photo.photo }}"></a><!--
+  --><div class="photo" style="background-image: url(/portfolio/{{ portfolio.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }})"></div><!--
 {% endfor %}
-  -->
+  --><div class="clearfix"></div>

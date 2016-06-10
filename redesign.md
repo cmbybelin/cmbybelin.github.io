@@ -10,16 +10,3 @@ layout: redesign
 </section><section id="contact">
  {% include contact.md %}
 </section>
-<script type="text/javascript">//<!--
-  (function () {
-    window.onresize = function(event) {
-      resizeDiv();
-    }
-
-    function resizeDiv() {
-      vpw = $(window).width();
-      vph = $(window).height();
-      $(‘#somediv’).css({‘height’: vph + ‘px’});
-    }
-  })();
-//--></script>
