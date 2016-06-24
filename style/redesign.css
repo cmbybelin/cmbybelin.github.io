@@ -121,8 +121,8 @@ footer {
 }
 @media (min-width: 1200px) {
  #portfolio .photo {
-  height: 25vw; /* IE does not support vmin */
-  width: 25%;
+  height: 33.33333vw; /* IE does not support vmin */
+  width: 33.33333%;
  }
 }
 
