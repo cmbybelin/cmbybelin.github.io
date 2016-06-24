@@ -8,5 +8,5 @@ layout: redesign
 </section><section id="portfolio">
  {% include portfolio.md %}
 </section><section id="contact">
- {% include contact.md %}
+ {% include contact.html %}
 </section>

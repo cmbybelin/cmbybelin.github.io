@@ -60,6 +60,7 @@ section {
 
 #contact {
  background-color: #f0e2d9;
+ padding: 68pt 32pt 32pt;
 }
 footer {
  background-color: #585751;
@@ -158,12 +159,23 @@ input, textarea {
  border: 1px solid #aaa;
  background-color: white;
  padding: 4px;
+ width: 100%;
 }
 button {
  background: rgb(192, 222, 255);
  border-radius: 2px;
  border: 1px solid #aaa;
  padding: 4px 8px 3px;
+}
+@media (min-width: 800px) {
+ .contact-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+ }
+ .contact-info > p:first-child {
+  margin-top: 6px;
+ }
 }
 
 /* MISC */

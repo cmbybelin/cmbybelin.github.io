@@ -1,10 +1,11 @@
-<div lang="nl" markdown="1">
+<div lang="nl">
 
-Mocht je meer willen weten, laat dan een berichtje achter:
+<div class="info">
+<p>Mocht je meer willen weten, laat dan een berichtje achter:</p>
 
 {% include vcard.html %}
 
-<form action="{{ site.email_post_url }}" method="post">
+</div><form action="{{ site.email_post_url }}" method="post">
   <input type='hidden' name='redirect_to' value='{{ site.url }}/contact-thanks.html' />
 
   <label for="f_name">Naam:</label>
@@ -17,26 +18,22 @@ Mocht je meer willen weten, laat dan een berichtje achter:
   <button type='submit'>Verzend</button>
 </form>
 
-</div>
-
-<div lang="en" markdown="1">
-
-If you want to learn more, please send me a message:
+</div><div lang="en"><!--
+--><div class="contact-info">
+<p>If you want to learn more, please send me a message:</p>
 
 {% include vcard.html %}
-
-<form action="{{ site.email_post_url }}" method="post">
+</div><!--
+--><form class="contact-info" action="{{ site.email_post_url }}" method="post">
   <input type='hidden' name='redirect_to' value='{{ site.url }}/contact-thanks.html' />
 
   <label for="f_name">Name:</label>
-  <input id="f_name" type="text" name="name" style="width:320px" required placeholder="Your name"/>
+  <input id="f_name" type="text" name="name" required placeholder="Your name"/>
   <label for="f_email">E-mail:</label>
-  <input id="f_email" type="email" name="email" style="width:320px" required placeholder="Your e-mail address"/>
+  <input id="f_email" type="email" name="email" required placeholder="Your e-mail address"/>
   <label for="f_message">Message:</label>
-  <textarea id="f_message" name="message" style="width:320px" rows="12" required placeholder="Type your message here"></textarea>
+  <textarea id="f_message" name="message" rows="12" required placeholder="Type your message here"></textarea>
 
   <button type='submit'>Send</button>
-</form>
-
-
-</div>
+</form><!--
+--></div>
