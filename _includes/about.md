@@ -1,7 +1,5 @@
 <div lang="nl" markdown="1">
 
-## Over mij
-
 <img src="portfolio/belin.jpg" class="me" alt="Dit ben ik"/>
 
 Fotografie. De kunst om het juiste moment vast te leggen, een gevoel over te brengen en mensen te intrigreren.
@@ -19,9 +17,7 @@ Enjoy!
 
 <div lang="en" markdown="1">
 
-## About me
-
-<img src="portfolio/belin.jpg" class="me" alt="This is me"/>
+<!-- <img src="portfolio/belin.jpg" class="me" alt="This is me"/> -->
 
 Photography. The art to capture the right moment, to transfer a feeling and intrigue people.
 

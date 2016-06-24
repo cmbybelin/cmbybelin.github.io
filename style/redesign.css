@@ -9,7 +9,7 @@ html {
 body {
  background: white;
  color: #5C5750;
- font-size: 15px;
+ font-size: 15pt;
  font-family: 'Josefin Sans', Arial, sans-serif;
  line-height: 1.3em;
  padding: 0;
@@ -48,6 +48,10 @@ section {
 
 #about {
  background-color: #f0e2d9;
+ font-size: 24pt;
+ line-height: 32pt;
+ text-align: center;
+ padding: 96pt 32pt 32pt;
 }
 
 #portfolio {
