@@ -51,11 +51,11 @@ section {
  font-size: 24pt;
  line-height: 32pt;
  text-align: center;
- padding: 96pt 32pt 32pt;
+ padding: 96pt 32pt;
 }
 
 #portfolio {
- background-color: #d7b1ca;
+ background-color: black;
 }
 
 #contact {
@@ -111,6 +111,21 @@ footer {
  background-position: center center;
 }
 
+.photo:after {
+ content: "";
+ display: block;
+ height: 100%;
+ width: 100%;
+ opacity: 0;
+ background: rgba(0,0,0,0.2);
+ -moz-transition: all .5s;
+ -webkit-transition: all .5s;
+ transition: all .5s;
+}
+.photo:hover:after {
+ opacity: 1;
+}
+
 @media (min-width: 600px) {
  #portfolio .photo {
   height: 50vw; /* IE does not support vmin */
@@ -152,7 +167,7 @@ label, button {
 }
 button, input, textarea {
  font-family: 'Josefin Sans', Arial, sans-serif;
- font-size: 15px;
+ font-size: 15pt;
  font-weight: 100;
 }
 input, textarea {
