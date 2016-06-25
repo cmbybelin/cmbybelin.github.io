@@ -116,7 +116,6 @@ footer {
 #portfolio img {
  display: block;
  margin: 0;
- //height: 60vw;
  width: 100%;
 }
 #portfolio .photo {
@@ -150,7 +149,7 @@ footer {
   float: left;
  }
 }
-@media (min-height: 600px) {
+@media (min-width: 600px) {
  #portfolio .photo {
   height: 50vh; /* IE does not support vmin */
   width: 50%;
@@ -204,6 +203,9 @@ button {
   display: inline-block;
   vertical-align: top;
   width: 50%;
+ }
+ .contact-info > p {
+  margin-right: 16pt;
  }
  .contact-info > p:first-child {
   margin-top: 6px;
