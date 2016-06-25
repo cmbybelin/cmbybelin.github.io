@@ -1,6 +1,7 @@
 <div lang="nl" markdown="1">
 
-<img src="portfolio/belin.jpg" class="me" alt="Dit ben ik"/>
+<div class="around-me"><img src="frontpage/belin.jpg" class="me" alt="Dit ben ik"/></div>
+<div markdown="1" class="about-info">
 
 Fotografie. De kunst om het juiste moment vast te leggen, een gevoel over te brengen en mensen te intrigreren.
 
@@ -12,12 +13,13 @@ Mijn interesse gaan uit naar new born-, portret- en high fashionfotografie.<br/>
 Beelden met een verhaal die voor eeuwig zijn vastgelegd.
 
 Enjoy!
-
+</div>
 </div>
 
 <div lang="en" markdown="1">
 
-<!-- <img src="portfolio/belin.jpg" class="me" alt="This is me"/> -->
+<div class="around-me"><img src="frontpage/belin.jpg" class="me" alt="This is me"/></div>
+<div markdown="1" class="about-info">
 
 Photography. The art to capture the right moment, to transfer a feeling and intrigue people.
 
@@ -27,6 +29,7 @@ My specialty is new born, portrait and high fashion photography. Images with a s
 
 Enjoy!
 
+</div>
 </div>
 
 <div class="clearfix"></div>
