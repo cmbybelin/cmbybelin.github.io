@@ -93,7 +93,7 @@ id: portfolio
 
        function selectNext() {
 	 var selectedImg = unselect();
-	 if (selectedImg.nextElementSibling) {
+	 if (selectedImg.nextElementSibling.classList.contains('caroussel')) {
 	   selectedImg.nextElementSibling.classList.add('selected');
 	 } else {
 	   selectedImg.parentElement.firstElementChild.classList.add('selected');
