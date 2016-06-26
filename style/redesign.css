@@ -116,6 +116,7 @@ footer {
 }
 #portfolio .photo {
  display: block;
+ height: 320px; /* fallback */
  height: 100vw;
  width: 100%;
  background-repeat: no-repeat;
