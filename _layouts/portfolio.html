@@ -105,7 +105,11 @@ id: portfolio
 	 if (selectedImg.previousElementSibling) {
 	   selectedImg.previousElementSibling.classList.add('selected');
 	 } else {
-	   selectedImg.parentElement.lastElementChild.classList.add('selected');
+	   var last = selectedImg.parentElement.lastElementChild;
+	   while (!last.classList.contains('caroussel')) {
+             last = last.previousElementSibling;
+           }
+           last.classList.add('selected');
 	 }
        }
      })(document);
