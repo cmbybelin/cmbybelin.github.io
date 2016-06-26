@@ -177,11 +177,11 @@ footer {
  margin: 0 auto;
 }
 
-label, button {
+label, .button {
  display: block;
  margin-top: 6px;
 }
-button, input, textarea {
+.button, input, textarea {
  font-family: 'Josefin Sans', Arial, sans-serif;
  font-size: 16pt;
  font-weight: 100;
@@ -192,11 +192,12 @@ input, textarea {
  padding: 4px;
  width: 100%;
 }
-button {
+.button {
  background: rgb(192, 222, 255);
  border-radius: 2px;
  border: 1px solid #aaa;
  padding: 4px 8px 3px;
+ text-decoration: none;
 }
 @media (min-width: 800px) {
  .contact-info {

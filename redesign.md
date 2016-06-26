@@ -10,3 +10,4 @@ layout: redesign
 </section><section id="contact">
  {% include contact.html %}
 </section>
+{% include contact-thanks.html %}

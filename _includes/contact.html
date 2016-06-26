@@ -6,7 +6,7 @@
 {% include vcard.html %}
 
 </div><form class="contact-info" action="{{ site.email_post_url }}" method="post">
-  <input type='hidden' name='redirect_to' value='{{ site.url }}/contact-thanks.html' />
+  <input type='hidden' name='redirect_to' value='{{ site.url }}/redesign.html#thanks' />
 
   <label for="f_name">Naam:</label>
   <input id="f_name" type="text" name="name" required placeholder="Je naam"/>
@@ -15,7 +15,7 @@
   <label for="f_message">Bericht:</label>
   <textarea id="f_message" name="message" rows="12" required placeholder="Type je bericht hier"></textarea>
 
-  <button type='submit'>Verzend</button>
+  <button class="button" type='submit'>Verzend</button>
 </form>
 
 </div><div lang="en"><!--
@@ -25,7 +25,7 @@
 {% include vcard.html %}
 </div><!--
 --><form class="contact-info" action="{{ site.email_post_url }}" method="post">
-  <input type='hidden' name='redirect_to' value='{{ site.url }}/contact-thanks.html' />
+  <input type='hidden' name='redirect_to' value='{{ site.url }}/redesign.html#thanks' />
 
   <label for="f_name">Name:</label>
   <input id="f_name" type="text" name="name" required placeholder="Your name"/>
@@ -34,6 +34,6 @@
   <label for="f_message">Message:</label>
   <textarea id="f_message" name="message" rows="12" required placeholder="Type your message here"></textarea>
 
-  <button type='submit'>Send</button>
+  <button class="button" type='submit'>Send</button>
 </form><!--
 --></div>
