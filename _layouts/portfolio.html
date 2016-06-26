@@ -2,7 +2,7 @@
 id: portfolio
 ---
 
-{% include head.html portfolio_section=page.title %}
+{% include htmlhead.html %}
 
  <article class="portfolio">
   {% for photo in page.portfolio %}
@@ -11,8 +11,9 @@ id: portfolio
    {% if photo.caption %}<p class="caption"><span>{{ photo.caption | newline_to_br }}</span></p>{% endif %}
   </div>
   {% endfor %}
-  <div class="navigate previous"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-  <div class="navigate next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+  <div class="navigate previous"><span aria-hidden="true">&lt;</span></div>
+  <div class="navigate next"><span aria-hidden="true">&gt;</span></div>
+  <a href="/portfolio.html" class="close" aria-hidden="true">&nbsp;x</a>
  </article>
 
  <script>

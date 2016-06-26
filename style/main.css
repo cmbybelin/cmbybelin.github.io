@@ -6,7 +6,7 @@ color scheme:
  accent/hover: #5B8AB2
 */
 
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100);
 @import url(https://fonts.googleapis.com/css?family=Halant:400,500,600);
 
 body {
@@ -194,9 +194,6 @@ footer img {
 }
 
 /* PORTFOLIO */
-.portfolio h2 {
- display: none;
-}
 .portfolio img {
  max-width: 100%;
  max-height: 100%;
@@ -204,43 +201,53 @@ footer img {
 }
 .portfolio {
  position: absolute;
- top: 200px;
+ top: 0;
  bottom: 0;
  left: 0;
  right: 0;
  z-index: 99;
  max-width: none;
- background-color: rgba(255, 255, 255, 0);
+ background-color: rgba(0, 0, 0, 0.9);
  transition: top .6s ease, bottom .6s ease, background .6s linear;
  -webkit-transition: top .6s ease, bottom .6s ease, background .6s linear;
 }
-.portfolio .caroussel img {
+.portfolio .close {
+ color: white;
  position: absolute;
- top: 0;
- bottom: 0;
- left: 0;
- right: 0;
- margin: auto;
- background-color: white;
- cursor: zoom-in;
+ top: 8pt;
+ right: 8pt;
+ font-size: 500%;
+ text-decoration: none;
+ cursor: pointer;
+ z-index: 999;
+ font-weight: 100;
+ line-height: 50%;
+ user-select: none;
+ transition: opacity 0.38s ease;
+ -webkit-transition: opacity 0.38s ease;
+ opacity: 0.7;
+}
+.portfolio .close:hover {
+ opacity: 1;
 }
 .navigate {
  display: none;
  position: absolute;
  top: 0;
  bottom: 0;
- width: 16%;
+ width: 40%;
  z-index: 101;
  font-size: 400%;
- color: #CCC4D1;
+ color: white;
  cursor: pointer;
+ font-weight: 100;
  user-select: none;
  -moz-user-select: none;
  -webkit-user-select: none;
  -ms-user-select: none;
  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.navigate .fa {
+.navigate > span {
  position: absolute;
  top: 50%;
  margin-top: -30px;
@@ -250,17 +257,13 @@ footer img {
  display: block;
  top: 8px;
  bottom: 8px;
- left: 8px;
- right: 8px;
- background-size: contain;
- background-position: center;
- background-repeat: no-repeat;
+ left: 0;
+ right: 0;
  transition: visibility 0s ease 2s, opacity 2s ease;
  -webkit-transition: visibility 0s ease 2s, opacity 2s ease;
  visibility: hidden;
  opacity: 0;
  text-align: center;
- margin: 0 auto;
 }
 .caroussel.selected {
  visibility: visible;
@@ -287,16 +290,6 @@ footer img {
  color: #f8f8f8;
  padding: 4px 12px;
  border-radius: 2px;
-}
-/* PORTFOLIO full screen */
-.portfolio.full-screen {
- top: 0;
- bottom: 0;
- padding: 0 8px;
- background-color: rgba(0, 0, 0, 0.9);
-}
-.portfolio.full-screen .caroussel img {
- cursor: zoom-out;
 }
 
 /* BLOG */
@@ -426,29 +419,24 @@ button {
  .navigate span {
   transition: opacity 0.38s ease;
   -webkit-transition: opacity 0.38s ease;
-  opacity: 0.3;
+  opacity: 0.7;
  }
  .navigate:hover span {
   opacity: 1;
  }
  .navigate.previous {
   left: 0;
-  text-align: left;
-  padding-left: 1em;
+  cursor: w-resize;
+ }
+ .navigate.previous > span {
+  left: 1em;
  }
  .navigate.next {
   right: 0;
-  text-align: right;
-  padding-right: 1em;
+  cursor: e-resize;
  }
- .dropdown-title.small {
-  display: none;
- }
- .dropdown-title.wide {
-  display: inline;
- }
- .portfolio h2 {
-  display: block;
+ .navigate.next > span {
+  right: 1em;
  }
 }
 
