@@ -3,6 +3,8 @@ id: contact
 title: Contact
 description: Contact information
 layout: page
+redirect_to:
+  - /index.html#contact
 ---
 
 <div lang="nl" markdown="1">

@@ -5,5 +5,5 @@
  --><a class="photo" style="background-image: url(frontpage/maternity.jpg)" href="/portfolio/maternity.html"></a><!--
  --><a class="photo" style="background-image: url(frontpage/wedding.jpg)" href="/portfolio/wedding.html"></a><!--
  --><a class="photo" style="background-image: url(frontpage/portrait.jpg); background-position: right top" href="/portfolio/portrait.html"></a><!--
- --><a class="photo" style="background-image: url(/frontpage/log.jpg)" href="/portfolio/portrait.html"></a><!--
+ --><a class="photo" style="background-image: url(/frontpage/log.jpg)" href="/blog.html"></a><!--
  --><div class="clearfix"></div>
