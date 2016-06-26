@@ -16,7 +16,6 @@ portfolio:
   - photo: M-6.07.jpg
   - photo: M-4.03.jpg
   - photo: m01.01.jpg
-  - photo: m01.02.jpg
   - photo: m01.10.jpg
   - photo: m01.11.jpg
   - photo: Shirley.jpg
