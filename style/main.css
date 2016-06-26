@@ -116,8 +116,6 @@ nav a {
 }
 
 img {
- border: 1px solid #aaa;
- padding: 4px;
  user-select: none;
  -moz-user-select: none;
  -webkit-user-select: none;
@@ -204,10 +202,10 @@ footer img {
  max-height: 100%;
  box-sizing: border-box;
 }
-.portfolio .photo {
+.portfolio {
  position: absolute;
- top: 208px;
- bottom: 8px;
+ top: 200px;
+ bottom: 0;
  left: 0;
  right: 0;
  z-index: 99;
@@ -215,7 +213,7 @@ footer img {
  transition: top .6s ease, bottom .6s ease, background .6s linear;
  -webkit-transition: top .6s ease, bottom .6s ease, background .6s linear;
 }
-.portfolio .photo img {
+.portfolio .caroussel img {
  position: absolute;
  top: 0;
  bottom: 0;
@@ -228,13 +226,12 @@ footer img {
 .navigate {
  display: none;
  position: absolute;
- top: 200px;
- bottom: 72px;
+ top: 0;
+ bottom: 0;
  width: 16%;
  z-index: 101;
  font-size: 400%;
  color: #CCC4D1;
- padding-top: 20%;
  cursor: pointer;
  user-select: none;
  -moz-user-select: none;
@@ -242,11 +239,16 @@ footer img {
  -ms-user-select: none;
  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.navigate .fa {
+ position: absolute;
+ top: 50%;
+ margin-top: -30px;
+}
 .caroussel {
  position: absolute;
  display: block;
- top: 0;
- bottom: 0;
+ top: 8px;
+ bottom: 8px;
  left: 8px;
  right: 8px;
  background-size: contain;
@@ -286,12 +288,13 @@ footer img {
  border-radius: 2px;
 }
 /* PORTFOLIO full screen */
-.portfolio.full-screen .photo {
- top: 8px;
- bottom: 8px;
- background-color: rgba(255, 255, 255, 0.9);
+.portfolio.full-screen {
+ top: 0;
+ bottom: 0;
+ padding: 0 8px;
+ background-color: rgba(0, 0, 0, 0.9);
 }
-.portfolio.full-screen .photo img {
+.portfolio.full-screen .caroussel img {
  cursor: zoom-out;
 }
 
