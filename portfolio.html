@@ -10,7 +10,7 @@ description: Portfolio
 <ul class="portfolio-index"><!--
 {% for portfolio in portfolio_ordered %}
   {% assign photo = portfolio.portfolio | first %}
-  --><li><a href="{{ portfolio.url }}"><img src="/thumbs/{{ portfolio.portfolio_folder }}/{{ photo.photo }}"><br/>{{ portfolio.title }}</a></li><!--
+  --><li><a href="{{ portfolio.url }}"><img src="/portfolio/{{ portfolio.portfolio_folder }}/{{ photo.photo }}"><br/>{{ portfolio.title }}</a></li><!--
 {% endfor %}
   --></ul>
 </article>

@@ -13,31 +13,13 @@ id: portfolio
    </div>
   {% endfor %}
   </div>
-   <div class="navigate previous"><span>&lt;</span></div>
-   <div class="navigate next"><span>&gt;</span></div>
-  <div class="thumbnails">
-  {% for photo in page.portfolio %}
-   <img rel="img{{ forloop.index }}" src="/thumbs/{{ page.portfolio_folder }}/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/>
-  {% endfor %}
-  </div>
+  <div class="navigate previous"><span>&lt;</span></div>
+  <div class="navigate next"><span>&gt;</span></div>
  </article>
 
  <script>
     (function (document) {
        var $caroussel = document.querySelectorAll('.caroussel');
-       var $thumbnails = document.querySelectorAll('.thumbnails img');
-
-       for (var i = 0; i < $thumbnails.length; i++) {
-         $thumbnails[i].addEventListener('click', function() {
-           var selectedImg = document.querySelector('.caroussel.selected');
-           var id = this.getAttribute('rel');
-           if (selectedImg) {
-             selectedImg.classList.remove('selected');
-           }
-           document.getElementById(id).classList.add('selected');
-         });
-       }
-
        var $next = document.querySelector('.navigate.next');
        var $previous = document.querySelector('.navigate.previous');
 

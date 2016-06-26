@@ -225,9 +225,6 @@ footer img {
  background-color: white;
  cursor: zoom-in;
 }
-.thumbnails {
- display: none;
-}
 .navigate {
  display: none;
  position: absolute;
@@ -419,27 +416,6 @@ button {
  nav li a {
   width: 130px;
  }
- .thumbnails {
-  display: block;
-  position: absolute;
-  bottom: 0px;
-  height: 64px;
-  left: 8px;
-  width: 100%;
-  text-align: center;
-  white-space: nowrap;
-  overflow-x: scroll;
- }
- .thumbnails img {
-  height: 54px;
-  width: auto;
-  border: 1px solid transparent;
-  padding: 0;
-  cursor: pointer;
- }
- .thumbnails img.selected {
-  border: 1px solid white;
- }
  .navigate {
   display: block;
  }
@@ -469,9 +445,6 @@ button {
  }
  .portfolio h2 {
   display: block;
- }
- .portfolio .photo {
-  bottom: 74px;
  }
 }
 
