@@ -11,8 +11,8 @@ id: portfolio
    {% if photo.caption %}<p class="caption"><span>{{ photo.caption | newline_to_br }}</span></p>{% endif %}
   </div>
   {% endfor %}
-  <div class="navigate previous"><span aria-hidden="true">&lt;</span></div>
-  <div class="navigate next"><span aria-hidden="true">&gt;</span></div>
+  <div class="navigate previous"><span>&lt;</span></div>
+  <div class="navigate next"><span>&gt;</span></div>
   <a href="/index.html#portfolio" class="close" aria-hidden="true">&nbsp;x</a>
  </article>
 
@@ -34,25 +34,19 @@ id: portfolio
        var startX, startY;
 
        for (var i = 0; i < $caroussel.length; i++) {
-         $caroussel[i].addEventListener('click', toggleFullScreen);
          $caroussel[i].addEventListener('touchstart', handleTouchStart, false);
          $caroussel[i].addEventListener('touchmove', handleTouchMove, false);
          $caroussel[i].addEventListener('touchend', handleTouchEnd, false);
        }
 
-       function toggleFullScreen() {
-         var container = document.querySelector('.portfolio');
-         container.classList.toggle('full-screen');
-       }
-
        function handleTouchStart(e) {
+ console.log(' handle touch start', e);
          // fade:
          var selectedImg = document.querySelector('.caroussel.selected');
          selectedImg.style.transition = 'none';
          // next/prev:
          startX = e.changedTouches[0].screenX;
          startY = e.changedTouches[0].screenY;
-	 e.preventDefault();
          return false;
        }
 
@@ -69,19 +63,17 @@ id: portfolio
        }
 
        function handleTouchEnd(e) {
+console.log('handle touch end', e);
 	 var dWidth = window.innerWidth / 6;
 	 var dHeight = window.innerHeight / 6;
 	 var endX = e.changedTouches[0].screenX;
 	 var endY = e.changedTouches[0].screenY;
-         if (startX === endX && startY === endY) {
-           toggleFullScreen();
-         } else if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
+         if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
 	   selectNext();
 	 } else if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
 	   selectPrevious();
 	 }
-	 e.preventDefault();
-         return false;
+         return true;
        }
 
        function unselect() {
@@ -93,6 +85,7 @@ id: portfolio
        }
 
        function selectNext() {
+console.log('select next');
 	 var selectedImg = unselect();
 	 if (selectedImg.nextElementSibling.classList.contains('caroussel')) {
 	   selectedImg.nextElementSibling.classList.add('selected');
