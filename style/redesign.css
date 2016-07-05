@@ -67,7 +67,7 @@ footer {
 .logo {
  display: block;
  margin: auto;
- padding-top: 25vh; /* TODO: CENTER, use modal dialog CSS */
+ padding-top: 20vh; /* TODO: CENTER, use modal dialog CSS */
  height: 240px;
  max-width: 80%;
 }
