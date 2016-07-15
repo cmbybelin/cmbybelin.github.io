@@ -1,6 +1,7 @@
 ---
 layout: redesign
 ---
+{% include nav.html %}
 <section id="home">
  <img src="/style/images/logo.svg" class="logo" alt="Belinda Terrisse Portrait photography" />
 </section><section id="about">

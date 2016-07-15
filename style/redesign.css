@@ -32,6 +32,22 @@ a:hover {
  color: #000;
 }
 
+nav {
+ position: fixed;
+ left: 0;
+ right: 0;
+ z-index: 1001;
+ background-color: rgba(255, 255, 255, 0.6);
+ color: #585751;
+ text-align: right;
+ padding: .5em 1em;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+.nav-link {
+ padding-left: 1em;
+ text-decoration: none;
+}
+
 section {
  padding: 32px;
 }
