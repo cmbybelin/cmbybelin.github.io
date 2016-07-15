@@ -132,46 +132,51 @@ footer {
 }
 #portfolio .photo {
  display: block;
+ position: relative;
  height: 320px; /* fallback */
  height: 100vw;
  width: 100%;
  background-repeat: no-repeat;
  background-size: cover;
  background-position: center center;
+ text-decoration: none;
 }
-
-#portfolio .photo:after {
- content: "";
- display: block;
- height: 100%;
- width: 100%;
- opacity: 0;
+#portfolio .photo span {
+ position: absolute;
+ top:0;
+ left:0;
+ bottom:0;
+ right:0;
+ text-align: center;
+ padding-top: 160px; /* fallback */
+ padding-top: 50vw;
  background: rgba(0,0,0,0.2);
- -moz-transition: all .5s;
- -webkit-transition: all .5s;
- transition: all .5s;
+ color: white;
+ opacity: 0;
+ -moz-transition: opacity .5s;
+ -webkit-transition: opacity .5s;
+ transition: opacity .5s;
 }
-#portfolio .photo:hover:after {
+#portfolio .photo:hover span {
  opacity: 1;
 }
-
 @media (min-width: 600px) {
  #portfolio .photo {
   height: 50vw; /* IE does not support vmin */
   width: 50%;
   float: left;
  }
-}
-@media (min-width: 600px) {
- #portfolio .photo {
-  height: 50vh; /* IE does not support vmin */
-  width: 50%;
+ #portfolio .photo span {
+  padding-top: 25vw;
  }
 }
 @media (min-width: 1200px) {
  #portfolio .photo {
   height: 33.33333vw; /* IE does not support vmin */
   width: 33.33333%;
+ }
+ #portfolio .photo span {
+  padding-top: 16.66665vw;
  }
 }
 
