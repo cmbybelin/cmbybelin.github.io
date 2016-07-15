@@ -232,6 +232,11 @@ input, textarea {
   clear: both;
 }
 
+section:target {
+  padding-top: 65px; 
+  margin-top: -65px;
+}
+
 /* MULTI LINGUAL */
 .lang-nl *[lang='en'],
 .lang-en *[lang='nl'] {
