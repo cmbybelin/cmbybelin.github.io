@@ -8,17 +8,17 @@ description: Blog posts
 
 <header><img src="/style/images/logo.svg" alt="Belinda Terrisse Portrait photography" /><h1>Blog</h1></header>
 
-<article class="page"><!--
 {% for post in site.posts %}
- {% assign photo = post.portfolio | first %}
- --><section class="excerpt"> 
-  {% if photo.photo %}<a class="blog-photo" style="background-image: url({{ photo.photo | replace:' ','%20' }})" title="{{ photo.caption }}" draggable="false"></a>{% endif %}
-  <h2>{{ post.title }}</h2>
-  <small>{{ post.date | date: "%d-%m-%Y" }}</small>
-  {{ post.excerpt }}
-  <p><a href="{{ post.url }}">&#8594; Lees verder</a></p>
-  <div class="clearfix"></div>
- </section><!--
-{% endfor %}
---></article>
+{% assign photo = post.portfolio | first %}
+<article class="blog page">
+ <h2>{{ post.title }}</h2>
+ <small>{{ post.date | date: "%d-%m-%Y" }}</small>
+ {{ post.content }}
 
+ {% for photo in post.portfolio %}
+ <p class="blog-photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/></p>
+ {% endfor %}
+
+</article>
+{% unless forloop.last %}<hr/>{% endunless %}
+{% endfor %}
