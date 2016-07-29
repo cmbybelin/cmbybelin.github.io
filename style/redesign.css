@@ -21,9 +21,9 @@ h1, h2, .fn.org {
  font-weight: normal;
 }
 h2 {
- text-align: center;
+ margin:0;
+ color: #8B7282;
 }
-
 a, a:visited, a:active {
  color: #585751;
 }
@@ -130,7 +130,7 @@ footer {
  margin: 0;
  width: 100%;
 }
-#portfolio .photo {
+.photo {
  display: block;
  position: relative;
  height: 320px; /* fallback */
@@ -141,7 +141,7 @@ footer {
  background-position: center center;
  text-decoration: none;
 }
-#portfolio .photo span {
+.photo span {
  position: absolute;
  top:0;
  left:0;
@@ -157,25 +157,25 @@ footer {
  -webkit-transition: opacity .5s;
  transition: opacity .5s;
 }
-#portfolio .photo:hover span {
+.photo:hover span {
  opacity: 1;
 }
 @media (min-width: 600px) {
- #portfolio .photo {
+ .photo {
   height: 50vw; /* IE does not support vmin */
   width: 50%;
   float: left;
  }
- #portfolio .photo span {
+ .photo span {
   padding-top: 25vw;
  }
 }
 @media (min-width: 1200px) {
- #portfolio .photo {
+ .photo {
   height: 33.33333vw; /* IE does not support vmin */
   width: 33.33333%;
  }
- #portfolio .photo span {
+ .photo span {
   padding-top: 16.66665vw;
  }
 }
@@ -230,6 +230,47 @@ input, textarea {
  .contact-info > p:first-child {
   margin-top: 6px;
  }
+}
+
+/* BLOG */
+header {
+ padding-top: 65px;
+ text-align: center;
+}
+header img {
+ vertical-align: middle;
+ height: 200px;
+ margin-bottom: 28px;
+}
+.page {
+ margin: 32px;
+}
+
+.excerpt {
+ padding: 0;
+ margin: 32px 0;
+}
+
+.excerpt p {
+ margin: 12px 24px 12px 0;
+}
+
+@media (min-width: 600px) {
+ .excerpt p {
+  margin-left: 158px;
+ }
+}
+
+.blog-photo {
+ display: block;
+ position: relative;
+ float: left;
+ height: 200px; /* fallback */
+ width: 134px;
+ background-repeat: no-repeat;
+ background-position: center top;
+ background-size: cover;
+ margin-right: 24px;
 }
 
 /* MISC */
