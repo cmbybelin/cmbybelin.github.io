@@ -1,6 +1,10 @@
 
 {% include head.html %}
 
+<body>
+
+{% include header.html %}
+
 <article class="blog page">
  <h2>{{ page.title }}</h2>
  {{ content }}
@@ -12,4 +16,7 @@
 </article>
 
 {% include footer.html %}
+
+</body>
+
 {% include tail.html %}

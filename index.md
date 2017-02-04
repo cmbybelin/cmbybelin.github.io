@@ -1,6 +1,6 @@
 ---
 layout: index
-photo: /photos/love-22.jpg
+photo: /love/love-22.jpg
 ---
 
 # Belinda

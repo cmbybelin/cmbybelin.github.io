@@ -4,6 +4,7 @@ id: portfolio
 
 {% include head.html %}
 
+<body>
  <article class="portfolio">
   {% for photo in page.portfolio %}
   <div id="img{{ forloop.index }}" class="caroussel{% if forloop.first %} selected{% endif %}">
@@ -108,6 +109,10 @@ console.log('select next');
        }
      })(document);
  </script>
+
+ {% include ga.html %}
+
+</body>
 
 {% include tail.html %}
 

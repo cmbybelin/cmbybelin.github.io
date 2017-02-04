@@ -33,16 +33,31 @@ article {
     }
   }
 
+  &.page-portfolio-overview {
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    h2 {
+      margin: 0;
+      padding-top: 4em;
+      margin-bottom: 1em;
+    }
+    a {
+      padding: 16px 32px;
+      color: $white;
+    }
+  }
+
   .half-wide {
-    background-size: cover;
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
     padding: $default-padding $default-padding * 2;
   }
-  .half-wide-1 {
+  .half-wide-1, .full-height {
     min-height: 320px;
     min-height: 100vw;
+    background-size: cover;
   }
 }
 

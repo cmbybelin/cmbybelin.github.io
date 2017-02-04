@@ -21,12 +21,10 @@ defaults:
        type: "posts"
     values:
        layout: "blog"
-  - scope:
-       path: ""
-       type: "portfolio"
-    values:
-       layout: "portfolio"
 
 collections:
+  love:
+  beauty:
+  happiness:
   portfolio:
     output: true

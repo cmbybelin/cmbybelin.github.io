@@ -9,7 +9,7 @@ a {
   padding: $default-padding;
 }
 
-article.page-index {
+article.page-index, article.page-portfolio-overview {
   a, a:visited, a:active, a:hover {
     border: 1px solid white;
   }
