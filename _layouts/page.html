@@ -1,9 +1,13 @@
 
 {% include head.html %}
 
-<article class="page">
+<body>
+
+
+<article class="page page-{{ page.sections }}" {% if page.sections == 1 %}style="background-image: url({{ page.photo }})"{% endif %}>
  {{ content }}
 </article>
 
 {% include footer.html %}
+</body>
 {% include tail.html %}

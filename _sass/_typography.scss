@@ -1,0 +1,38 @@
+// Colors:
+$white: white;
+$creme: rgb(244, 238, 234);
+$nude: rgb(288, 217, 212);
+$grey: rgb(183, 183, 183);
+$cloud-grey: rgb(230, 231, 234);
+$black: black;
+
+// Distance:
+$default-padding: 8px;
+
+// Fonts:
+$serif: 'Cinzel', serif;
+$sans-serif: 'Josefin Sans', Arial, sans-serif;
+$default-font-size: 16px;
+$default-line-height: 19px;
+
+@import url(https://fonts.googleapis.com/css?family=Cinzel|Josefin+Sans:400);
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: $white;
+  color: $black;
+  font-size: $default-font-size;
+  font-family: $sans-serif;
+  line-height: $default-font-size * 1.18;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2 {
+  font-family: $serif;
+  font-size: 34px;
+  font-weight: 100;
+}
