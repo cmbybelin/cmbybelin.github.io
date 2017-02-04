@@ -7,16 +7,15 @@ a, a:visited, a:active, a:hover {
 
 a {
   padding: $default-padding;
+}
 
-  &:active, &:hover {
+article.page-index {
+  a, a:visited, a:active, a:hover {
+    border: 1px solid white;
+  }
+  a:hover {
     background-color: $cloud-grey;
     transition: background-color .2s ease;
     opacity: 0.8;
-  }
-}
-
-article {
-  a, a:visited, a:active, a:hover {
-    border: 1px solid white;
   }
 }

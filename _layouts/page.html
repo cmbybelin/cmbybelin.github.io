@@ -3,9 +3,12 @@
 
 <body>
 
+{% include header.html %}
 
-<article class="page page-{{ page.sections }}" {% if page.sections == 1 %}style="background-image: url({{ page.photo }})"{% endif %}>
- {{ content }}
+<article class="page">
+ <div class="photo half-wide half-wide-1" style="background-image: url({{ page.photo }})"></div><div class="half-wide half-wide-2">
+  {{ content }}
+ </div>
 </article>
 
 {% include footer.html %}
