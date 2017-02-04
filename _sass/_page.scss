@@ -1,33 +1,35 @@
-.page {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+article {
+  &.page {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 
-  a {
-    color: $black;
-  }
-}
-
-.page-index { /* Single page -- index */
-  color: $white;
-  text-align: center;
-  padding-top: 10em;
-  padding-bottom: 6em;
-  box-sizing: border-box;
-  font-size: 120%;
-  h1 {
-    letter-spacing: 0.1em;
-    font-size: 34px;
-    line-height: normal;
-    margin: 0;
-  }
-  p {
-    letter-spacing: 0.55em;
-    margin-bottom: 3em;
+    a {
+      color: $black;
+    }
   }
 
-  a {
-    padding: 16px 32px;
+  &.page-index { /* Single page -- index */
     color: $white;
+    text-align: center;
+    padding-top: 10em;
+    padding-bottom: 6em;
+    box-sizing: border-box;
+    font-size: 120%;
+    h1 {
+      letter-spacing: 0.1em;
+      font-size: 34px;
+      line-height: normal;
+      margin: 0;
+    }
+    p {
+      letter-spacing: 0.55em;
+      margin-bottom: 3em;
+    }
+
+    a {
+      padding: 16px 32px;
+      color: $white;
+    }
   }
 }

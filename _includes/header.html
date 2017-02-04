@@ -1,0 +1,40 @@
+<header>
+  <!--<a href="/"><img src="/style/images/logo.svg" class="logo" alt="Belinda Terrisse Portrait photography" /></a>-->
+
+  <a href="/" class="logo">Belinda Terrisse<span id="header-open-mobile-menu" class="mobile-menu">&#9776;</span></a>
+  <nav>
+    <div id="header-close-mobile-menu" class="mobile-menu">&#10005;</div>
+    <ul>
+      <li class="{% if page.id == 'home' %}active{% endif %}"><a href="/">Home</a></li>
+      <li class="{% if page.id == 'portfolio' or page.layout == 'portfolio' %}active{% endif %}"><a href="/portfolio.html">Portfolio</a></li>
+      <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/about.html">About</a></li>
+      <li class="{% if page.id == 'blog' %}active{% endif %}"><a href="/blog.html">Blog</a></li>
+      <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/sessions.html">Sessions</a></li>
+      <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  (function (document) {
+      var openMobileMenu = document.querySelector("#header-open-mobile-menu");
+      var closeMobileMenu = document.querySelector("#header-close-mobile-menu");
+      var nav = document.querySelector("header nav");
+
+      openMobileMenu.addEventListener('click', function(e) {
+          nav.classList.remove("hidden"); // for visual effects
+          nav.classList.add("visible");
+          console.log('toggling nav;');
+          e.preventDefault();
+          e.stopPropagation();
+      });
+      closeMobileMenu.addEventListener('click', function(e) {
+          nav.classList.remove("visible");
+          nav.classList.add("hidden"); // for visual effects
+          window.setTimeout(function () { nav.classList.remove("hidden"); }, 500);
+          e.preventDefault();
+      });
+
+
+  })(document);
+</script>

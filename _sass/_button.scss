@@ -1,4 +1,10 @@
 
+a, a:visited, a:active, a:hover {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: normal;
+}
+
 a {
   padding: $default-padding;
 
@@ -9,10 +15,8 @@ a {
   }
 }
 
-a, a:visited, a:active, a:hover {
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid white;
-  letter-spacing: normal;
+article {
+  a, a:visited, a:active, a:hover {
+    border: 1px solid white;
+  }
 }
-

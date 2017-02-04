@@ -1,0 +1,73 @@
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
+
+  .logo {
+    display: block;
+    font-family: $serif;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    margin: .8em 0;
+  }
+  .mobile-menu {
+    float: right;
+    font-size: 34px;
+    font-family: $serif;
+    @include no-user-select;
+  }
+  nav {
+    background-color: $cloud-grey;
+    .mobile-menu {
+      margin: .8em 0;
+      padding: $default-padding;
+    }
+    ul {
+      clear: both;
+      list-style: none;
+      text-align: center;
+      line-height: 3em;
+      padding: 0;
+    }
+    a {
+      font-size: 120%;
+    }
+  }
+}
+
+
+/** Mobile show/hide effect */
+nav {
+  @include full-screen;
+  visibility: hidden;
+  opacity: 0;
+  perspective: 1200px;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+  ul {
+    opacity: 0.4;
+    transform: translateY(-25%) rotateX(35deg);
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease;
+  }
+  &.visible ul {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  &.hidden ul {
+    transform: translateY(25%) rotateX(-35deg);
+  }
+
+}
+
+
+article {
+  &.page {
+    margin-top: 3em;
+  }
+}

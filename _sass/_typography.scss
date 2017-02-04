@@ -36,3 +36,9 @@ h1, h2 {
   font-size: 34px;
   font-weight: 100;
 }
+
+/* MULTI LINGUAL */
+.lang-nl *[lang='en'],
+.lang-en *[lang='nl'] {
+  display: none;
+}
