@@ -1,0 +1,13 @@
+---
+layout: index
+style: page-portfolio-overview
+---
+
+{% assign path_prefix = "/" | append: page.name | append: "/" %}
+{% for file in site.static_files %}
+  {% if file.path contains path_prefix %}
+    <img src="{{ file.path }}" alt="{{ page.collection }}"/>
+  {% endif %}
+
+{% endfor %}
+

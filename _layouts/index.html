@@ -5,7 +5,7 @@
 
 {% include header.html %}
 
-<article class="page page-index" style="background-image: url({{ page.photo }})">
+<article class="page {{ page.style }}" {% if page.photo and page.with_photo %}style="background-image: url({{ page.photo }})"{% endif %}>
  {{ content }}
 </article>
 
