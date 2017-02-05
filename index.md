@@ -11,4 +11,4 @@ with_photo: true
 
 PHOTOGRAPHY
 
-[View more](/portfolio.html)
+<a class="outlined" lang="nl" href="/portfolio.html">Bekijk</a><a class="outlined" lang="en" href="/portfolio.html">View</a>
