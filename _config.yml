@@ -25,7 +25,7 @@ defaults:
        path: ""
        type: "portfolio"
     values:
-       layout: "portfolio-category"
+       layout: "portfolio-index"
 
 collections:
   portfolio:
