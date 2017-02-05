@@ -9,7 +9,7 @@ article {
   }
 
   &.blog {
-    margin: 6em $default-padding 0;
+    margin: 6em $default-padding * 2 0;
     h1 {
       text-align: center;
     }
