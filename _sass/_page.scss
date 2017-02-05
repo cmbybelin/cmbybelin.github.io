@@ -39,7 +39,7 @@ article {
   }
 
   &.page-portfolio-overview {
-    color: $white;
+    @include no-user-select;
     margin-top: 6em;
     text-align: center;
     box-sizing: border-box;
@@ -55,6 +55,7 @@ article {
   }
 
   &.page-portfolio-index {
+    @include no-user-select;
     margin-top: 6em;
     h1 {
       text-align: center;
