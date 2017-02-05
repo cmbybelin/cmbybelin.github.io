@@ -8,6 +8,13 @@ article {
     color: $black;
   }
 
+  &.blog {
+    margin: 6em $default-padding 0;
+    h1 {
+      text-align: center;
+    }
+  }
+
   &.page-index { /* Single page -- index */
     color: $white;
     text-align: center;
