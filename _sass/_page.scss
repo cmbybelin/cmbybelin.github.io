@@ -1,12 +1,11 @@
 article {
-  &.page {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  margin-top: 4.5em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 
-    a {
-      color: $black;
-    }
+  a {
+    color: $black;
   }
 
   &.page-index { /* Single page -- index */
@@ -34,6 +33,7 @@ article {
 
   &.page-portfolio-overview {
     color: $white;
+    margin-top: 6em;
     text-align: center;
     box-sizing: border-box;
     h2 {
@@ -48,9 +48,9 @@ article {
   }
 
   &.page-portfolio-index {
+    margin-top: 6em;
     h1 {
       text-align: center;
-      padding-top: 2em;
     }
   }
 

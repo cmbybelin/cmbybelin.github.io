@@ -9,7 +9,7 @@ with_photo: true
 
 <div class="portfolio-category full-height" style="background-image: url({{ category.photo}}); background-position-y: 30%;">
   <h2>{{ category.title }}</h2>
-  <p><a lang="nl" href="{{  category.url }}">Bekijk</a><a lang="en" href="{{  category.url }}">View</a></p>
+  <p><a class="outlined" lang="nl" href="{{  category.url }}">Bekijk</a><a class="outlined" lang="en" href="{{  category.url }}">View</a></p>
 </div>
     
 {% endfor %}
