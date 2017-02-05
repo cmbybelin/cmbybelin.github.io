@@ -33,9 +33,9 @@
 .cell {
   display: block;
   box-sizing: border-box;
-  background-image: url(/happiness/happy-01.jpg);
   background-size: cover;
   background-clip: content-box;
+  background-position-x: 50%;
   padding: 4px;
   width: 100%;
 }

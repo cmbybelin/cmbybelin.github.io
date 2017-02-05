@@ -3,6 +3,10 @@ layout: index
 style: page-portfolio-index
 
 rows:
+- items: 1
+  height: 62
+  cols:
+  - width: 100
 - items: 3
   height: 100
   cols:
@@ -18,13 +22,13 @@ rows:
 - items: 2
   height: 62
   cols:
-  - width: 62
   - width: 38
+  - width: 62
 - items: 2
   height: 62
   cols:
-  - width: 38
   - width: 62
+  - width: 38
 - items: 3
   height: 62
   cols:
@@ -51,12 +55,24 @@ rows:
   cols:
   - width: 100
 
+# How does this work:
+# Given a simple portfolio page. It has a property `title` (which is the
+# basename of the portfolio). There is also a folder '/:title/' (all lowercase)
+# where the images reside. We scan all static files for the files that live in
+# '/:title/' and create a list out of that, via a string.
+# Then we iterate the 'rows' variable as defined above and create sections for
+# all the images. If a row requires more items than are left in our portfolio
+# (`left`), we skip to the next entry. Hence the list ends with a layout with 2
+# and 1 item, so everything can be displayed.
+# `current` refers to the current image that has to be displayed.
+# `index_list` contains strings `basename:path`, which has to be split.
+# For a column (`cols`) the height variable will default to 100%.
 ---
 
 <h1>{{ page.title }}</h1>
 
 {% capture index_str %}
-  {% assign path_prefix = "/" | append: page.name | append: "/" %}
+  {% assign path_prefix = "/" | append: page.title | downcase | append: "/" %}
   {% assign first = true %}
   {% for file in site.static_files %}
     {% if file.path contains path_prefix %}
@@ -65,32 +81,29 @@ rows:
   {% endfor %}
 {% endcapture %}
 
-<ul>
 {% assign index_list = index_str | split: ';' %}
 {% assign left = index_list | size %}
-{% for base_path in index_list %}
-  {% assign w = base_path | strip | split: ':' %}
-  <li>{{ left }}. <em>{{ w[0] }}</em> = {{ w[1] }}</li>
-  {% assign left = left | minus: 1 %}
-{% endfor %}
-</ul>
+{% assign current = 0 %}
 
-{% assign index_list = index_str | split: ';' %}
-{% assign left = index_list | size %}
-
-{% for row in page.rows %}
-<div class="row row-{{ row.height }}"
-     {% for col in row.cols %}
-><div class="col col-{{ col.width }}"
+{% for row in layout.rows %}
+  {% if row.items <= left %}
+    <div class="row row-{{ row.height }}"
+    {% for col in row.cols %}
+      ><div class="col col-{{ col.width }}"
       {% if col.height %}
-      {% assign col_height = col.height | split: ',' %}
-  {% for height in col_height %}
-  ><div class="cell cell-{{ height | strip }}" style="background-image: url({{ foo }})"></div
-          {% endfor %}
-          {% else %}
-  ><div class="cell cell-100"></div
-          {% endif %}
-  ></div
-        {% endfor %}
-></div>
-{% endfor%}
+        {% assign col_height = col.height | split: ',' %}
+      {% else %}
+        {% assign col_height = '100' | split: ',' %}
+      {% endif %}
+      {% for height in col_height %}
+        {% assign base_path = index_list[current] %}
+        {% assign w = base_path | strip | split: ':' %}
+        ><div class="cell cell-{{ height | strip }}" style="background-image: url({{ w[1] }})" data-hash="{{ w[0] }}"></div
+        {% assign left = left | minus: 1 %}
+        {% assign current = current | plus: 1 %}
+      {% endfor %}
+      ></div
+    {% endfor %}
+    ></div>
+  {% endif %}
+{% endfor %}

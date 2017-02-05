@@ -52,10 +52,10 @@ rows:
     {% if col.height %}
       {% assign col_height = col.height | split: ',' %}
       {% for height in col_height %}
-      ><div class="cell cell-{{ height | strip }}" style="background-image: url({{ foo }})"></div
+      ><div class="cell cell-{{ height | strip }}" style="background-image: url(/happiness/happy-01.jpg)"></div
       {% endfor %}
     {% else %}
-      ><div class="cell cell-100"></div
+      ><div class="cell cell-100" style="background-image: url(/happiness/happy-01.jpg)"></div
     {% endif %}
   ></div
   {% endfor %}

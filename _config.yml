@@ -26,6 +26,7 @@ defaults:
        type: "portfolio"
     values:
        layout: "portfolio-index"
+       style: "page-portfolio-index"
 
 collections:
   portfolio:

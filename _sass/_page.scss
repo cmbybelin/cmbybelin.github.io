@@ -1,5 +1,4 @@
 article {
-  background-color: $cloud-grey;
   &.page {
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,7 +33,7 @@ article {
   }
 
   &.page-portfolio-overview {
-    color: white;
+    color: $white;
     text-align: center;
     box-sizing: border-box;
     h2 {
@@ -49,17 +48,9 @@ article {
   }
 
   &.page-portfolio-index {
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-    h2 {
-      margin: 0;
-      padding-top: 4em;
-      margin-bottom: 1em;
-    }
-    a {
-      padding: 16px 32px;
-      color: $white;
+    h1 {
+      text-align: center;
+      padding-top: 2em;
     }
   }
 
