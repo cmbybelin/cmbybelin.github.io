@@ -82,7 +82,7 @@ rows:
 {% assign current = 0 %}
 
 {% for row in layout.rows %}
-  {% if row.items <= left %}
+  {% if row.items <= left %}{% unless page.skip_list contains forloop.index %}
     <div class="row row-{{ row.height }}"
     {% for col in row.cols %}
       ><div class="col col-{{ col.width }}"
@@ -101,5 +101,5 @@ rows:
       ></div
     {% endfor %}
     ></div>
-  {% endif %}
+  {% endunless %}{% endif %}
 {% endfor %}

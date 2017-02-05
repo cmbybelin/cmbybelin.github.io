@@ -1,6 +1,6 @@
 ---
 layout: page
-photo: /beauty/portrait-129.jpg
+photo: /images/portrait-129.jpg
 ---
 
 <div lang="nl">
