@@ -1,4 +1,4 @@
 ---
 order: 2
-photo: /love/love-1.jpg
+photo: /love/love-02.jpg
 ---
