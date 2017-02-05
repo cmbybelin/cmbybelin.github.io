@@ -1,0 +1,68 @@
+---
+layout: index
+rows:
+- items: 3
+  height: 100
+  cols:
+  - width: 38
+    height: 62, 38
+  - width: 62
+- items: 3
+  height: 100
+  cols:
+  - width: 62
+  - width: 38
+    height: 38, 62
+- items: 2
+  height: 62
+  cols:
+  - width: 62
+  - width: 38
+- items: 2
+  height: 62
+  cols:
+  - width: 38
+  - width: 62
+- items: 3
+  height: 62
+  cols:
+  - width: 33
+  - width: 33
+  - width: 33
+- items: 1
+  height: 62
+  cols:
+  - width: 100
+- items: 3
+  height: 62
+  cols:
+  - width: 62
+    height: 50, 50
+  - width: 38
+---
+
+<style type="text/css">
+  header {
+    display: none;
+  }
+</style>
+
+{% assign rows = page.rows %}
+<h1>Happiness</h1>
+
+{% for row in rows %}
+<div class="row row-{{ row.height }}"
+  {% for col in row.cols %}
+  ><div class="col col-{{ col.width }}"
+    {% if col.height %}
+      {% assign col_height = col.height | split: ',' %}
+      {% for height in col_height %}
+      ><div class="cell cell-{{ height | strip }}"></div
+      {% endfor %}
+    {% else %}
+      ><div class="cell cell-100"></div
+    {% endif %}
+  ></div
+  {% endfor %}
+></div>
+{% endfor%}

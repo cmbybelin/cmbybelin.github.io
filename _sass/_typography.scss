@@ -6,6 +6,13 @@ $grey: rgb(183, 183, 183);
 $cloud-grey: rgb(230, 231, 234);
 $black: black;
 
+// Metrics:
+$golden-ratio: 1.618;
+$golden-ratio-p-2: 100% / $golden-ratio;
+$golden-ratio-p-1: 100% - $golden-ratio-p-2;
+$golden-ratio-vw-2: 100vw / $golden-ratio;
+$golden-ratio-vw-1: 100vw - $golden-ratio-vw-2;
+
 // Distance:
 $default-padding: 8px;
 
