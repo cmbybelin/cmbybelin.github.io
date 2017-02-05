@@ -1,0 +1,19 @@
+---
+layout: index
+id: blog
+title: Blog
+description: Blog posts
+---
+
+{% for post in site.posts %}
+{% assign photo = post.portfolio | first %}
+ <h2>{{ post.title }}</h2>
+ <small>{{ post.date | date: "%d-%m-%Y" }}</small>
+ {{ post.content }}
+
+ {% for photo in post.portfolio %}
+ <p class="blog-photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/></p>
+ {% endfor %}
+
+{% unless forloop.last %}<hr/>{% endunless %}
+{% endfor %}
