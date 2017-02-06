@@ -6,12 +6,13 @@ layout: index
 {% assign sorted_sessions = site.sessions | sort: "order" %}
 {% for session in sorted_sessions %}
 
-><div class="page-session secondary">
+><div class="page-session"><div class="half-wide-dyn secondary">
   {{ session.content }}
   
-  <p style="text-align: right"><a class="outlined" href="/contact.html#contact"><span lang="nl">Contact opnemen</span><span lang="en">Contact</span></a></p>
+  <p style="text-align: center"><a class="outlined" href="/contact.html#contact"><span lang="nl">Contact opnemen</span><span lang="en">Contact</span></a></p>
+</div><div class="half-wide-dyn secondary">
   <p><img src="{{ session.photo }}" alt="{{ session.title}}"/></p>
-</div
+</div><div style="clear: both"></div></div
     
 {% endfor %}
 ></div>

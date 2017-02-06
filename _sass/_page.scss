@@ -53,6 +53,7 @@ article {
 
   .page-session {
     margin-bottom: 8px;
+    background-color: $cloud-grey;
   }
 }
 
@@ -74,11 +75,17 @@ article {
 
 @media (min-width: 800px) {
   .half-wide {
+    background-position-x: 50%;
     float: left;
     min-height: 720px;
     min-height: 70vw;
     width: 50%;
+  }
+  .half-wide-dyn {
     background-position-x: 50%;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
   }
 }
 
