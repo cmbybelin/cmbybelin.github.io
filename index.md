@@ -10,4 +10,4 @@ bg_photo: /images/love-22.jpg
 
 PHOTOGRAPHY
 
-<a class="outlined" lang="nl" href="/portfolio.html">Bekijk</a><a class="outlined" lang="en" href="/portfolio.html">View</a>
+<a class="outlined-inv" lang="nl" href="/portfolio.html">Bekijk</a><a class="outlined" lang="en" href="/portfolio.html">View</a>

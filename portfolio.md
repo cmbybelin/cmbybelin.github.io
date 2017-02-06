@@ -9,7 +9,7 @@ style: page-portfolio-overview
 
 ><div class="portfolio-category full-height" style="background-image: url({{ category.photo}}); background-position-y: 30%;">
   <h2>{{ category.title }}</h2>
-  <p style="margin: 0"><a class="outlined" lang="nl" href="{{  category.url }}">Bekijk</a><a class="outlined" lang="en" href="{{  category.url }}">View</a></p>
+  <a class="outlined-inv" lang="nl" href="{{  category.url }}">Bekijk</a><a class="outlined-inv" lang="en" href="{{  category.url }}">View</a>
 </div
     
 {% endfor %}

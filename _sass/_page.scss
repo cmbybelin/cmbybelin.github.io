@@ -9,7 +9,6 @@ article {
   }
 
   &.blog {
-    margin: 6em $default-padding * 2 0;
     h1 {
       text-align: center;
     }
@@ -29,12 +28,6 @@ article {
     }
     p {
       letter-spacing: 0.55em;
-      margin-bottom: 3em;
-    }
-
-    a {
-      padding: 16px 32px;
-      color: $white;
     }
   }
 
@@ -45,12 +38,8 @@ article {
     box-sizing: border-box;
     h2 {
       margin: 0;
-      padding-top: 4em;
+      padding-top: 2em;
       margin-bottom: 1em;
-    }
-    a {
-      padding: 16px 32px;
-      color: $white;
     }
   }
 
@@ -62,16 +51,24 @@ article {
     }
   }
 
+  .secondary {
+    background-color: $cloud-grey;
+    padding: $default-padding $default-padding * 2;
+  }
+
   .half-wide {
-    display: inline-block;
+    display: block;
     width: 100%;
     box-sizing: border-box;
-    padding: $default-padding $default-padding * 2;
   }
   .half-wide-1, .full-height {
     min-height: 320px;
     min-height: 100vw;
     background-size: cover;
+  }
+
+  .page-session {
+    margin-bottom: 8px;
   }
 }
 
@@ -90,7 +87,7 @@ button, input, textarea {
 input, textarea {
   width: 100%;
   border: 1px solid #aaa;
-  background-color: white;
+  background-color: $white;
   padding: 4px;
   margin: $default-padding 0;
 }

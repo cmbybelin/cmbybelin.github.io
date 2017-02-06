@@ -29,5 +29,6 @@ defaults:
        style: "page-portfolio-index"
 
 collections:
+  sessions:
   portfolio:
     output: true

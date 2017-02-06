@@ -10,9 +10,19 @@ a {
 }
 
 a.outlined, a.outlined:visited, a.outlined:active, a.outlined:hover {
-  border: 1px solid white;
+  border: 1px solid $black;
+  padding: 16px 32px;
+  display: inline-block;
 }
-a.outlined:hover {
+
+a.outlined-inv, a.outlined-inv:visited, a.outlined-inv:active, a.outlined-inv:hover {
+  border: 1px solid $white;
+  color: $white;
+  padding: 16px 32px;
+  display: inline-block;
+}
+
+a.outlined:hover, a.outlined-inv:hover {
   background-color: $cloud-grey;
   transition: background-color .2s ease;
   opacity: 0.8;

@@ -6,6 +6,7 @@ description: Blog posts
 <h1>Blog</h1>
 {% for post in site.posts %}
 {% assign photo = post.portfolio | first %}
+<div class="secondary">
  <h3>{{ post.title }}</h3>
  <small>{{ post.date | date: "%d-%m-%Y" }}</small>
  {{ post.content }}
@@ -13,6 +14,5 @@ description: Blog posts
  {% for photo in post.portfolio %}
  <p class="blog-photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/></p>
  {% endfor %}
-
-{% unless forloop.last %}<hr/>{% endunless %}
+</div>
 {% endfor %}
