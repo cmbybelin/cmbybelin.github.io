@@ -102,6 +102,16 @@ article {
   }
 }
 
+@media (min-width: 960px) {
+  article {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+  .half-wide {
+    min-height: 70vw;
+  }
+
+}
 
 /* CONTACT */
 button {
