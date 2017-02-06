@@ -1,6 +1,6 @@
 ---
 layout: page
-photo: /images/belinda.jpg
+bg_photo: /images/belinda.jpg
 ---
 
 <div lang="nl" markdown="1">
