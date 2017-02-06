@@ -51,26 +51,37 @@ article {
     }
   }
 
-  .secondary {
-    background-color: $cloud-grey;
-    padding: $default-padding $default-padding * 2;
-  }
-
-  .half-wide {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .half-wide-1, .full-height {
-    min-height: 320px;
-    min-height: 100vw;
-    background-size: cover;
-  }
-
   .page-session {
     margin-bottom: 8px;
   }
 }
+
+.secondary {
+  background-color: $cloud-grey;
+  padding: $default-padding $default-padding * 2;
+}
+
+.half-wide {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.half-wide-1, .full-height {
+  min-height: 320px;
+  min-height: 100vw;
+  background-size: cover;
+}
+
+@media (min-width: 800px) {
+  .half-wide {
+    float: left;
+    min-height: 720px;
+    min-height: 70vw;
+    width: 50%;
+    background-position-x: 50%;
+  }
+}
+
 
 /* CONTACT */
 button {

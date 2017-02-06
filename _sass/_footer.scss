@@ -1,9 +1,10 @@
 footer {
-  margin: 1.6em;
+  padding: 1.6em;
+  clear: both;
 
   .socialmedia {
     font-size: 148%;
-    margin: 1em;
+    margin-bottom: 1em;
     text-align: center;
     letter-spacing: 0.55em;
     a {
@@ -12,7 +13,6 @@ footer {
   }
 
   .copyright {
-    margin: 1em;
     font-size: $default-font-size / 1.25;
     text-align: center;
   }
