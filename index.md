@@ -2,7 +2,6 @@
 layout: index
 style: page-index
 photo: /images/love-22.jpg
-with_photo: true
 ---
 
 # Belinda

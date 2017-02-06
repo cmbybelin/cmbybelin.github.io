@@ -1,4 +1,4 @@
 ---
 order: 1
-photo: /happiness/happy-05.jpg
+index_photo: /happiness/happy-05.jpg
 ---
