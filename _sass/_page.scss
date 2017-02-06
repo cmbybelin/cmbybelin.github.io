@@ -73,12 +73,24 @@ article {
   background-size: cover;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
+  article.page-portfolio-overview {
+    .portfolio-category {
+      width: calc(33.33% - 5.3333px);
+      float: left;
+      margin-right: 8px;
+      min-height: 90vh;
+      background-position-x: 50%;
+    }
+    .portfolio-category:last-child {
+      margin-right: 0;
+    }
+  }
+
   .half-wide {
     background-position-x: 50%;
     float: left;
     min-height: 720px;
-    min-height: 70vw;
     width: 50%;
   }
   .half-wide-dyn {
