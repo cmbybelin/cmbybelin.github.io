@@ -38,6 +38,17 @@ header {
   }
 }
 
+@media (min-width: $screen-wide) {
+  header {
+    .logo {
+      margin-left: 58px;
+      margin-right: 64px;
+    }
+    nav .mobile-menu {
+      margin-right: 66px;
+    }
+  }
+}
 
 /** Mobile show/hide effect */
 nav {

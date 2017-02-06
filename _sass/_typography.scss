@@ -12,6 +12,8 @@ $golden-ratio-p-2: 100% / $golden-ratio;
 $golden-ratio-p-1: 100% - $golden-ratio-p-2;
 $golden-ratio-vw-2: 100vw / $golden-ratio;
 $golden-ratio-vw-1: 100vw - $golden-ratio-vw-2;
+$screen-wide: 960px;
+$screen-medium: 600px;
 
 // Distance:
 $default-padding: 8px;

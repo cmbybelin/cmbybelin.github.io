@@ -62,7 +62,7 @@
   height: 50%;
 }
 
-$portfolio-width: 960px;
+$portfolio-width: $screen-wide;
 @media (min-width: $portfolio-width) {
   .row {
     margin: 0 auto;
