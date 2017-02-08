@@ -20,7 +20,6 @@ header {
     @include no-user-select;
   }
   nav {
-    background-color: $cloud-grey;
     .mobile-menu {
       margin: .8em 0;
       padding: 4px 12px;
@@ -38,21 +37,53 @@ header {
   }
 }
 
+nav.desktop {
+  display: none;
+}
+
 @media (min-width: $screen-wide) {
   header {
+    margin-left: 4em;
+    margin-right: 4em;
     .logo {
-      margin-left: 58px;
-      margin-right: 64px;
+      padding-left: 0;
     }
-    nav .mobile-menu {
-      margin-right: 66px;
+    .mobile-menu {
+      display: none;
+    }
+    nav.desktop {
+      display: block;
+    }
+    ul {
+      float: right;
+    }
+    li {
+      display: inline-block;
+      text-align: right;
+      padding-right: 36px;
+      font-size: 90%;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    a {
+      padding: 0;
+    }
+  }
+}
+@media (min-width: 1100px) {
+  header {
+    li {
+      padding-right: 52px;
     }
   }
 }
 
+
 /** Mobile show/hide effect */
-nav {
+nav.mobile {
   @include full-screen;
+  background-color: $cloud-grey;
   visibility: hidden;
   opacity: 0;
   perspective: 1200px;
@@ -74,5 +105,4 @@ nav {
   &.hidden ul {
     transform: translateY(25%) rotateX(-35deg);
   }
-
 }

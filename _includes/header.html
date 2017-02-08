@@ -1,18 +1,24 @@
 <header>
-  <!--<a href="/"><img src="/style/images/logo.svg" class="logo" alt="Belinda Terrisse Portrait photography" /></a>-->
-
-  <a href="/" class="logo">Belinda Terrisse<span id="header-open-mobile-menu" class="mobile-menu">&#9776;</span></a>
-  <nav>
+  {%capture menu %}
+  <ul>
+    <li class="{% if page.id == 'home' %}active{% endif %}"><a href="/">Home</a></li>
+    <li class="{% if page.id == 'portfolio' or page.layout == 'portfolio' %}active{% endif %}"><a href="/portfolio.html">Portfolio</a></li>
+    <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/about.html">About</a></li>
+    <li class="{% if page.id == 'blog' %}active{% endif %}"><a href="/blog.html">Blog</a></li>
+    <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/sessions.html">Sessions</a></li>
+    <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/contact.html">Contact</a></li>
+  </ul>
+  {% endcapture %}
+  <nav class="mobile">
     <div id="header-close-mobile-menu" class="mobile-menu">&#10005;</div>
-    <ul>
-      <li class="{% if page.id == 'home' %}active{% endif %}"><a href="/">Home</a></li>
-      <li class="{% if page.id == 'portfolio' or page.layout == 'portfolio' %}active{% endif %}"><a href="/portfolio.html">Portfolio</a></li>
-      <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/about.html">About</a></li>
-      <li class="{% if page.id == 'blog' %}active{% endif %}"><a href="/blog.html">Blog</a></li>
-      <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/sessions.html">Sessions</a></li>
-      <li class="{% if page.id == 'contact' %}active{% endif %}"><a href="/contact.html">Contact</a></li>
-    </ul>
+    {{ menu }}
   </nav>
+  <nav class="desktop">
+    {{ menu }}
+  </nav>
+
+  <!--<a href="/"><img src="/style/images/logo.svg" class="logo" alt="Belinda Terrisse Portrait photography" /></a>-->
+  <a href="/" class="logo">Belinda Terrisse<span id="header-open-mobile-menu" class="mobile-menu">&#9776;</span></a>
 </header>
 
 <script>
