@@ -21,20 +21,42 @@
    </div>
    <div class="blog-sidebox">
     <h4>Stay Up-To-Date With New Posts</h4>
-    <form>
-     <input type="text" placeholder="Email address">
-     <button type="submit">Subscribe Now</button>
+    <form class="contact-info" action="{{ site.email_post_url }}" method="post">
+     <input type='hidden' name='redirect_to' value='{{ site.url }}{{ page.url }}#thanks' />
+
+     <input type="hidden" name="name" value="Stay up to date"/>
+     <input type="email" name="email" required placeholder="Your email address"/>
+     <input type="hidden" name="message" value="Blog subscription."/>
+
+     <button type='submit'>Subscribe Now</button>
     </form>
+
    </div>
    <div class="blog-sidebox transparent">
     <h4>Search With Tags</h4>
     <p>Fotografie Noord-Holland New Born Portret Fashion Events Travel</p>
    </div>
   </div>
+  <div style="clear: both"></div>
  </div>
 </article>
 
 {% include footer.html %}
+
+<div class="contact-thanks" id="thanks">
+ <div class="contact-thanks-dialog">
+  <h3 lang="nl">Bedankt</h3>
+  <h3 lang="en">Thank you</h3>
+  <div class="contact-thanks-dialog-content">
+   <p lang="nl">Bedankt voor je registratie.</p>
+   <p lang="en">Thank you for your registration.</p>
+  </div>
+  <div class="contact-thanks-dialog-button-bar">
+   <p lang="nl"><a class="button" href="#">Sluiten</a></p>
+   <p lang="en"><a class="button" href="#">Close</a></p>
+  </div>
+ </div>
+</div>
 
 </body>
 

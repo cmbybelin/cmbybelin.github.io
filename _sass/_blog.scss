@@ -7,16 +7,16 @@
     //font-size: 20px;
     margin-bottom: 0;
   }
+  img {
+    margin: 1em;
+  }
 }
 
 .blog-container {
-  max-width: $screen-wide;
-  margin: 0 auto;
+  max-width: 880px;
+  margin: 10em auto 0;
 }
 
-.blog-content {
-  max-width: 612px;
-}
 
 .blog-link {
   font-family: $serif;
@@ -42,9 +42,36 @@
   }
   &.transparent {
     background-color: transparent;
+    padding-top: 0;
   }
 
   button {
     width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .blog-content {
+    max-width: calc(100% - 32px - 256px);
+    float: left;
+    margin-top: -6.45em
+  }
+  .blog-sidebox {
+    margin-left: calc(100% - 256px);
+    min-width: 146px;
+    margin-top: 5em;
+  }
+  .blog-sidebox + .blog-sidebox {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $screen-wide) {
+  article.blog {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+  .blog-content {
+    max-width: calc(100% - 64px - 256px);
   }
 }
