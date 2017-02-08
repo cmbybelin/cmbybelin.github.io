@@ -2,7 +2,7 @@
 layout: index
 ---
 
-<div
+<div style="margin-top: 6em"
 {% assign sorted_sessions = site.sessions | sort: "order" %}
 {% for session in sorted_sessions %}
 

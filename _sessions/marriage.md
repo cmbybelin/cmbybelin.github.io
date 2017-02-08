@@ -1,6 +1,6 @@
 ---
 order: 2
-photo: /love/love-90.jpg
+photo: /images/love-90.jpg
 ---
 
 ## TROUWEN
