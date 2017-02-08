@@ -9,7 +9,7 @@ style: page-portfolio-overview
 
 ><div class="portfolio-category full-height" style="background-image: url({{ category.photo}}); background-position-y: 30%;">
   <h2>{{ category.title }}</h2>
-  <a class="outlined-inv"git c href="{{  category.url }}">View</a>
+  <a class="outlined-inv" href="{{  category.url }}">View</a>
 </div
     
 {% endfor %}
