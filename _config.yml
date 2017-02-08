@@ -20,7 +20,7 @@ defaults:
        path: ""
        type: "posts"
     values:
-       layout: "blog"
+       layout: "blog2"
   - scope:
        path: ""
        type: "portfolio"

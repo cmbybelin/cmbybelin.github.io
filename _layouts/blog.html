@@ -6,13 +6,32 @@
 {% include header.html %}
 
 <article class="blog">
- <h2>{{ page.title }}</h2>
- {{ content }}
+ <div class="secondary">
+  <div class="blog-container">
+   <div class="blog-content">
+    {{ content }}
+   </div>
+   <div class="blog-sidebox">
+    <h4>Recent Posts</h4>
+    {% for post in site.posts %}
+    <p class="blog-link"><a>{{ post.title }}</a></p>
+    <small>{{ post.date | date: "%B %d, %Y" }}</small>
 
- {% for photo in page.portfolio %}
- <p class="photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/></p>
- {% endfor %}
- 
+    {% endfor %}
+   </div>
+   <div class="blog-sidebox">
+    <h4>Stay Up-To-Date With New Posts</h4>
+    <form>
+     <input type="text" placeholder="Email address">
+     <button type="submit">Subscribe Now</button>
+    </form>
+   </div>
+   <div class="blog-sidebox transparent">
+    <h4>Search With Tags</h4>
+    <p>Fotografie Noord-Holland New Born Portret Fashion Events Travel</p>
+   </div>
+  </div>
+ </div>
 </article>
 
 {% include footer.html %}

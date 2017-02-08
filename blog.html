@@ -1,18 +1,25 @@
 ---
-layout: index
+layout: blog
 style: blog
 description: Blog posts
 ---
-<h1>Blog</h1>
+
 {% for post in site.posts %}
-{% assign photo = post.portfolio | first %}
-<div class="secondary">
+<div class="blog-snippet">
  <h3>{{ post.title }}</h3>
- <small>{{ post.date | date: "%d-%m-%Y" }}</small>
+ <small>{{ post.date | date: "%B %d, %Y" }}</small>
+ {% for photo in post.portfolio %}
+  {% if forloop.first %}
+   <p class="blog-photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/></p>
+  {% endif %}
+ {% endfor %}
+
  {{ post.content }}
 
  {% for photo in post.portfolio %}
- <p class="blog-photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/></p>
+  {% unless forloop.first %}
+   <p class="blog-photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/></p>
+  {% endunless %}
  {% endfor %}
 </div>
 {% endfor %}

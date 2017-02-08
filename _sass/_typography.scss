@@ -20,10 +20,10 @@ $default-padding: 8px;
 
 // Fonts:
 $serif: 'Cinzel', serif;
-$sans-serif: 'Josefin Sans', Arial, sans-serif;
-$default-font-size: 19px;
+$sans-serif: 'Nunito Sans', Arial, sans-serif;
+$default-font-size: 16px;
 
-@import url(https://fonts.googleapis.com/css?family=Cinzel|Josefin+Sans:400);
+@import url(https://fonts.googleapis.com/css?family=Cinzel|Nunito+Sans:300);
 
 html {
   -webkit-text-size-adjust: 100%;

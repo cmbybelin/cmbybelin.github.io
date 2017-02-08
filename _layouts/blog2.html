@@ -1,0 +1,22 @@
+
+{% include head.html %}
+
+<body>
+
+{% include header.html %}
+
+<article class="blog">
+ <h2>{{ page.title }}</h2>
+ {{ content }}
+
+ {% for photo in page.portfolio %}
+ <p class="photo"><img src="/{{ photo.photo | replace:' ','%20' }}" alt="{{ photo.caption }}" draggable="false"/></p>
+ {% endfor %}
+ 
+</article>
+
+{% include footer.html %}
+
+</body>
+
+{% include tail.html %}
