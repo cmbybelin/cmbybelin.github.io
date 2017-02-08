@@ -26,6 +26,7 @@ article {
       font-size: 34px;
       line-height: normal;
       margin: 0;
+      padding: 0 1em;
     }
     p {
       letter-spacing: 0.55em;
@@ -75,6 +76,15 @@ article {
 }
 
 @media (min-width: $screen-medium) {
+  article.page-index {
+    padding-top: 26em;
+    h1 {
+      font-size: 70px;
+      letter-spacing: 0.1em;
+      padding: 0;
+    }
+  }
+
   article.page-portfolio-overview {
     .portfolio-category {
       width: calc(33.33% - 5.3333px);
