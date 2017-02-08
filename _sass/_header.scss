@@ -4,6 +4,10 @@ header {
   right: 0;
   top: 0;
   background-color: white;
+  padding: 1em 1em 0 1em;
+  a {
+    padding: 0;
+  }
 
   .logo {
     display: block;
@@ -11,7 +15,6 @@ header {
     font-size: 28px;
     letter-spacing: 0.1em;
     margin: .8em 0;
-    padding-left: $default-padding * 2;
   }
   .mobile-menu {
     float: right;
@@ -43,8 +46,8 @@ nav.desktop {
 
 @media (min-width: $screen-wide) {
   header {
-    margin-left: 4em;
-    margin-right: 4em;
+    padding-left: 4em;
+    padding-right: 4em;
     .logo {
       padding-left: 0;
     }
