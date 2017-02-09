@@ -72,7 +72,9 @@ rows:
   {% assign first = true %}
   {% for file in site.static_files %}
     {% if file.path contains path_prefix %}
-      {% if first %}{% assign first = false %}{% else %};{% endif %}{{ file.basename }}:{{ file.path }}
+      {% unless file.path contains '/thumbs/' %}
+        {% if first %}{% assign first = false %}{% else %};{% endif %}{{ file.basename }}:{{ file.path }}
+      {% endunless %}
     {% endif %}
   {% endfor %}
 {% endcapture %}
@@ -94,7 +96,7 @@ rows:
       {% for height in col_height %}
         {% assign base_path = index_list[current] %}
         {% assign w = base_path | strip | split: ':' %}
-        ><div class="cell cell-{{ height | strip }}" style="background-image: url({{ w[1] }})" data-hash="{{ w[0] }}"></div
+        ><div class="cell cell-{{ height | strip }}" style="background-image: url(/thumbs{{ w[1] }})" data-hash="{{ w[0] }}"></div
         {% assign left = left | minus: 1 %}
         {% assign current = current | plus: 1 %}
       {% endfor %}
