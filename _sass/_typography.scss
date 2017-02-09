@@ -39,22 +39,25 @@ body {
   margin: 0;
 }
 
-h1, h2 {
+h1 {
   font-family: $serif;
   font-size: 52px;
   font-weight: 100;
+  line-height: normal;
 }
 
 h2 {
   font-family: $serif;
   font-size: 40px;
   font-weight: 100;
+  line-height: normal;
 }
 
 h3 {
   font-family: $serif;
   font-size: 28px;
   font-weight: 100;
+  line-height: normal;
 }
 
 img {
