@@ -5,7 +5,7 @@ bg_photo: /images/belinda.jpg
 
 <div lang="nl" markdown="1">
 
-# Over mij
+# About Belinda
 
 Fotografie...
 
@@ -23,7 +23,7 @@ Enjoy!
 
 <div lang="en" markdown="1">
 
-# About me
+# About Belinda
 
 Photography...
 
