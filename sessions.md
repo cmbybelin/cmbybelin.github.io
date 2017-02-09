@@ -7,8 +7,9 @@ layout: index
 {% for session in sorted_sessions %}
 
 ><div class="page-session"><div class="half-wide-dyn secondary">
-  {{ session.content }}
-  
+  <div class="page-session-text">
+   {{ session.content }}
+  </div>
   <p style="text-align: center"><a class="outlined" href="/contact.html#contact"><span lang="nl">Contact opnemen</span><span lang="en">Contact</span></a></p>
 </div><div class="half-wide-dyn secondary">
   <p><img src="{{ session.photo }}" alt="{{ session.title}}"/></p>
