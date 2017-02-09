@@ -13,7 +13,7 @@ article {
     text-align: center;
     padding-top: 10em;
     padding-bottom: 6em;
-    min-height: 100vmax;
+    min-height: 960px;
     box-sizing: border-box;
     h1 {
       letter-spacing: 0.1em;
@@ -71,7 +71,7 @@ article {
 
 @media (min-width: $screen-medium) {
   article.page-index {
-    padding-top: 26em;
+    padding-top: 28em;
     h1 {
       font-size: 70px;
       letter-spacing: 0.1em;
