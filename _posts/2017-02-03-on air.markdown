@@ -1,5 +1,5 @@
 ---
-title: Welkom
+title: Welkom op mijn website
 tags: Fotografie, Noord-Holland, New Born, Portret, Fashion, Events, Travel
 portfolio:
   - photo: images/logo.jpg

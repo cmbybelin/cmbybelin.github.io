@@ -41,7 +41,7 @@ article {
 
   &.page-portfolio-index {
     @include no-user-select;
-    margin-top: 7em;
+    margin-top: 9em;
     h1 {
       text-align: center;
     }
@@ -67,6 +67,7 @@ article {
   min-height: 320px;
   min-height: 100vw;
   background-size: cover;
+  background-position-y: 50%;
 }
 
 @media (min-width: $screen-medium) {
@@ -118,14 +119,14 @@ article {
     }
   }
   .half-wide-2 > div {
-    max-width: 420px;
+    max-width: 430px;
     margin: 2em auto;
   }
   .page-session h2 {
     margin-top: 2em;
   }
   .page-session-text {
-    max-width: 420px;
+    max-width: 430px;
     margin: 2em auto;
     text-align: center;
   }

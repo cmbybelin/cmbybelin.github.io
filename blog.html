@@ -6,7 +6,7 @@ description: Blog posts
 
 {% for post in site.posts %}
 <div class="blog-snippet">
- <h3>{{ post.title }}</h3>
+ <h3>{{ post.title | upcase }}</h3>
  <small>{{ post.date | date: "%B %d, %Y" }}</small>
  {% for photo in post.portfolio %}
   {% if forloop.first %}
