@@ -73,7 +73,7 @@ rows:
   {% for file in site.static_files %}
     {% if file.path contains path_prefix %}
       {% unless file.path contains '/thumbs/' %}
-        {% if first %}{% assign first = false %}{% else %};{% endif %}{{ file.basename }}:{{ file.path }}
+        {% if first %}{% assign first = false %}{% else %};{% endif %}{{ file.basename }}:{{ file.path | replace:' ','%20' }}
       {% endunless %}
     {% endif %}
   {% endfor %}
@@ -96,7 +96,7 @@ rows:
       {% for height in col_height %}
         {% assign base_path = index_list[current] %}
         {% assign w = base_path | strip | split: ':' %}
-        ><div class="cell cell-{{ height | strip }}" style="background-image: url(/thumbs{{ w[1] }})" data-hash="{{ w[0] }}"></div
+        ><div class="cell cell-{{ height | strip }} open-caroussel" style="background-image: url(/thumbs{{ w[1] }})" data-imgid="{{ w[0] }}"></div
         {% assign left = left | minus: 1 %}
         {% assign current = current | plus: 1 %}
       {% endfor %}
@@ -105,3 +105,132 @@ rows:
     ></div>
   {% endunless %}{% endif %}
 {% endfor %}
+
+
+<div id="fullscreen" class="portfolio">
+{% for base_path in index_list %}
+  {% assign w = base_path | strip | split: ':' %}
+  {% assign imgid = w[0] %}
+  {% assign photo = w[1] %}
+  <div id="imgid-{{ imgid }}" class="caroussel">
+    <img src="{{ photo }}" draggable="false"/>
+  </div>
+{% endfor %}
+  <div class="navigate previous"><span>&lt;</span></div>
+  <div class="navigate next"><span>&gt;</span></div>
+  <span class="close" aria-hidden="true">&nbsp;&times;</span>
+</div>
+
+<script>
+    (function (document) {
+        var $portfolio = document.querySelector('.portfolio');
+        var $images = document.querySelectorAll('.open-caroussel');
+        var $caroussel = document.querySelectorAll('.caroussel');
+        var $next = document.querySelector('.navigate.next');
+        var $previous = document.querySelector('.navigate.previous');
+        var $close = document.querySelector('.close');
+
+        $next.addEventListener('click', selectNext);
+        $next.addEventListener('touchstart', handleTouchStart, false);
+        $next.addEventListener('touchmove', handleTouchMove, false);
+        $next.addEventListener('touchend', handleTouchEnd, false);
+        $previous.addEventListener('click', selectPrevious);
+        $previous.addEventListener('touchstart', handleTouchStart, false);
+        $previous.addEventListener('touchmove', handleTouchMove, false);
+        $previous.addEventListener('touchend', handleTouchEnd, false);
+
+        for (var i = 0; i < $images.length; i++) {
+            $images[i].addEventListener('click', openCaroussel, false);
+        }
+
+        $close.addEventListener('click', function () {
+            unselect();
+            $portfolio.classList.remove('open');
+        }, false);
+
+        var startX, startY;
+
+        for (var i = 0; i < $caroussel.length; i++) {
+            $caroussel[i].addEventListener('touchstart', handleTouchStart, false);
+            $caroussel[i].addEventListener('touchmove', handleTouchMove, false);
+            $caroussel[i].addEventListener('touchend', handleTouchEnd, false);
+        }
+
+
+        function openCaroussel(e) {
+            unselect();
+            $portfolio.classList.add('open');
+            console.log(this, this.dataset.imgid, e);
+            document.querySelector('#imgid-' + this.dataset.imgid).classList.add('selected');
+        }
+
+        function handleTouchStart(e) {
+            console.log(' handle touch start', e);
+            // fade:
+            var selectedImg = document.querySelector('.caroussel.selected');
+            selectedImg.style.transition = 'none';
+            // next/prev:
+            startX = e.changedTouches[0].screenX;
+            startY = e.changedTouches[0].screenY;
+            return false;
+        }
+
+        function handleTouchMove(e) {
+            // fade:
+            var selectedImg = document.querySelector('.caroussel.selected');
+            var width = window.innerWidth * 1.2;
+            var height = window.innerHeight * 1.2;
+            var endX = e.changedTouches[0].screenX;
+            var endY = e.changedTouches[0].screenY;
+            selectedImg.style.opacity = Math.max(1.0 - Math.max((Math.abs(endX - startX) / width), (Math.abs(endY - startY) / height)), 0.3);
+            e.preventDefault();
+            return false;
+        }
+
+        function handleTouchEnd(e) {
+            console.log('handle touch end', e);
+            var dWidth = window.innerWidth / 6;
+            var dHeight = window.innerHeight / 6;
+            var endX = e.changedTouches[0].screenX;
+            var endY = e.changedTouches[0].screenY;
+            if ((startX - endX > dWidth) || (startY - endY > dHeight)) {
+                selectNext();
+            } else if ((endX - startX > dWidth) || (endY - startY > dHeight)) {
+                selectPrevious();
+            }
+            return true;
+        }
+
+        function unselect() {
+            var selectedImg = document.querySelector('.caroussel.selected');
+            if (!selectedImg) return;
+            selectedImg.style.opacity = '';
+            selectedImg.style.transition = '';
+            selectedImg.classList.remove('selected');
+            return selectedImg;
+        }
+
+        function selectNext() {
+            console.log('select next');
+            var selectedImg = unselect();
+            if (selectedImg.nextElementSibling.classList.contains('caroussel')) {
+                selectedImg.nextElementSibling.classList.add('selected');
+            } else {
+                selectedImg.parentElement.firstElementChild.classList.add('selected');
+            }
+        }
+
+        function selectPrevious() {
+            var selectedImg = unselect();
+            if (selectedImg.previousElementSibling) {
+                selectedImg.previousElementSibling.classList.add('selected');
+            } else {
+                var last = selectedImg.parentElement.lastElementChild;
+                while (!last.classList.contains('caroussel')) {
+                    last = last.previousElementSibling;
+                }
+                last.classList.add('selected');
+            }
+        }
+    })(document);
+</script>
