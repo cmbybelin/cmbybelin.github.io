@@ -56,7 +56,7 @@ article {
 
   &.page-portfolio-index {
     @include no-user-select;
-    margin-top: 9em;
+    margin: 9em auto 0;
     h1 {
       text-align: center;
     }
@@ -124,8 +124,8 @@ article {
 
 @media (min-width: $screen-wide) {
   article {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 4em;
+    margin-right: 4em;
   }
   .half-wide {
     min-height: 960px;
