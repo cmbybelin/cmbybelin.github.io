@@ -119,7 +119,7 @@ rows:
     {% assign imgid = w[0] %}
     {% assign photo = w[1] %}
     <div id="imgid-{{ imgid }}" class="caroussel">
-      <img src="{{ photo }}" draggable="false"/>
+      <img src="" draggable="false" data-imgsrc="{{ photo }}"/>
     </div>
   {% endfor %}
   </div>
@@ -152,20 +152,17 @@ rows:
         }
 
         function openCaroussel(e) {
-            unselect();
             $container.classList.add('open');
-            document.querySelector('#imgid-' + this.dataset.imgid).classList.add('selected');
+            select(document.querySelector('#imgid-' + this.dataset.imgid));
             return true;
         }
 
         function closeCaroussel() {
-            unselect();
             $container.classList.remove('open');
             return true;
         }
 
         function handleTouchStart(e) {
-            console.log(' handle touch start', e);
             // fade:
             var selectedImg = document.querySelector('.caroussel.selected');
             selectedImg.style.transition = 'none';
@@ -188,7 +185,6 @@ rows:
         }
 
         function handleTouchEnd(e) {
-            console.log('handle touch end', e);
             var dWidth = window.innerWidth / 6;
             var dHeight = window.innerHeight / 6;
             var endX = e.changedTouches[0].screenX;
@@ -201,32 +197,58 @@ rows:
             return true;
         }
 
+        function loadImg(img) {
+            var innerImg = img.querySelector('img');
+            innerImg.src = innerImg.dataset.imgsrc;
+        }
+
         function unselect() {
-            var selectedImg = document.querySelector('.caroussel.selected');
-            if (!selectedImg) return;
-            selectedImg.style.opacity = '';
-            selectedImg.style.transform = '';
-            selectedImg.style.transition = '';
-            selectedImg.classList.remove('selected');
-            return selectedImg;
+            var img = currentImage();
+            if (img) {
+                img.style.opacity = '';
+                img.style.transition = '';
+                img.classList.remove('selected');
+            }
+        }
+
+       function select(img) {
+            unselect();
+
+            loadImg(img);
+            img.classList.add('selected');
+            loadImg(nextImage());
+            loadImg(previousImage());
         }
 
         function selectNext() {
-            var selectedImg = unselect();
-            if (selectedImg.nextElementSibling) {
-                selectedImg.nextElementSibling.classList.add('selected');
-            } else {
-                selectedImg.parentElement.firstElementChild.classList.add('selected');
-            }
+            select(nextImage());
         }
 
         function selectPrevious() {
-            var selectedImg = unselect();
-            if (selectedImg.previousElementSibling) {
-                selectedImg.previousElementSibling.classList.add('selected');
+            select(previousImage());
+        }
+
+        function currentImage() {
+            return document.querySelector('.caroussel.selected');
+        }
+
+        function nextImage() {
+            var selectedImg = currentImage();
+            if (selectedImg && selectedImg.nextElementSibling) {
+                return selectedImg.nextElementSibling;
             } else {
-                selectedImg.parentElement.lastElementChild.classList.add('selected');
+                return selectedImg.parentElement.firstElementChild;
             }
         }
+
+        function previousImage() {
+            var selectedImg = currentImage();
+            if (selectedImg && selectedImg.previousElementSibling) {
+                return selectedImg.previousElementSibling;
+            } else {
+                return selectedImg.parentElement.lastElementChild;
+            }
+        }
+
     })(document);
 </script>
