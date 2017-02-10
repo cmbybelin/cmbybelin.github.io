@@ -28,6 +28,9 @@ defaults:
        layout: "portfolio-index"
        style: "page-portfolio-index"
 
+sass:
+  style: compressed
+
 collections:
   sessions:
   portfolio:
