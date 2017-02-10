@@ -151,16 +151,17 @@ rows:
             $caroussel[i].addEventListener('touchend', handleTouchEnd, false);
         }
 
-
         function openCaroussel(e) {
             unselect();
             $container.classList.add('open');
             document.querySelector('#imgid-' + this.dataset.imgid).classList.add('selected');
+            return true;
         }
 
         function closeCaroussel() {
             unselect();
             $container.classList.remove('open');
+            return true;
         }
 
         function handleTouchStart(e) {
