@@ -18,7 +18,7 @@ header {
   }
   .mobile-menu {
     float: right;
-    font-size: 34px;
+    font-size: $mobile-menu-font-size;
     font-family: $serif;
     @include no-user-select;
   }

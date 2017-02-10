@@ -107,23 +107,27 @@ rows:
 {% endfor %}
 
 
-<div id="fullscreen" class="portfolio">
-{% for base_path in index_list %}
-  {% assign w = base_path | strip | split: ':' %}
-  {% assign imgid = w[0] %}
-  {% assign photo = w[1] %}
-  <div id="imgid-{{ imgid }}" class="caroussel">
-    <img src="{{ photo }}" draggable="false"/>
+<div id="fullscreen">
+  <div class="portfolio-nav">
+    <span class="navigate previous" aria-hidden="true">&lt;</span>
+    <span class="navigate next" aria-hidden="true">&gt;</span>
+    <span class="navigate close" aria-hidden="true">&times;</span>
   </div>
-{% endfor %}
-  <div class="navigate previous"><span>&lt;</span></div>
-  <div class="navigate next"><span>&gt;</span></div>
-  <span class="close" aria-hidden="true">&nbsp;&times;</span>
+  <div class="portfolio">
+  {% for base_path in index_list %}
+    {% assign w = base_path | strip | split: ':' %}
+    {% assign imgid = w[0] %}
+    {% assign photo = w[1] %}
+    <div id="imgid-{{ imgid }}" class="caroussel">
+      <img src="{{ photo }}" draggable="false"/>
+    </div>
+  {% endfor %}
+  </div>
 </div>
 
 <script>
     (function (document) {
-        var $portfolio = document.querySelector('.portfolio');
+        var $container = document.querySelector('#fullscreen');
         var $images = document.querySelectorAll('.open-caroussel');
         var $caroussel = document.querySelectorAll('.caroussel');
         var $next = document.querySelector('.navigate.next');
@@ -131,22 +135,13 @@ rows:
         var $close = document.querySelector('.close');
 
         $next.addEventListener('click', selectNext);
-        $next.addEventListener('touchstart', handleTouchStart, false);
-        $next.addEventListener('touchmove', handleTouchMove, false);
-        $next.addEventListener('touchend', handleTouchEnd, false);
         $previous.addEventListener('click', selectPrevious);
-        $previous.addEventListener('touchstart', handleTouchStart, false);
-        $previous.addEventListener('touchmove', handleTouchMove, false);
-        $previous.addEventListener('touchend', handleTouchEnd, false);
 
         for (var i = 0; i < $images.length; i++) {
             $images[i].addEventListener('click', openCaroussel, false);
         }
 
-        $close.addEventListener('click', function () {
-            unselect();
-            $portfolio.classList.remove('open');
-        }, false);
+        $close.addEventListener('click', closeCaroussel, false);
 
         var startX, startY;
 
@@ -159,9 +154,13 @@ rows:
 
         function openCaroussel(e) {
             unselect();
-            $portfolio.classList.add('open');
-            console.log(this, this.dataset.imgid, e);
+            $container.classList.add('open');
             document.querySelector('#imgid-' + this.dataset.imgid).classList.add('selected');
+        }
+
+        function closeCaroussel() {
+            unselect();
+            $container.classList.remove('open');
         }
 
         function handleTouchStart(e) {
@@ -205,15 +204,15 @@ rows:
             var selectedImg = document.querySelector('.caroussel.selected');
             if (!selectedImg) return;
             selectedImg.style.opacity = '';
+            selectedImg.style.transform = '';
             selectedImg.style.transition = '';
             selectedImg.classList.remove('selected');
             return selectedImg;
         }
 
         function selectNext() {
-            console.log('select next');
             var selectedImg = unselect();
-            if (selectedImg.nextElementSibling.classList.contains('caroussel')) {
+            if (selectedImg.nextElementSibling) {
                 selectedImg.nextElementSibling.classList.add('selected');
             } else {
                 selectedImg.parentElement.firstElementChild.classList.add('selected');
@@ -225,11 +224,7 @@ rows:
             if (selectedImg.previousElementSibling) {
                 selectedImg.previousElementSibling.classList.add('selected');
             } else {
-                var last = selectedImg.parentElement.lastElementChild;
-                while (!last.classList.contains('caroussel')) {
-                    last = last.previousElementSibling;
-                }
-                last.classList.add('selected');
+                selectedImg.parentElement.lastElementChild.classList.add('selected');
             }
         }
     })(document);
