@@ -5,9 +5,7 @@
 
 {% include header.html %}
 
-<div class="spinner">
- {% include spinner.svg %}
-</div>
+{% include spinner.html %}
 
 <article class="{{ page.style }}" {% if page.bg_photo %}style="background-image: url({{ page.bg_photo }})"{% endif %}>
  {{ content }}
