@@ -1,10 +1,16 @@
+$header-padding-top: 16px;
+$header-padding-bottom: 12px;
+$header-logo-height: 48px;
+$header-height: $header-padding-top + $header-padding-bottom + $header-logo-height;
+
 header {
   position: fixed;
+  z-index: 1;
   left: 0;
   right: 0;
   top: 0;
   background-color: white;
-  padding: 1em 1em 0 1em;
+  padding: $header-padding-top 16px $header-padding-bottom;
   a {
     padding: 0;
   }
@@ -14,7 +20,14 @@ header {
     font-family: $serif;
     font-size: 28px;
     letter-spacing: 0.1em;
-    margin: .8em 0;
+    line-height: $header-logo-height;
+    //img {
+    //  width: 3em;
+    //  vertical-align: baseline;
+    //  display: inline-block;
+    //  margin-right: -1.1em;
+    //  margin-bottom: -1.2em;
+    //}
   }
   .mobile-menu {
     float: right;
@@ -23,14 +36,11 @@ header {
     @include no-user-select;
   }
   nav {
-    .mobile-menu {
-      margin: 38px 22px 0 0;
-    }
     ul {
       clear: both;
       list-style: none;
       text-align: center;
-      line-height: 2.8em;
+      margin: 1.2em 0 0;
       padding: 0;
     }
     a {
@@ -43,13 +53,8 @@ nav.desktop {
   display: none;
 }
 
-@media (min-width: $screen-wide) {
+@media (min-width: $screen-wide - 90px) {
   header {
-    padding-left: 4em;
-    padding-right: 4em;
-    .logo {
-      padding-left: 0;
-    }
     .mobile-menu {
       display: none;
     }
@@ -73,6 +78,15 @@ nav.desktop {
     }
   }
 }
+@media (min-width: $screen-wide) {
+  header {
+    padding-left: 4em;
+    padding-right: 4em;
+    .logo {
+      padding-left: 0;
+    }
+  }
+}
 @media (min-width: 1100px) {
   header {
     li {
@@ -88,10 +102,12 @@ nav.mobile {
   background-color: $cloud-grey;
   visibility: hidden;
   opacity: 0;
+  padding: 28px 20px;
   perspective: 1200px;
   transition: opacity 0.5s, visibility 0s 0.5s;
   ul {
     opacity: 0.4;
+    line-height: 3em;
     transform: translateY(-25%) rotateX(35deg);
     transition: transform 0.5s, opacity 0.5s;
   }

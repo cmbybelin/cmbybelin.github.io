@@ -14,7 +14,7 @@
 
 article {
   transition: opacity .6s ease;
-  margin-top: 93px;
+  margin-top: $header-height;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -30,6 +30,7 @@ article {
     padding-bottom: 6em;
     min-height: 960px;
     box-sizing: border-box;
+    background-position-y: 30%;
     h1 {
       letter-spacing: 0.1em;
       font-size: 34px;
@@ -44,7 +45,6 @@ article {
 
   &.page-portfolio-overview {
     @include no-user-select;
-    margin-top: 6em;
     text-align: center;
     box-sizing: border-box;
     h2 {
