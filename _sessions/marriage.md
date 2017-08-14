@@ -7,5 +7,5 @@ photo: /images/love-90.jpg
 ​
 Van Harte Gefeliciteerd!
  
-Zijn jullie ge&iuml;nteresseerd in een love shoot of trouwreportage? neem
+Zijn jullie ge&iuml;nteresseerd in een love shoot of trouwreportage? Neem
 gerust contact met me op.
