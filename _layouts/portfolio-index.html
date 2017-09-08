@@ -119,8 +119,10 @@ rows:
     {% assign imgid = w[0] %}
     {% assign photo = w[1] %}
     <div id="imgid-{{ imgid }}" class="caroussel">
-      <a data-pin-do="buttonPin" data-pin-id="{{ site.url }}{{ photo }}" data-pin-tall="true"
-       href="https://www.pinterest.com/pin/create/button/?media={{ site.url }}{{ photo }}"></a>
+      <div class="social-photo-link">
+        <a data-pin-do="buttonPin" data-pin-id="{{ site.url }}{{ photo }}" data-pin-tall="true"
+        href="https://www.pinterest.com/pin/create/button/?media={{ site.url }}{{ photo }}"></a>
+      </div>
       <img src="" draggable="false" data-imgsrc="{{ photo }}" />
     </div>
   {% endfor %}
