@@ -23,12 +23,11 @@ bg_photo: /images/portrait-129.jpg
 <div>
  {% include vcard.html %}
 </div>
-
 <div lang="nl">
 
 <form class="contact-info" action="{{ site.email_post_url }}" method="post">
   <input type='hidden' name='redirect_to' value='{{ site.url }}{{ page.url }}#thanks' />
-
+  <input type="text" name="humancheck" value="" />
   <input type="text" name="name" required placeholder="Je naam"/>
   <input type="email" name="email" required placeholder="Je e-mail adres"/>
   <textarea name="message" rows="8" required placeholder="Type je bericht hier"></textarea>
@@ -66,3 +65,14 @@ bg_photo: /images/portrait-129.jpg
   </div>
  </div>
 </div>
+
+<script type="text/javascript">//<!--
+  (function () {
+    var submissionCheck = function() {
+      var humancheck = document.getElementsByName('humancheck');
+      return (humancheck[0].value == "" && humancheck[1].value == "")
+    }
+    document.forms[0].onsubmit = submissionCheck;
+    document.forms[1].onsubmit = submissionCheck;
+  })();
+//--></script>
