@@ -25,9 +25,9 @@ bg_photo: /images/portrait-129.jpg
 </div>
 <div lang="nl">
 
-<form class="contact-info" action="{{ site.email_post_url }}" method="post">
+<form class="contact-info" action="" method="post">
   <input type='hidden' name='redirect_to' value='{{ site.url }}{{ page.url }}#thanks' />
-  <input type="text" name="humancheck" value="" />
+  <input type="hidden" name="humancheck" value="" />
   <input type="text" name="name" required placeholder="Je naam"/>
   <input type="email" name="email" required placeholder="Je e-mail adres"/>
   <textarea name="message" rows="8" required placeholder="Type je bericht hier"></textarea>
@@ -37,8 +37,9 @@ bg_photo: /images/portrait-129.jpg
 
 </div><div lang="en">
 
-<form class="contact-info" action="{{ site.email_post_url }}" method="post">
+<form class="contact-info" action="" method="post">
   <input type='hidden' name='redirect_to' value='{{ site.url }}/contact.html#thanks' />
+  <input type="hidden" name="humancheck" value="" />
 
   <input type="text" name="name" required placeholder="Your name"/>
   <input type="email" name="email" required placeholder="Your email address"/>
@@ -68,11 +69,14 @@ bg_photo: /images/portrait-129.jpg
 
 <script type="text/javascript">//<!--
   (function () {
-    var submissionCheck = function() {
+    var formId = { "lang-nl": 0, "lang-en" : 1 }[document.children[0].className];
+    document.forms[formId].onsubmit = function(event) {
       var humancheck = document.getElementsByName('humancheck');
-      return (humancheck[0].value == "" && humancheck[1].value == "")
+      if (humancheck[0].value == "" && humancheck[1].value == "") {
+        event.target.action = "{{ site.email_post_url }}";
+        return true;
+      }
+      return false;
     }
-    document.forms[0].onsubmit = submissionCheck;
-    document.forms[1].onsubmit = submissionCheck;
   })();
 //--></script>
