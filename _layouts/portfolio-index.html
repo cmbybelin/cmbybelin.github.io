@@ -2,61 +2,12 @@
 layout: index
 style: page-portfolio-index
 
-rows:
-- items: 1
-  height: 62
-  cols:
-  - width: 100
-- items: 3
-  height: 100
-  cols:
-  - width: 38
-    height: 62, 38
-  - width: 62
-- items: 3
-  height: 100
-  cols:
-  - width: 62
-  - width: 38
-    height: 38, 62
-- items: 2
-  height: 62
-  cols:
-  - width: 38
-  - width: 62
-- items: 3
-  height: 62
-  cols:
-  - width: 33
-  - width: 33
-  - width: 33
-- items: 2
-  height: 62
-  cols:
-  - width: 62
-  - width: 38
-- items: 3
-  height: 100
-  cols:
-  - width: 38
-    height: 62, 38
-  - width: 62
-- items: 2
-  height: 62
-  cols:
-  - width: 38
-  - width: 62
-- items: 1
-  height: 62
-  cols:
-  - width: 100
-
 # How does this work:
 # Given a simple portfolio page. It has a property `title` (which is the
 # basename of the portfolio). There is also a folder '/:title/' (all lowercase)
 # where the images reside. We scan all static files for the files that live in
 # '/:title/' and create a list out of that, via a string.
-# Then we iterate the 'rows' variable as defined above and create sections for
+# Then we iterate the 'collage' variable from _config.yaml and create sections for
 # all the images. If a row requires more items than are left in our portfolio
 # (`left`), we skip to the next entry. Hence the list ends with a layout with 2
 # and 1 item, so everything can be displayed.
@@ -83,7 +34,7 @@ rows:
 {% assign left = index_list | size %}
 {% assign current = 0 %}
 
-{% for row in layout.rows %}
+{% for row in site.collage %}
   {% if row.items <= left %}{% unless page.skip_list contains forloop.index %}
     <div class="row row-{{ row.height }}"
     {% for col in row.cols %}
